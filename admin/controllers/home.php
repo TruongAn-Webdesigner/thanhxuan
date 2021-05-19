@@ -23,9 +23,11 @@
             $page_file = "views/blog_index.php";
             require_once "layout.php";
         }
+
         function login(){
             require "views/login.php";
         }
+
         function check_form_login() {
             if (isset($_POST['taikhoan'])==true) $taikhoan = $_POST['taikhoan'];
             if (isset($_POST['pass'])==true) $pass = $_POST['pass'];
@@ -34,13 +36,14 @@
             if ($row != null) {
                 $_SESSION['admin']=$taikhoan;
                 $_SESSION['nameadmin']=$row['hoten'];
-                header("location: http://localhost:80/suckhoexuan/admin/?ctrl=home");
+                header("location: http://localhost:80/thanhxuan/admin/?ctrl=home");
                 exit();
             } else {
                 $erro = 1;
                 require "views/login.php";
             }
         }
+
         function logout(){
             if (isset($_SESSION['admin']))
             {
@@ -48,6 +51,7 @@
             }
             require "views/login.php";
         }
+
         function edit(){
             if (isset($_GET['idNSX'])==true)
             $idNSX = $_GET['idNSX'];
@@ -57,6 +61,7 @@
             $page_file = "views/nhasanxuat_edit.php";
             require_once "layout.php";
         }
+
         function update(){
             if(isset($_GET['idNSX'])==true) $idNSX = $_GET['idNSX'];
             if(isset($_POST['TenNSX'])==true) $TenNSX = $_POST['TenNSX'];
@@ -71,6 +76,7 @@
             header('Location: ?ctrl=nhasanxuat&act=index');
             exit();
         }
+
         function delete(){
             if (isset($_GET['id'])==true) $id = $_GET['id'];
             settype($id, "int");

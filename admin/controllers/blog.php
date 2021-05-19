@@ -21,11 +21,14 @@
         //$this->$act;
         }
         function index() {
-
+          $page_title = "Danh sách blog";
+          $page_file = "views/blog_index.php";
+          require_once "layout.php";
         }
         function addnew() {
-
-            require_once "layout.php";
+          $page_title = "Thêm Blog mới";
+          $page_file = "views/blog_addnew.php";
+          require_once "layout.php";
         }
         function store() {
 

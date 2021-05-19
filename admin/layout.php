@@ -81,13 +81,13 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href="<?=ADMIN_URL?>/?ctrl=blog&act=index">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Quản lí bài viết</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href="<?=ADMIN_URL?>/?ctrl=blog&act=addnew">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Thêm bài viết</span>
                 </a>
