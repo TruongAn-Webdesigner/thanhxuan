@@ -19,6 +19,7 @@
         //$this->$act;
         }
         function index() {
+            
             $page_title = "Danh sách blog";
             $page_file = "views/blog_index.php";
             require_once "layout.php";

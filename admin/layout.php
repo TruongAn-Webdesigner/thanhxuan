@@ -46,7 +46,11 @@
 <!-- Button trigger modal -->
     <!-- Modal -->
 
-
+    <?php
+    if (!isset($_SESSION['admin'])) {
+         header('location:views/login.php');
+     }
+    ?>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
