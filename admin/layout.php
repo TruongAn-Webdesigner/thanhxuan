@@ -1,10 +1,8 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['admin']))//kiem tra xem co dang nhap chua
-    {
-        header('location:/suckhoexuan/admin/?ctrl=home&act=login');
-    }
-?>
+    if (!isset($_SESSION['admin'])) {
+         header('location:views/login.php');
+     }
+    ?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,11 +44,7 @@
 <!-- Button trigger modal -->
     <!-- Modal -->
 
-    <?php
-    if (!isset($_SESSION['admin'])) {
-         header('location:views/login.php');
-     }
-    ?>
+    
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -303,7 +297,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$_SESSION['nameadmin']?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$_SESSION['admin']?></span>
                                 <img class="img-profile rounded-circle"
                                     src="template/img/undraw_profile.svg">
                             </a>
@@ -323,7 +317,7 @@
                                     Activity Log
                                 </a> -->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="<?= ADMIN_URL ?>/?ctrl=home&act=logout" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Đăng xuất
                                 </a>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +40,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">ADMIN ĐĂNG NHẬP</h1>
                                     </div>
-                                    <form class="user" method="POST" action="?ctrl=home&act=check_form_login">
+                                    <form class="user" method="POST" action="/thanhxuan/admin/?ctrl=home&act=check_form_login">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" name="taikhoan" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nhập tài khoản...">
                                             <div>   </div>
