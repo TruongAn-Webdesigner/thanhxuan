@@ -137,28 +137,48 @@
       <div class="boxcenter">
           <div class="bg-calo-left">
               <div class="bg-calo-form">
-                  <form>
+                  <form id="tinhcalo">
                       <div class="form-group">
                         <label for="">Tuổi:</label>
-                        <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Tuổi">
+                        <input type="text" class="form-control" id="calo_tuoi" placeholder="Tuổi">
                         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                       </div>
                       <div class="form-group">
+                        <label for="">Giới tính</label>
+                        <div class="row">
+                          <div class="col-3">
+                              <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="calo_optradio" checked value="1">Nữ
+
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="calo_optradio" value="0">Nam
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label for="">Chiều cao:</label>
-                        <input type="text" class="form-control" id="" placeholder="Chiều cao">
+                        <input type="text" class="form-control" id="calo_chieucao" placeholder="Chiều cao">
                       </div>
                       <div class="form-group">
                           <label for="">Cân nặng:</label>
-                          <input type="text" class="form-control" id="" placeholder="Cân nặng">
+                          <input type="text" class="form-control" id="calo_cannang" placeholder="Cân nặng">
                       </div>
                       <div class="form-group">
                           <label for="">Hoạt động:</label>
-                          <select class="form-control" id="">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                          <select class="form-control" id="calo_vandong">
+                            <option value="1.2">Ít vận động: ít hoặc không tập thể dục</option>
+                            <option value="1.375">Nhẹ: tập thể dục 1-3 lần/tuần</option>
+                            <option value="1.55">Vừa: tập thể dục 3-5 lần/tuần</option>
+                            <option value="1.725">Mạnh: tập thể dục hằng ngày hoặc vận động cường độ cao 6-7 lần/tuần</option>
+                            <option value="1.9">Đặc biệt: vận động cường độ cao hằng ngày hoặc công việc nặng</option>
                           </select>
                         </div>
                       <button type="submit" class="calc">Tính</button>
