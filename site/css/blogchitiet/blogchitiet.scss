@@ -79,6 +79,33 @@ body{
                         width: 75%;
                         min-height: 25rem;
                         /* background-color: rgb(202, 38, 38); */
+                        .box-news-img{
+                            width: 95%;
+                            height: 25rem;
+                            background-color: blanchedalmond;
+                            margin-bottom: 20px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                display: block;
+                            }
+                        }
+                        .box-news-infor{
+                            width: 100%;
+                            height: 2rem;
+                            /* background-color: rgb(197, 49, 49); */
+                            color: rgb(136, 136, 136);
+                            font-size: 0.8vw;
+                        }
+                        .box-news-title{
+                            width: 95%;
+                            height: 5rem;
+                            color: #e26363;
+                            font-family: 'Asap Condensed', sans-serif;
+                            font-size: 2vw;
+                            margin-bottom: 65px;
+                        }
                         .bg-noi-dung{
                             width: 95%;
                             min-height: 5rem;
@@ -126,7 +153,7 @@ body{
                             width: 95%;
                             min-height: 20rem;
                             /* background-color: yellowgreen; */
-                            margin-bottom: 1rem;
+                            margin-bottom: 5rem;
                             .related-title{
                                 width: 100%;
                                 height: 3rem;
@@ -206,13 +233,15 @@ body{
                             /* phần đăng bình luận */
                             .post-comment{
                                 width: 100%;
-                                height: 20rem;
+                                height: 15rem;
                                 /* background-color: yellowgreen; */
                                 display: flex;
                                 .post-comment-img{
                                     width: 15%;
                                     height: 8rem;
                                     background-color: #cecece;
+                                    border-radius: 50%;
+                                    overflow: hidden;
                                     /* padding: 20px; */
                                     img{
                                         width: 100%;
@@ -253,15 +282,28 @@ body{
                                 font-family: 'Anton', sans-serif;
                                 margin-bottom: 2rem;
                                 /* background-color: yellow; */
+                                position: relative;
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    top: -10px;
+                                    width: 100%;
+                                    height: 2px;
+                                    background-color: #e2e2e2;
+                                }
                             }
                             .show-comment{
                                 display: flex;
                                 width: 100%;
                                 .show-comment-img{
-                                    width: 15%;
-                                    min-height: 8rem;
+                                    width: 5.5rem;
+                                    height: 5.5rem;
+                                    border-radius: 50%;
                                     background-color: #cecece;
                                     /* padding: 20px; */
+                                    overflow: hidden;
+                                    margin-top: 1rem;
+                                    margin-bottom: 8rem;
                                     img{
                                         width: 100%;
                                         height: 100%;
@@ -273,11 +315,39 @@ body{
                                     width: 80%;
                                     min-height: 7rem;
                                     background-color: white;
-                                    margin-left: 5%;
-                                    font-family: 'Asap Condensed', sans-serif;
-                                    padding:20px; 
-                                    border-radius: 5px;
-                                    border: 1px solid rgb(221, 221, 221);                  
+                                    margin-left: 2%;
+                                    .show-comment-name-time{
+                                        width: 100%;
+                                        height: 2rem;
+                                        /* background-color: darkmagenta; */
+                                        display: flex;
+                                        .name{
+                                            min-width: 7%;
+                                            height: 100%;
+                                            /* background-color: darkorange; */
+                                            font-family: 'Asap Condensed', sans-serif;
+                                            font-size: 0.8vw;
+                                            font-weight: bold;
+                                        }
+                                        .time{
+                                            width: 20%;
+                                            height: 100%;
+                                            /* background-color: rgb(206, 203, 200); */
+                                            font-family: 'Asap Condensed', sans-serif;
+                                            font-weight: bold;
+                                            font-size: 0.8vw;
+                                        }
+                                    }
+                                    .show-comment-chat{
+                                        background-color: rgb(255, 255, 255);
+                                        width: 100%;
+                                        min-height: 5rem;
+                                        font-family: 'Asap Condensed', sans-serif;
+                                        padding:20px; 
+                                        border-radius: 5px;
+                                        border: 1px solid rgb(221, 221, 221);
+                                    }
+
                                 }
                             }
                             /* /phần show bình luận */

@@ -1,11 +1,19 @@
-
-    <!-- article -->
-    <div class="row-handmake">
+<div class="row-handmake">
         <article>
             <div class="boxcenter">
                 <div class="bg-news">
                     <!-- blog -->
                     <div class="bg-news-left">
+                        <div class="box-news-img">
+                            <img src="../img/women.jpg" alt="">
+                        </div>
+                        <div class="box-news-infor">
+                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
+                            <i class="fa fa-calendar" aria-hidden="true"> (Ngày đăng)</i>
+                        </div>
+                        <div class="box-news-title">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
                         <div class="bg-noi-dung">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -84,7 +92,14 @@
                             <!-- show bình luận -->
                             <div class="show-comment">
                                 <div class="show-comment-img"><img src="../img/women.jpg" alt=""></div>
-                                <div class="show-comment-infor">aefewafewfef</div>
+
+                                <div class="show-comment-infor">
+                                    <div class="show-comment-name-time">
+                                        <div class="name">User</div>
+                                        <div class="time">12/12/12</div>
+                                    </div>
+                                    <div class="show-comment-chat">abcd</div>
+                                </div>
                             </div>
                             <!-- /show bình luận -->
 
@@ -173,6 +188,5 @@
         </article>
     </div>
 
-    
 
 <script src="js/blogdetail.js"></script>
