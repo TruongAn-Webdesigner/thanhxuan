@@ -124,13 +124,15 @@
 
   <!-- calc calo -->
   <div class="mainCount">
-  
-    <select name="" id="selectCount">
-      <option value="bg-calo">bg-calo</option>
-      <option value="bg-bmi">bg-bmi</option>
-      <option value="bg-ti_le_mo">bg-tilemo</option>
-    </select>
-
+    <div class="boxcenter">
+        <div class="box-select">
+            <select name="" id="selectCount">
+            <option value="bg-calo">Calo</option>
+            <option value="bg-bmi">BMI</option>
+            <option value="bg-ti_le_mo">Tỉ lệ mỡ</option>
+            </select>
+        </div>
+    </div>
     <div class="form_main bg-calo z-index-2 show opacity-1" id="bg-calo">
             <div class="boxcenter">
                 <div class="bg-calo-title">
@@ -147,33 +149,56 @@
                     <div class="bg-calo-left">
                         <div class="bg-calo-form">
                             <div class="calo-form-title">
-                                Nhập thông tin của bạn
+                                Mục tiêu
+                                <div class="calo-form-title-small">
+                                giảm calo
+                                </div>  
                             </div>
                             <form>
-                                <div class="form-group">
-                                <!-- <label for="">Tuổi:</label> -->
-                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Tuổi">
-                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                                </div>
-                                <div class="form-group">
-                               <!--  <label for="">Chiều cao:</label> -->
-                                <input type="text" class="form-control" id="" placeholder="Chiều cao">
-                                </div>
-                                <div class="form-group">
-                                    <!-- <label for="">Cân nặng:</label> -->
-                                    <input type="text" class="form-control" id="" placeholder="Cân nặng">
-                                </div>
-                                <div class="form-group">
-                                    <!-- <label for="">Hoạt động:</label> -->
-                                    <select class="form-control" id="">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="calc">Tính</button>
+                            <div class="form-group row">
+                                    <label for="" class="col-4">Tuổi:</label>
+                                    <input type="text" class="form-control col-8" id="" aria-describedby="emailHelp" placeholder="Tuổi">
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                    </div>
+
+                                    <div class="form-group row">
+                                    <label for="" class="col-4">Chiều cao:</label>
+                                    <input type="text" class="form-control col-8" id="" placeholder="Chiều cao">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-4">Cân nặng:</label>
+                                        <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
+                                    </div>
+
+                                    <div class="form-group row">
+                                    <label for="" class="col-4">Giới tính:</label>
+                                        <div class="col-8">
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Nam</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-4">Hoạt động:</label>
+                                        <select class="form-control col-8" id="">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-4"></label>
+                                        <button type="submit" class="calc col-8">Tính</button>
+                                    </div>
+                                
                             </form>
                         </div>
                     </div>
@@ -222,33 +247,59 @@
                         <div class="bg-bmi-right">
                             <div class="bg-bmi-form">
                                 <div class="bmi-form-title">
-                                    Nhập thông tin của bạn
+                                
+                                        Mục tiêu
+                                    <div class="bmi-form-title-small">
+                                        cân đối
+                                    </div>  
+                        
                                 </div>
                                 <form>
                                     <div class="form-group row">
-                                    <label for="" class="col-2">Tuổi:</label>
-                                    <input type="text" class="form-control col-10" id="" aria-describedby="emailHelp" placeholder="Tuổi">
+                                    <label for="" class="col-4">Tuổi:</label>
+                                    <input type="text" class="form-control col-8" id="" aria-describedby="emailHelp" placeholder="Tuổi">
                                     <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                     </div>
                                     <div class="form-group row">
-                                    <label for="" class="col-2">Chiều cao:</label>
-                                    <input type="text" class="form-control col-10" id="" placeholder="Chiều cao">
+                                    <label for="" class="col-4">Chiều cao:</label>
+                                    <input type="text" class="form-control col-8" id="" placeholder="Chiều cao">
                                     </div>
                                     <div class="form-group row">
-                                        <label for="" class="col-2">Cân nặng:</label>
-                                        <input type="text" class="form-control col-10" id="" placeholder="Cân nặng">
+                                        <label for="" class="col-4">Cân nặng:</label>
+                                        <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
                                     </div>
-                                    <div class="form-group">
-                                        <!-- <label for="">Hoạt động:</label> -->
-                                        <select class="form-control" id="">
+
+                                    
+                                    <div class="form-group row">
+                                    <label for="" class="col-4">Giới tính:</label>
+                                        <div class="col-8">
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Nam</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                                    </div>
+                                    </div>
+                                    </div>
+
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-4">Hoạt động:</label>
+                                        <select class="form-control col-8" id="">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
                                         <option>5</option>
                                         </select>
+                                    
                                     </div>
-                                    <button type="submit" class="calc">Tính</button>
+                                    <div class="form-group row">
+                                        <label for="" class="col-4"></label>
+                                        <button type="submit" class="calc col-8">Tính</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -284,25 +335,45 @@
                         <div class="bg-bmi-right">
                             <div class="bg-bmi-form">
                                 <div class="bmi-form-title">
-                                    Nhập thông tin của bạn
+                                        Mục tiêu
+                                    <div class="bmi-form-title-small">
+                                        giảm mỡ
+                                    </div>
                                 </div>
                                 <form>
                                     <div class="form-group row">
-                                    <label for="" class="col-2">Tuổi:</label>
-                                    <input type="text" class="form-control col-10" id="" aria-describedby="emailHelp" placeholder="Tuổi">
+                                    <label for="" class="col-4">Tuổi:</label>
+                                    <input type="text" class="form-control col-8" id="" aria-describedby="emailHelp" placeholder="Tuổi">
                                     <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                     </div>
                                     <div class="form-group row">
-                                    <label for="" class="col-2">Chiều cao:</label>
-                                    <input type="text" class="form-control col-10" id="" placeholder="Chiều cao">
+                                    <label for="" class="col-4">Chiều cao:</label>
+                                    <input type="text" class="form-control col-8" id="" placeholder="Chiều cao">
                                     </div>
                                     <div class="form-group row">
-                                        <label for="" class="col-2">Cân nặng:</label>
-                                        <input type="text" class="form-control col-10" id="" placeholder="Cân nặng">
+                                        <label for="" class="col-4">Cân nặng:</label>
+                                        <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
                                     </div>
-                                    <div class="form-group">
-                                        <!-- <label for="">Hoạt động:</label> -->
-                                        <select class="form-control" id="">
+
+                                    
+                                    <div class="form-group row">
+                                    <label for="" class="col-4">Giới tính:</label>
+                                        <div class="col-8">
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Nam</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                                    </div>
+                                    </div>
+                                    </div>
+
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-4">Hoạt động:</label>
+                                        <select class="form-control col-8" id="">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -310,7 +381,10 @@
                                         <option>5</option>
                                         </select>
                                     </div>
-                                    <button type="submit" class="calc">Tính</button>
+                                    <div class="form-group row">
+                                        <label for="" class="col-4"></label>
+                                        <button type="submit" class="calc col-8">Tính</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>

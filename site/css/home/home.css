@@ -294,6 +294,8 @@ article {
   /* /about us */
   /* help */
   /* /help */
+  /* phan select */
+  /* phan select */
   /* calo */
   /* /calo */
   /* bmi */
@@ -609,6 +611,45 @@ article .bg-help .boxcenter .box-help-right .box-help-img-right .box-help-img-3:
   bottom: 0px;
 }
 
+article .mainCount .boxcenter .box-select {
+  width: 100%;
+  height: 5rem;
+  /* background-color: blanchedalmond; */
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+}
+
+article .mainCount .boxcenter .box-select::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  width: 44%;
+  height: 1px;
+  background-color: brown;
+}
+
+article .mainCount .boxcenter .box-select::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  width: 44%;
+  height: 1px;
+  background-color: brown;
+}
+
+article .mainCount .boxcenter .box-select select {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  -webkit-box-shadow: 0 0px 0.4px rgba(0, 0, 0, 0.022), 0 0px 0.9px rgba(0, 0, 0, 0.032), 0 0px 1.8px rgba(0, 0, 0, 0.04), 0 0px 3.1px rgba(0, 0, 0, 0.048), 0 0px 5.8px rgba(0, 0, 0, 0.058), 0 0px 14px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0px 0.4px rgba(0, 0, 0, 0.022), 0 0px 0.9px rgba(0, 0, 0, 0.032), 0 0px 1.8px rgba(0, 0, 0, 0.04), 0 0px 3.1px rgba(0, 0, 0, 0.048), 0 0px 5.8px rgba(0, 0, 0, 0.058), 0 0px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+}
+
 article .bg-calo {
   width: 100%;
   /* min-height: 45rem; */
@@ -667,33 +708,53 @@ article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form {
 }
 
 article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form .calo-form-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 900;
+  margin-bottom: 50px;
+  color: #b82424;
+  text-align: center;
+}
+
+article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form .calo-form-title .calo-form-title-small {
   font-family: 'Signika', sans-serif;
   font-size: 1vw;
+  color: #bebebe;
+  letter-spacing: 5px;
+}
+
+article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form form .form-group label {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1vw;
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #b82424;
+  color: #545151;
 }
 
 article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form form .form-group input {
-  border-radius: 30px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  border: none;
 }
 
 article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form form .form-group select {
-  border-radius: 30px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  border: none;
 }
 
-article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form .calc {
+article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form form .form-group .calc {
   padding: 5px 20px;
   background-color: white;
   border: solid deeppink 1px;
   font-family: 'Signika', sans-serif;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border-radius: 30px;
-  width: 100%;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 2rem;
 }
 
-article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form .calc:hover {
+article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form form .form-group .calc:hover {
   cursor: pointer;
   background-color: #fd9797;
   border: solid #fd9797 1px;
@@ -796,46 +857,66 @@ article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-left .bg-bmi-show .bmi-about-
 
 article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right {
   width: 50%;
-  height: 25rem;
+  min-height: 25rem;
   /* background-color: red; */
   padding: 30px 70px;
 }
 
 article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   /* background-color: blueviolet; */
   padding: 20px;
 }
 
 article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .bmi-form-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 900;
+  margin-bottom: 50px;
+  color: #b82424;
+  text-align: center;
+}
+
+article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .bmi-form-title .bmi-form-title-small {
   font-family: 'Signika', sans-serif;
   font-size: 1vw;
+  color: #bebebe;
+  letter-spacing: 5px;
+}
+
+article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group label {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1vw;
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #b82424;
+  color: #545151;
 }
 
 article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group input {
-  border-radius: 30px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  border: none;
 }
 
 article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group select {
-  border-radius: 30px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  border: none;
 }
 
-article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .calc {
+article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group .calc {
   padding: 5px 20px;
   background-color: white;
   border: solid deeppink 1px;
   font-family: 'Signika', sans-serif;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border-radius: 30px;
-  width: 100%;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 2rem;
 }
 
-article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .calc:hover {
+article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group .calc:hover {
   cursor: pointer;
   background-color: #fd9797;
   border: solid #fd9797 1px;
@@ -912,46 +993,66 @@ article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-left .bg-bmi-show .bmi-a
 
 article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right {
   width: 50%;
-  height: 25rem;
+  min-height: 25rem;
   /* background-color: red; */
   padding: 30px 70px;
 }
 
 article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   /* background-color: blueviolet; */
   padding: 20px;
 }
 
 article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .bmi-form-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.5vw;
+  font-weight: 900;
+  margin-bottom: 50px;
+  color: #b82424;
+  text-align: center;
+}
+
+article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .bmi-form-title .bmi-form-title-small {
   font-family: 'Signika', sans-serif;
   font-size: 1vw;
+  color: #bebebe;
+  letter-spacing: 5px;
+}
+
+article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group label {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1vw;
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #b82424;
+  color: #545151;
 }
 
 article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group input {
-  border-radius: 30px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  border: none;
 }
 
 article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group select {
-  border-radius: 30px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  border: none;
 }
 
-article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .calc {
+article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group .calc {
   padding: 5px 20px;
   background-color: white;
   border: solid deeppink 1px;
   font-family: 'Signika', sans-serif;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border-radius: 30px;
-  width: 100%;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 2rem;
 }
 
-article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form .calc:hover {
+article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right .bg-bmi-form form .form-group .calc:hover {
   cursor: pointer;
   background-color: #fd9797;
   border: solid #fd9797 1px;

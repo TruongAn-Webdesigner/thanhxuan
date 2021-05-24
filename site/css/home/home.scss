@@ -525,6 +525,54 @@ article{
     }
     /* /help */
 
+    /* phan select */
+    .mainCount{
+        .boxcenter{
+            .box-select{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 35px;
+                    left:0px;
+                    width: 44%;
+                    height: 1px;
+                    background-color: brown;
+                }
+                width: 100%;
+                height: 5rem;
+                /* background-color: blanchedalmond; */
+                text-align: center;
+                margin-top: 4rem;
+                position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 35px;
+                        right: 0px;
+                        width: 44%;
+                        height: 1px;
+                        background-color: brown;
+                    }
+                select {
+                    margin-top: 1rem;
+                    padding: 10px 20px;
+                    background-color: #f1f1f1;
+                    border: none;
+                    box-shadow:
+                    0 0px 0.4px rgba(0, 0, 0, 0.022),
+                    0 0px 0.9px rgba(0, 0, 0, 0.032),
+                    0 0px 1.8px rgba(0, 0, 0, 0.04),
+                    0 0px 3.1px rgba(0, 0, 0, 0.048),
+                    0 0px 5.8px rgba(0, 0, 0, 0.058),
+                    0 0px 14px rgba(0, 0, 0, 0.08)
+                    ;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    /* phan select */
+    
     /* calo */
     .bg-calo{
         width: 100%;
@@ -578,39 +626,57 @@ article{
                         height: 100%;
                         /* background-color: blueviolet; */
                         padding: 20px;
-                        
                         .calo-form-title{
-                            font-family: 'Signika', sans-serif;
-                            font-size: 1vw;
-                            font-weight: bold;
-                            margin-bottom: 10px;
+                            font-family: 'Merriweather Sans', sans-serif;
+                            font-size: 1.5vw;
+                            font-weight: 900;
+                            margin-bottom: 50px;
                             color: #b82424;
+                            text-align: center;
+                            .calo-form-title-small{
+                                font-family: 'Signika', sans-serif;
+                                font-size: 1vw;
+                                color: rgb(190, 190, 190);
+                                letter-spacing: 5px;
+                            }
                         }
                         form{
                             .form-group{
+                                label{
+                                    font-family: 'Noto Sans', sans-serif;
+                                    font-size: 1vw;
+                                    font-weight: bold;
+                                    color: #545151;
+                                }
                                 input{
-                                    border-radius: 30px;
+                                    border-radius: 5px;
+                                    background-color: #f1f1f1;
+                                    border: none;
                                 }
                                 select{
-                                    border-radius: 30px;
+                                    border-radius: 5px;
+                                    background-color: #f1f1f1;
+                                    border: none;
+                                }
+                                .calc{
+                                    padding: 5px 20px;
+                                    background-color: white;
+                                    border: solid deeppink 1px;
+                                    font-family: 'Signika', sans-serif;
+                                    transition: 0.5s;
+                                    border-radius: 5px;
+                                    width: 50%;
+                                    margin-top: 2rem;
+                                }
+                                .calc:hover{
+                                    cursor: pointer;
+                                    background-color: rgb(253, 151, 151);
+                                    border: solid rgb(253, 151, 151) 1px;
+                                    color: white;
                                 }
                             }
                         }
-                        .calc{
-                            padding: 5px 20px;
-                            background-color: white;
-                            border: solid deeppink 1px;
-                            font-family: 'Signika', sans-serif;
-                            transition: 0.5s;
-                            border-radius: 30px;
-                            width: 100%;
-                        }
-                        .calc:hover{
-                            cursor: pointer;
-                            background-color: rgb(253, 151, 151);
-                            border: solid rgb(253, 151, 151) 1px;
-                            color: white;
-                        }
+                        
                     }
                 }
                 .bg-calo-right{
@@ -708,45 +774,63 @@ article{
                 }
                 .bg-bmi-right{
                     width: 50%;
-                    height: 25rem;
+                    min-height: 25rem;
                     /* background-color: red; */
                     padding: 30px 70px;
                     .bg-bmi-form{
                         width: 100%;
-                        height: 100%;
+                        min-height: 100%;
                         /* background-color: blueviolet; */
                         padding: 20px;
                         .bmi-form-title{
-                            font-family: 'Signika', sans-serif;
-                            font-size: 1vw;
-                            font-weight: bold;
-                            margin-bottom: 10px;
+                            font-family: 'Merriweather Sans', sans-serif;
+                            font-size: 1.5vw;
+                            font-weight: 900;
+                            margin-bottom: 50px;
                             color: #b82424;
+                            text-align: center;
+                            .bmi-form-title-small{
+                                font-family: 'Signika', sans-serif;
+                                font-size: 1vw;
+                                color: rgb(190, 190, 190);
+                                letter-spacing: 5px;
+                            }
                         }
                         form{
                             .form-group{
+                                label{
+                                    font-family: 'Noto Sans', sans-serif;
+                                    font-size: 1vw;
+                                    font-weight: bold;
+                                    color: #545151;
+                                }
                                 input{
-                                    border-radius: 30px;
+                                    border-radius: 5px;
+                                    background-color: #f1f1f1;
+                                    border: none;
                                 }
                                 select{
-                                    border-radius: 30px;
+                                    border-radius: 5px;
+                                    background-color: #f1f1f1;
+                                    border: none;
+                                }
+                                .calc{
+                                    padding: 5px 20px;
+                                    background-color: white;
+                                    border: solid deeppink 1px;
+                                    font-family: 'Signika', sans-serif;
+                                    transition: 0.5s;
+                                    border-radius: 5px;
+                                    width: 50%;
+                                    margin-top: 2rem;
+                                }
+                                .calc:hover{
+                                    cursor: pointer;
+                                    background-color: rgb(253, 151, 151);
+                                    border: solid rgb(253, 151, 151) 1px;
+                                    color: white;
                                 }
                             }
-                        }
-                        .calc{
-                            padding: 5px 20px;
-                            background-color: white;
-                            border: solid deeppink 1px;
-                            font-family: 'Signika', sans-serif;
-                            transition: 0.5s;
-                            border-radius: 30px;
-                            width: 100%;
-                        }
-                        .calc:hover{
-                            cursor: pointer;
-                            background-color: rgb(253, 151, 151);
-                            border: solid rgb(253, 151, 151) 1px;
-                            color: white;
                         }
                     }
                 }
@@ -822,45 +906,63 @@ article{
                 }
                 .bg-bmi-right{
                     width: 50%;
-                    height: 25rem;
+                    min-height: 25rem;
                     /* background-color: red; */
                     padding: 30px 70px;
                     .bg-bmi-form{
                         width: 100%;
-                        height: 100%;
+                        min-height: 100%;
                         /* background-color: blueviolet; */
                         padding: 20px;
                         .bmi-form-title{
-                            font-family: 'Signika', sans-serif;
-                            font-size: 1vw;
-                            font-weight: bold;
-                            margin-bottom: 10px;
+                            font-family: 'Merriweather Sans', sans-serif;
+                            font-size: 1.5vw;
+                            font-weight: 900;
+                            margin-bottom: 50px;
                             color: #b82424;
+                            text-align: center;
+                            .bmi-form-title-small{
+                                font-family: 'Signika', sans-serif;
+                                font-size: 1vw;
+                                color: rgb(190, 190, 190);
+                                letter-spacing: 5px;
+                            }
                         }
                         form{
                             .form-group{
+                                label{
+                                    font-family: 'Noto Sans', sans-serif;
+                                    font-size: 1vw;
+                                    font-weight: bold;
+                                    color: #545151;
+                                }
                                 input{
-                                    border-radius: 30px;
+                                    border-radius: 5px;
+                                    background-color: #f1f1f1;
+                                    border: none;
                                 }
                                 select{
-                                    border-radius: 30px;
+                                    border-radius: 5px;
+                                    background-color: #f1f1f1;
+                                    border: none;
+                                }
+                                .calc{
+                                    padding: 5px 20px;
+                                    background-color: white;
+                                    border: solid deeppink 1px;
+                                    font-family: 'Signika', sans-serif;
+                                    transition: 0.5s;
+                                    border-radius: 5px;
+                                    width: 50%;
+                                    margin-top: 2rem;
+                                }
+                                .calc:hover{
+                                    cursor: pointer;
+                                    background-color: rgb(253, 151, 151);
+                                    border: solid rgb(253, 151, 151) 1px;
+                                    color: white;
                                 }
                             }
-                        }
-                        .calc{
-                            padding: 5px 20px;
-                            background-color: white;
-                            border: solid deeppink 1px;
-                            font-family: 'Signika', sans-serif;
-                            transition: 0.5s;
-                            border-radius: 30px;
-                            width: 100%;
-                        }
-                        .calc:hover{
-                            cursor: pointer;
-                            background-color: rgb(253, 151, 151);
-                            border: solid rgb(253, 151, 151) 1px;
-                            color: white;
                         }
                     }
                 }
