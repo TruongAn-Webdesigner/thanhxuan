@@ -124,12 +124,13 @@
 
   <!-- calc calo -->
   <div class="mainCount">
+  
     <select name="" id="selectCount">
       <option value="bg-calo">bg-calo</option>
       <option value="bg-bmi">bg-bmi</option>
       <option value="bg-ti_le_mo">bg-tilemo</option>
-
     </select>
+
     <div class="form_main bg-calo z-index-2 show opacity-1" id="bg-calo">
         <div class="boxcenter">
             <div class="bg-calo-title">
