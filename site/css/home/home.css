@@ -862,3 +862,87 @@ footer .icon .boxcenter i {
 
 /* /footer */
 /*# sourceMappingURL=home.css.map */
+
+
+
+/********* Long css **********/
+
+article .bg-ti_le_mo {
+  width: 100%;
+  height: 45rem;
+  position: absolute;
+  top: 0px;
+  background-color: white;
+}
+
+article .bg-bmi {
+  width: 100%;
+  height: 45rem;
+  position: absolute;
+  top: 0px;
+  background-color: white;
+}
+
+article .bg-calo {
+  width: 100%;
+  height: 45rem;
+  position: absolute;
+  top: 100;
+  top: 0px;
+  transition: 1s;
+  background-color: white;
+  margin-top: 0;
+}
+
+.mainCount {
+  position: relative;
+  min-height: 1000px;
+}
+
+.mainCount .form_main {
+  margin-top: 5rem;
+}
+
+.opacity_fadeOut {
+  animation-name: opacity_fadeOut;
+  animation-duration: 1.2s;
+}
+
+@keyframes opacity_fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.opacity_fadeIn {
+  animation-name: opacity_fadeIn;
+  animation-duration: 1.2s;
+}
+
+@keyframes opacity_fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}

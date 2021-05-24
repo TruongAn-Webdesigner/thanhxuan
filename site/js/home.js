@@ -1,3 +1,5 @@
+var checkSelect = true;
+
 linkCssHome();
 
 function linkCssHome() {
@@ -44,3 +46,34 @@ function kgToLbs(W) {
   var toLb = W * 2.20462262;
   return toLb
 }
+
+$('#selectCount').change(function (e) {
+  e.preventDefault();
+  if (checkSelect == true) {
+    checkSelect = false;
+
+    var option = $('#selectCount').val();
+    var check = $('#' + option).hasClass('show');
+
+    if (check == false)
+    {
+      $('#' + option).removeClass('opacity-0');
+      $('#' + option).addClass('z-index-1 opacity_fadeIn');
+
+      var divDangShow = $('.mainCount').children('div .show');
+
+      divDangShow.addClass('opacity_fadeOut opacity-0');
+      divDangShow.removeClass('show');
+
+      setTimeout(function() {
+        $('#' + option).removeClass('z-index-1 opacity_fadeIn');
+        $('#' + option).addClass('show z-index-2 opacity-1');
+        divDangShow.removeClass('opacity_fadeOut z-index-2 opacity-1');
+      }, 1200)
+    }
+
+    setTimeout(function() {
+      checkSelect = true;
+    }, 1200);
+  }
+});
