@@ -132,184 +132,195 @@
     </select>
 
     <div class="form_main bg-calo z-index-2 show opacity-1" id="bg-calo">
-        <div class="boxcenter">
-            <div class="bg-calo-title">
-                <div class="calo-title">
-                    Tính Calo
-                </div>
-                <div class="calo-small">
-                    Tính toán khả năng tiêu thụ calo của cơ thê bạn trong một ngày
+            <div class="boxcenter">
+                <div class="bg-calo-title">
+                    <div class="calo-title">
+                        Tính Calo
+                    </div>
+                    <div class="calo-small">
+                        Tính toán khả năng tiêu thụ calo của cơ thê bạn trong một ngày
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="boxcenter">
-            <div class="bg-calo-left">
-                <div class="bg-calo-form">
-                    <form id="tinhcalo">
-                        <div class="form-group">
-                          <label for="">Tuổi:</label>
-                          <input type="text" class="form-control" id="calo_tuoi" placeholder="Tuổi">
-                          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                        </div>
-                        <div class="form-group">
-                          <label for="">Giới tính</label>
-                          <div class="row">
-                            <div class="col-3">
-                                <div class="form-check">
-                                <label class="form-check-label">
-                                  <input type="radio" class="form-check-input" name="calo_optradio" checked value="1">Nữ
-
-                                </label>
-                              </div>
+            <div class="bg-display-calo" id="show">
+                <div class="boxcenter" >
+                    <div class="bg-calo-left">
+                        <div class="bg-calo-form">
+                            <div class="calo-form-title">
+                                Nhập thông tin của bạn
                             </div>
-                            <div class="col-3">
-                              <div class="form-check">
-                                <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="calo_optradio" value="0">Nam
-                                </label>
-                              </div>
+                            <form>
+                                <div class="form-group">
+                                <!-- <label for="">Tuổi:</label> -->
+                                <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Tuổi">
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                </div>
+                                <div class="form-group">
+                               <!--  <label for="">Chiều cao:</label> -->
+                                <input type="text" class="form-control" id="" placeholder="Chiều cao">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="">Cân nặng:</label> -->
+                                    <input type="text" class="form-control" id="" placeholder="Cân nặng">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="">Hoạt động:</label> -->
+                                    <select class="form-control" id="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="calc">Tính</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="bg-calo-right">
+                        <div class="bg-calo-show">
+                            <div class="row-handmake">
+                                <div class="calo-about-title">CALO</div>
+                                <div class="calo-about">
+                                    Lượng calo nạp vào cơ thể mỗi ngày sẽ quyết định cân nặng và sức khỏe của bạn. 
+                                    Quá nhiều calo sẽ dẫn đến thừa cân và ngược lại. 
+                                    Tuy nhiên, không có quy định chung cho mức calo của mọi người vì mỗi cá nhân sẽ có lượng calo tiêu thụ khác nhau.
+                                </div>
                             </div>
-                          </div>
                         </div>
-                        <div class="form-group">
-                          <label for="">Chiều cao:</label>
-                          <input type="text" class="form-control" id="calo_chieucao" placeholder="Chiều cao">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Cân nặng:</label>
-                            <input type="text" class="form-control" id="calo_cannang" placeholder="Cân nặng">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Hoạt động:</label>
-                            <select class="form-control" id="calo_vandong">
-                              <option value="1.2">Ít vận động: ít hoặc không tập thể dục</option>
-                              <option value="1.375">Nhẹ: tập thể dục 1-3 lần/tuần</option>
-                              <option value="1.55">Vừa: tập thể dục 3-5 lần/tuần</option>
-                              <option value="1.725">Mạnh: tập thể dục hằng ngày hoặc vận động cường độ cao 6-7 lần/tuần</option>
-                              <option value="1.9">Đặc biệt: vận động cường độ cao hằng ngày hoặc công việc nặng</option>
-                            </select>
-                          </div>
-                        <button type="submit" class="calc">Tính</button>
-                      </form>
+                    </div>
                 </div>
             </div>
-            <div class="bg-calo-right">
-                <div class="bg-calo-show">
-
-                </div>
-            </div>
-        </div>
     </div>
     <!-- /calc calo -->
 
     <!-- calc bmi -->
     <div class="form_main bg-bmi opacity-0" id="bg-bmi">
-        <div class="bg-bmi">
-            <div class="boxcenter">
-                <div class="bg-bmi-title">
-                    <div class="bmi-title">
-                        Tính BMI
-                    </div>
-                    <div class="bmi-small">
-                        Tính toán khả năng tiêu thụ calo của cơ thê bạn trong một ngày
-                    </div>
-                </div>
-            </div>
-            <div class="boxcenter">
-                <div class="bg-bmi-left">
-                    <div class="bg-bmi-show">
-
-                    </div>
-
-                </div>
-                <div class="bg-bmi-right">
-                    <div class="bg-bmi-form">
-                        <form>
-                            <div class="form-group">
-                              <label for="">Tuổi:</label>
-                              <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Tuổi">
-                              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                              <label for="">Chiều cao:</label>
-                              <input type="text" class="form-control" id="" placeholder="Chiều cao">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Cân nặng:</label>
-                                <input type="text" class="form-control" id="" placeholder="Cân nặng">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Hoạt động:</label>
-                                <select class="form-control" id="">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
-                                </select>
-                              </div>
-                            <button type="submit" class="calc">Tính</button>
-                          </form>
+        <div class="boxcenter">
+                    <div class="bg-bmi-title">
+                        <div class="bmi-title">
+                            Tính BMI
+                        </div>
+                        <div class="bmi-small">
+                            Tính toán khả năng tiêu thụ calo của cơ thê bạn trong một ngày
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="bg-display-bmi">
+                    <div class="boxcenter">
+                        <div class="bg-bmi-left">
+                            <div class="bg-bmi-show">
+                                <div class="row-handmake">
+                                    <div class="bmi-about-title">BMI</div>
+                                    <div class="bmi-about">
+                                        là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi. 
+                                        Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-bmi-right">
+                            <div class="bg-bmi-form">
+                                <div class="bmi-form-title">
+                                    Nhập thông tin của bạn
+                                </div>
+                                <form>
+                                    <div class="form-group row">
+                                    <label for="" class="col-2">Tuổi:</label>
+                                    <input type="text" class="form-control col-10" id="" aria-describedby="emailHelp" placeholder="Tuổi">
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                    </div>
+                                    <div class="form-group row">
+                                    <label for="" class="col-2">Chiều cao:</label>
+                                    <input type="text" class="form-control col-10" id="" placeholder="Chiều cao">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-2">Cân nặng:</label>
+                                        <input type="text" class="form-control col-10" id="" placeholder="Cân nặng">
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- <label for="">Hoạt động:</label> -->
+                                        <select class="form-control" id="">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="calc">Tính</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
+    <!-- /calc bmi -->
+    <!-- ti le mo -->
     <div class="form_main bg-ti_le_mo opacity-0" id="bg-ti_le_mo">
-        <div class="bg-bmi">
-            <div class="boxcenter">
-                <div class="bg-bmi-title">
-                    <div class="bmi-title">
-                        Tính tỉ lệ mỡ
-                    </div>
-                    <div class="bmi-small">
-                        Tính toán khả năng tiêu thụ calo của cơ thê
-                    </div>
-                </div>
-            </div>
-            <div class="boxcenter">
-                <div class="bg-bmi-left">
-                    <div class="bg-bmi-show">
-
-                    </div>
-
-                </div>
-                <div class="bg-bmi-right">
-                    <div class="bg-bmi-form">
-                        <form>
-                            <div class="form-group">
-                              <label for="">Tuổi:</label>
-                              <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Tuổi">
-                              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                              <label for="">Chiều cao:</label>
-                              <input type="text" class="form-control" id="" placeholder="Chiều cao">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Cân nặng:</label>
-                                <input type="text" class="form-control" id="" placeholder="Cân nặng">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Hoạt động:</label>
-                                <select class="form-control" id="">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
-                                </select>
-                              </div>
-                            <button type="submit" class="calc">Tính</button>
-                          </form>
+        <div class="boxcenter">
+                    <div class="bg-bmi-title">
+                        <div class="bmi-title">
+                            Tính tỉ lệ mỡ
+                        </div>
+                        <div class="bmi-small">
+                            Tính toán khả năng tiêu thụ calo của cơ thê bạn trong một ngày
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="bg-display-bmi">
+                    <div class="boxcenter">
+                        <div class="bg-bmi-left">
+                            <div class="bg-bmi-show">
+                                <div class="row-handmake">
+                                    <div class="bmi-about-title">Tỉ lệ mỡ</div>
+                                    <div class="bmi-about">
+                                        là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi. 
+                                        Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-bmi-right">
+                            <div class="bg-bmi-form">
+                                <div class="bmi-form-title">
+                                    Nhập thông tin của bạn
+                                </div>
+                                <form>
+                                    <div class="form-group row">
+                                    <label for="" class="col-2">Tuổi:</label>
+                                    <input type="text" class="form-control col-10" id="" aria-describedby="emailHelp" placeholder="Tuổi">
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                    </div>
+                                    <div class="form-group row">
+                                    <label for="" class="col-2">Chiều cao:</label>
+                                    <input type="text" class="form-control col-10" id="" placeholder="Chiều cao">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-2">Cân nặng:</label>
+                                        <input type="text" class="form-control col-10" id="" placeholder="Cân nặng">
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- <label for="">Hoạt động:</label> -->
+                                        <select class="form-control" id="">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="calc">Tính</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            
     </div>
+    <!-- ti le mo -->
   </div>
 
-  <!-- /calc bmi -->
+  
 </article>
 
 <script src="js/home.js"></script>

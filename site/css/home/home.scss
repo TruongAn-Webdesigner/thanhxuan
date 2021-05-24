@@ -528,9 +528,12 @@ article{
     /* calo */
     .bg-calo{
         width: 100%;
-        height: 45rem;
+        /* min-height: 45rem; */
+        min-height: 25rem;
         /* background-color: yellowgreen; */
         margin-top: 5rem;
+        transition: 1s;
+        margin-bottom: 5rem;
         .boxcenter{
             .bg-calo-title{
                 width: 100%;
@@ -550,40 +553,88 @@ article{
                 }
             }
         }
-        .boxcenter{
-            display: flex;
-            .bg-calo-left{
-                width: 50%;
-                height: 35rem;
-                /* background-color: yellow; */
-                .bg-calo-form{
-                    width: 100%;
+        .bg-display-calo{
+            .boxcenter{
+                width: 70%;
+                min-height: 25rem;
+                background-color: white;
+                box-shadow:
+                0 0px 0.4px rgba(0, 0, 0, 0.022),
+                0 0px 0.9px rgba(0, 0, 0, 0.032),
+                0 0px 1.8px rgba(0, 0, 0, 0.04),
+                0 0px 3.1px rgba(0, 0, 0, 0.048),
+                0 0px 5.8px rgba(0, 0, 0, 0.058),
+                0 0px 14px rgba(0, 0, 0, 0.08)
+              ;
+                border-radius: 10px;
+                display: flex;
+                .bg-calo-left{
+                    width: 50%;
                     height: 100%;
-                    /* background-color: blueviolet; */
-                    padding: 20px;
-                    .calc{
-                        padding: 5px 20px;
-                        background-color: white;
-                        border: solid deeppink 1px;
-                        font-family: 'Signika', sans-serif;
-                        transition: 0.5s;
-                    }
-                    .calc:hover{
-                        cursor: pointer;
-                        background-color: rgb(253, 151, 151);
-                        border: solid rgb(253, 151, 151) 1px;
-                        color: white;
+                    /* background-color: yellow; */
+                    padding: 30px 70px;
+                    .bg-calo-form{
+                        width: 100%;
+                        height: 100%;
+                        /* background-color: blueviolet; */
+                        padding: 20px;
+                        
+                        .calo-form-title{
+                            font-family: 'Signika', sans-serif;
+                            font-size: 1vw;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            color: #b82424;
+                        }
+                        form{
+                            .form-group{
+                                input{
+                                    border-radius: 30px;
+                                }
+                                select{
+                                    border-radius: 30px;
+                                }
+                            }
+                        }
+                        .calc{
+                            padding: 5px 20px;
+                            background-color: white;
+                            border: solid deeppink 1px;
+                            font-family: 'Signika', sans-serif;
+                            transition: 0.5s;
+                            border-radius: 30px;
+                            width: 100%;
+                        }
+                        .calc:hover{
+                            cursor: pointer;
+                            background-color: rgb(253, 151, 151);
+                            border: solid rgb(253, 151, 151) 1px;
+                            color: white;
+                        }
                     }
                 }
-            }
-            .bg-calo-right{
-                width: 50%;
-                height: 35rem;
-                /* background-color: red; */
-                .bg-calo-show{
-                    width: 100%;
-                    min-height: 21.6rem;
-                    background-image: linear-gradient(to top right,rgba(255, 241, 241, 0.048),rgba(248, 225, 225, 0.63),rgba(253, 109, 109, 0.527));
+                .bg-calo-right{
+                    width: 50%;
+                    min-height: 100%;
+                    /* background-color: red; */
+                    .bg-calo-show{
+                        width: 100%;
+                        min-height: 100%;
+                        background-color: #ffffff;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(206,960,468)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23ffc2b5'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='1354' height='1128.3' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+                        background-attachment: fixed;
+                        background-size: cover;
+                        border-radius: 0px 10px 10px 0px;
+                        text-align: center;
+                        font-family: 'Signika', sans-serif;
+                        font-size: 1vw;
+                        padding: 120px 55px 0px 55px;
+                        color: #dd4e4e;
+                        .calo-about-title{
+                            font-size: 1.5vw;
+                            color: #b82424;
+                        }
+                    }
                 }
             }
         }
@@ -593,8 +644,11 @@ article{
     /* bmi */
     .bg-bmi{
         width: 100%;
-        height: 45rem;
+        min-height: 25rem;
         /* background-color: yellowgreen; */
+        margin-top: 5rem;
+        transition: 1s;
+        margin-bottom: 5rem;
         .boxcenter{
             .bg-bmi-title{
                 width: 100%;
@@ -614,45 +668,206 @@ article{
                 }
             }
         }
-        .boxcenter{
-            display: flex;
-            .bg-bmi-left{
-                width: 50%;
-                height: 35rem;
-                /* background-color: yellow; */
-                .bg-bmi-show{
-                    width: 100%;
-                    min-height: 21.6rem;
-                    background-image: linear-gradient(to left bottom,rgba(255, 241, 241, 0.048),rgba(248, 225, 225, 0.63),rgba(253, 109, 109, 0.527));
+        .bg-display-bmi{
+            .boxcenter{
+                width: 70%;
+                min-height: 25rem;
+                background-color: white;
+                box-shadow:
+                0 0px 0.4px rgba(0, 0, 0, 0.022),
+                0 0px 0.9px rgba(0, 0, 0, 0.032),
+                0 0px 1.8px rgba(0, 0, 0, 0.04),
+                0 0px 3.1px rgba(0, 0, 0, 0.048),
+                0 0px 5.8px rgba(0, 0, 0, 0.058),
+                0 0px 14px rgba(0, 0, 0, 0.08)
+              ;
+                border-radius: 10px;
+                display: flex;
+                .bg-bmi-left{
+                    width: 50%;
+                    min-height: 100%;
+                    /* background-color: yellow; */
+                    .bg-bmi-show{
+                        width: 100%;
+                        min-height: 100%;
+                        background-color: #ffffff;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(206,960,468)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23ffc2b5'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='1354' height='1128.3' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+                        background-attachment: fixed;
+                        background-size: cover;
+                        border-radius: 10px 0px 0px 10px;
+                        text-align: center;
+                        font-family: 'Signika', sans-serif;
+                        font-size: 1vw;
+                        padding: 120px 55px 0px 55px;
+                        color: #dd4e4e;
+                        .bmi-about-title{
+                            font-size: 1.5vw;
+                            color: #b82424;
+                        } 
+                    }
+                }
+                .bg-bmi-right{
+                    width: 50%;
+                    height: 25rem;
+                    /* background-color: red; */
+                    padding: 30px 70px;
+                    .bg-bmi-form{
+                        width: 100%;
+                        height: 100%;
+                        /* background-color: blueviolet; */
+                        padding: 20px;
+                        .bmi-form-title{
+                            font-family: 'Signika', sans-serif;
+                            font-size: 1vw;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            color: #b82424;
+                        }
+                        form{
+                            .form-group{
+                                input{
+                                    border-radius: 30px;
+                                }
+                                select{
+                                    border-radius: 30px;
+                                }
+                            }
+                        }
+                        .calc{
+                            padding: 5px 20px;
+                            background-color: white;
+                            border: solid deeppink 1px;
+                            font-family: 'Signika', sans-serif;
+                            transition: 0.5s;
+                            border-radius: 30px;
+                            width: 100%;
+                        }
+                        .calc:hover{
+                            cursor: pointer;
+                            background-color: rgb(253, 151, 151);
+                            border: solid rgb(253, 151, 151) 1px;
+                            color: white;
+                        }
+                    }
                 }
             }
-            .bg-bmi-right{
-                width: 50%;
-                height: 35rem;
-                /* background-color: red; */
-                .bg-bmi-form{
-                    width: 100%;
-                    height: 100%;
-                    /* background-color: blueviolet; */
-                    padding: 20px;
-                    .calc{
-                        padding: 5px 20px;
-                        background-color: white;
-                        border: solid deeppink 1px;
-                        font-family: 'Signika', sans-serif;
-                        transition: 0.5s;
-                    }
-                    .calc:hover{
-                        cursor: pointer;
-                        background-color: rgb(253, 151, 151);
-                        border: solid rgb(253, 151, 151) 1px;
-                        color: white;
-                    }
+        }    
+    }
+    /* /bmi */
+
+    /* ti le mo */
+    .bg-ti_le_mo{
+        width: 100%;
+        min-height: 25rem;
+        /* background-color: yellowgreen; */
+        margin-top: 5rem;
+        transition: 1s;
+        margin-bottom: 5rem;
+        .boxcenter{
+            .bg-bmi-title{
+                width: 100%;
+                height: 10rem;
+                /* background-color: blue; */
+                .bmi-title{
+                    font-size: 2vw;
+                    color: #b82424;
+                    font-family: 'Anton', sans-serif;
+                    text-align: center;
+                }
+                .bmi-small{
+                    font-size: 1.2vw;
+                    color: #b82424;
+                    font-family: 'Signika', sans-serif;
+                    text-align: center;
                 }
             }
         }
-    }
-    /* /bmi */
+        .bg-display-bmi{
+            .boxcenter{
+                width: 70%;
+                min-height: 25rem;
+                background-color: white;
+                box-shadow:
+                0 0px 0.4px rgba(0, 0, 0, 0.022),
+                0 0px 0.9px rgba(0, 0, 0, 0.032),
+                0 0px 1.8px rgba(0, 0, 0, 0.04),
+                0 0px 3.1px rgba(0, 0, 0, 0.048),
+                0 0px 5.8px rgba(0, 0, 0, 0.058),
+                0 0px 14px rgba(0, 0, 0, 0.08)
+              ;
+                border-radius: 10px;
+                display: flex;
+                .bg-bmi-left{
+                    width: 50%;
+                    min-height: 100%;
+                    /* background-color: yellow; */
+                    .bg-bmi-show{
+                        width: 100%;
+                        min-height: 100%;
+                        background-color: #ffffff;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(206,960,468)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23ffc2b5'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='1354' height='1128.3' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+                        background-attachment: fixed;
+                        background-size: cover;
+                        border-radius: 10px 0px 0px 10px;
+                        text-align: center;
+                        font-family: 'Signika', sans-serif;
+                        font-size: 1vw;
+                        padding: 120px 55px 0px 55px;
+                        color: #dd4e4e;
+                        .bmi-about-title{
+                            font-size: 1.5vw;
+                            color: #b82424;
+                        } 
+                    }
+                }
+                .bg-bmi-right{
+                    width: 50%;
+                    height: 25rem;
+                    /* background-color: red; */
+                    padding: 30px 70px;
+                    .bg-bmi-form{
+                        width: 100%;
+                        height: 100%;
+                        /* background-color: blueviolet; */
+                        padding: 20px;
+                        .bmi-form-title{
+                            font-family: 'Signika', sans-serif;
+                            font-size: 1vw;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            color: #b82424;
+                        }
+                        form{
+                            .form-group{
+                                input{
+                                    border-radius: 30px;
+                                }
+                                select{
+                                    border-radius: 30px;
+                                }
+                            }
+                        }
+                        .calc{
+                            padding: 5px 20px;
+                            background-color: white;
+                            border: solid deeppink 1px;
+                            font-family: 'Signika', sans-serif;
+                            transition: 0.5s;
+                            border-radius: 30px;
+                            width: 100%;
+                        }
+                        .calc:hover{
+                            cursor: pointer;
+                            background-color: rgb(253, 151, 151);
+                            border: solid rgb(253, 151, 151) 1px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }       
+}
+    /* ti le mo */
 }
 /* /article */
 
@@ -747,3 +962,85 @@ article{
         }
     }
 /* /footer */
+
+/********* Long css **********/
+
+article .bg-ti_le_mo {
+    width: 100%;
+    height: 45rem;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+  }
+  
+  article .bg-bmi {
+    width: 100%;
+    height: 45rem;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+  }
+  
+  article .bg-calo {
+    width: 100%;
+    height: 45rem;
+    position: absolute;
+    top: 100;
+    top: 0px;
+    transition: 1s;
+    background-color: white;
+    margin-top: 0;
+  }
+  
+  .mainCount {
+    position: relative;
+    min-height: 1000px;
+  }
+  
+  .mainCount .form_main {
+    margin-top: 5rem;
+  }
+  
+  .opacity_fadeOut {
+    animation-name: opacity_fadeOut;
+    animation-duration: 1.2s;
+  }
+  
+  @keyframes opacity_fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .opacity_fadeIn {
+    animation-name: opacity_fadeIn;
+    animation-duration: 1.2s;
+  }
+  
+  @keyframes opacity_fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .z-index-1 {
+    z-index: 1;
+  }
+  
+  .z-index-2 {
+    z-index: 2;
+  }
+  
+  .opacity-0 {
+    opacity: 0;
+  }
+  
+  .opacity-1 {
+    opacity: 1;
+  }
