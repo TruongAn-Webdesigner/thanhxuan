@@ -152,65 +152,101 @@
                                 Mục tiêu
                                 <div class="calo-form-title-small">
                                 giảm calo
-                                </div>  
+                                </div>
                             </div>
-                            <form>
-                            <div class="form-group row">
-                                    <label for="" class="col-4">Tuổi:</label>
-                                    <input type="text" class="form-control col-8" id="" aria-describedby="emailHelp" placeholder="Tuổi">
-                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                                    </div>
+                            <form  id="tinhcalo">
+                              <div class="form-group row">
+                                  <label for="" class="col-4">Tuổi:</label>
+                                  <input type="text" class="form-control col-8" id="cl_tuoi" placeholder="Tuổi">
+                                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                              </div>
 
-                                    <div class="form-group row">
-                                    <label for="" class="col-4">Chiều cao:</label>
-                                    <input type="text" class="form-control col-8" id="" placeholder="Chiều cao">
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-4">Cân nặng:</label>
-                                        <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
-                                    </div>
+                              <div class="form-group row">
+                                  <label for="" class="col-4">Chiều cao:</label>
+                                  <input type="text" class="form-control col-8" id="cl_chieucao" placeholder="Chiều cao">
+                              </div>
+                              <div class="form-group row">
+                                  <label for="" class="col-4">Cân nặng:</label>
+                                  <input type="text" class="form-control col-8" id="cl_cannang" placeholder="Cân nặng">
+                              </div>
 
-                                    <div class="form-group row">
-                                    <label for="" class="col-4">Giới tính:</label>
-                                        <div class="col-8">
+                              <div class="form-group row">
+                                  <label for="" class="col-4">Giới tính:</label>
+                                  <div class="col-8">
+                                  <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="cl_gioitinh" id="inlineRadio2" checked value="1">
+                                        <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                                    </div>
                                     <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Nam</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Nữ</label>
-                                    </div>
-                                    </div>
+                                        <input class="form-check-input" type="radio" name="cl_gioitinh" id="inlineRadio1" value="0">
+                                        <label class="form-check-label" for="inlineRadio1">Nam</label>
                                     </div>
 
-                                    <div class="form-group row">
-                                        <label for="" class="col-4">Hoạt động:</label>
-                                        <select class="form-control col-8" id="">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-4"></label>
-                                        <button type="submit" class="calc col-8">Tính</button>
-                                    </div>
-                                
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                  <label for="" class="col-4">Hoạt động:</label>
+                                  <select class="form-control col-8" id="cl_Vandong">
+                                    <option value="1.2">Ít vận động: ít hoặc không tập thể dục</option>
+                                    <option value="1.375">Nhẹ: tập thể dục 1-3 lần/tuần</option>
+                                    <option value="1.55">Vừa: tập thể dục 3-5 lần/tuần</option>
+                                    <option value="1.725">Mạnh: tập thể dục hằng ngày hoặc vận động cường độ cao 6-7 lần/tuần</option>
+                                    <option value="1.9">Đặc biệt: vận động cường độ cao hằng ngày hoặc công việc nặng</option>
+                                  </select>
+
+                              </div>
+                              <div class="form-group row">
+                                  <label for="" class="col-4"></label>
+                                  <button type="submit" class="calc col-8">Tính</button>
+                              </div>
+
                             </form>
                         </div>
                     </div>
                     <div class="bg-calo-right">
                         <div class="bg-calo-show">
-                            <div class="row-handmake">
-                                <div class="calo-about-title">CALO</div>
-                                <div class="calo-about">
-                                    Lượng calo nạp vào cơ thể mỗi ngày sẽ quyết định cân nặng và sức khỏe của bạn. 
-                                    Quá nhiều calo sẽ dẫn đến thừa cân và ngược lại. 
-                                    Tuy nhiên, không có quy định chung cho mức calo của mọi người vì mỗi cá nhân sẽ có lượng calo tiêu thụ khác nhau.
+                            <div class="row-handmake" id="box_calo">
+                                <div class="cl_about">
+                                  <div class="calo-about-title">CALO</div>
+                                  <div class="calo-about">
+                                      Lượng calo nạp vào cơ thể mỗi ngày sẽ quyết định cân nặng và sức khỏe của bạn.
+                                      Quá nhiều calo sẽ dẫn đến thừa cân và ngược lại.
+                                      Tuy nhiên, không có quy định chung cho mức calo của mọi người vì mỗi cá nhân sẽ có lượng calo tiêu thụ khác nhau.
+                                  </div>
                                 </div>
+                                <!-- <div id="cl_result" class="" class="mt-Down50">
+                                  <div class="calo-about-title">Lượng Calories cơ thể cần trong ngày</div>
+                                  <button>1806 Calories/ngày</button>
+                                  <table border=1 class="w-100">
+                                    <tr>
+                                      <td colspan="2">Giữ cân</td>
+                                      <td colspan="2">1806 Calories/ngày</td>
+                                    </tr>
+                                    <tr col="4">
+                                      <td colspan="2">Giảm cân</td>
+                                      <td colspan="2">Tăng cân</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Giảm cân nhẹ (0.25kg/tuần)</td>
+                                      <td>1556 Calories/ngày(86%)</td>
+                                      <td>Giảm cân Tăng cân nhẹ(0.25kg/tuần)</td>
+                                      <td>2056 Calories/ngày(114%)</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Giảm cân(0.5kg/tuần)</td>
+                                      <td>1306 Calories/ngày(72%)</td>
+                                      <td>Tăng cân(0.5kg/tuần)</td>
+                                      <td>2306 Calories/ngày(128%)</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Giảm cân nhiều(1kg/tuần)</td>
+                                      <td>806 Calories/ngày(45%)</td>
+                                      <td>Tăng cân nhiều(1kg/tuần)</td>
+                                      <td>2806 Calories/ngày(155%)</td>
+                                    </tr>
+                                  </table>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -238,8 +274,8 @@
                                 <div class="row-handmake">
                                     <div class="bmi-about-title">BMI</div>
                                     <div class="bmi-about">
-                                        là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi. 
-                                        Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ. 
+                                        là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi.
+                                        Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ.
                                     </div>
                                 </div>
                             </div>
@@ -247,12 +283,12 @@
                         <div class="bg-bmi-right">
                             <div class="bg-bmi-form">
                                 <div class="bmi-form-title">
-                                
+
                                         Mục tiêu
                                     <div class="bmi-form-title-small">
                                         cân đối
-                                    </div>  
-                        
+                                    </div>
+
                                 </div>
                                 <form>
                                     <div class="form-group row">
@@ -269,7 +305,7 @@
                                         <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
                                     </div>
 
-                                    
+
                                     <div class="form-group row">
                                     <label for="" class="col-4">Giới tính:</label>
                                         <div class="col-8">
@@ -288,13 +324,13 @@
                                     <div class="form-group row">
                                         <label for="" class="col-4">Hoạt động:</label>
                                         <select class="form-control col-8" id="">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                          <option value="1.2">Ít vận động: ít hoặc không tập thể dục</option>
+                                          <option value="1.375">Nhẹ: tập thể dục 1-3 lần/tuần</option>
+                                          <option value="1.55">Vừa: tập thể dục 3-5 lần/tuần</option>
+                                          <option value="1.725">Mạnh: tập thể dục hằng ngày hoặc vận động cường độ cao 6-7 lần/tuần</option>
+                                          <option value="1.9">Đặc biệt: vận động cường độ cao hằng ngày hoặc công việc nặng</option>
                                         </select>
-                                    
+
                                     </div>
                                     <div class="form-group row">
                                         <label for="" class="col-4"></label>
@@ -326,8 +362,8 @@
                                 <div class="row-handmake">
                                     <div class="bmi-about-title">Tỉ lệ mỡ</div>
                                     <div class="bmi-about">
-                                        là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi. 
-                                        Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ. 
+                                        là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi.
+                                        Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ.
                                     </div>
                                 </div>
                             </div>
@@ -355,7 +391,7 @@
                                         <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
                                     </div>
 
-                                    
+
                                     <div class="form-group row">
                                     <label for="" class="col-4">Giới tính:</label>
                                         <div class="col-8">
@@ -389,12 +425,12 @@
                             </div>
                         </div>
                     </div>
-            
+
     </div>
     <!-- ti le mo -->
   </div>
 
-  
+
 </article>
 
 <script src="js/home.js"></script>

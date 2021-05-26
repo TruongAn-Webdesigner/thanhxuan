@@ -214,7 +214,7 @@ header{
                                 color: white;
                                 .span1{
                                     color: rgb(240, 98, 98);
-                                    
+
                                 }
                                 .span2{
                                     color: rgb(223, 67, 67);
@@ -572,7 +572,7 @@ article{
         }
     }
     /* phan select */
-    
+
     /* calo */
     .bg-calo{
         width: 100%;
@@ -676,7 +676,7 @@ article{
                                 }
                             }
                         }
-                        
+
                     }
                 }
                 .bg-calo-right{
@@ -769,7 +769,7 @@ article{
                         .bmi-about-title{
                             font-size: 1.5vw;
                             color: #b82424;
-                        } 
+                        }
                     }
                 }
                 .bg-bmi-right{
@@ -835,7 +835,7 @@ article{
                     }
                 }
             }
-        }    
+        }
     }
     /* /bmi */
 
@@ -901,7 +901,7 @@ article{
                         .bmi-about-title{
                             font-size: 1.5vw;
                             color: #b82424;
-                        } 
+                        }
                     }
                 }
                 .bg-bmi-right{
@@ -967,7 +967,7 @@ article{
                     }
                 }
             }
-        }       
+        }
 }
     /* ti le mo */
 }
@@ -1074,7 +1074,7 @@ article .bg-ti_le_mo {
     top: 0px;
     background-color: white;
   }
-  
+
   article .bg-bmi {
     width: 100%;
     height: 45rem;
@@ -1082,7 +1082,7 @@ article .bg-ti_le_mo {
     top: 0px;
     background-color: white;
   }
-  
+
   article .bg-calo {
     width: 100%;
     height: 45rem;
@@ -1093,21 +1093,21 @@ article .bg-ti_le_mo {
     background-color: white;
     margin-top: 0;
   }
-  
+
   .mainCount {
     position: relative;
     min-height: 1000px;
   }
-  
+
   .mainCount .form_main {
     margin-top: 5rem;
   }
-  
+
   .opacity_fadeOut {
     animation-name: opacity_fadeOut;
     animation-duration: 1.2s;
   }
-  
+
   @keyframes opacity_fadeOut {
     from {
       opacity: 1;
@@ -1116,12 +1116,12 @@ article .bg-ti_le_mo {
       opacity: 0;
     }
   }
-  
+
   .opacity_fadeIn {
     animation-name: opacity_fadeIn;
     animation-duration: 1.2s;
   }
-  
+
   @keyframes opacity_fadeIn {
     from {
       opacity: 0;
@@ -1130,19 +1130,27 @@ article .bg-ti_le_mo {
       opacity: 1;
     }
   }
-  
+
   .z-index-1 {
     z-index: 1;
   }
-  
+
   .z-index-2 {
     z-index: 2;
   }
-  
+
   .opacity-0 {
     opacity: 0;
   }
-  
+
   .opacity-1 {
     opacity: 1;
+  }
+
+  .mt-Down50 {
+    margin: -50px;
+  }
+
+  .w-90 {
+    width: 90%!important;
   }

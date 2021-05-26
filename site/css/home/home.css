@@ -1268,3 +1268,11 @@ article .bg-calo {
   opacity: 1;
 }
 /*# sourceMappingURL=home.css.map */
+
+.mt-Down50 {
+  margin: -50px;
+}
+
+.w-90 {
+  width: 90%!important;
+}
