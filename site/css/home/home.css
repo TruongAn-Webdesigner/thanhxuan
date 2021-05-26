@@ -694,7 +694,7 @@ article .bg-calo .bg-display-calo .boxcenter {
 }
 
 article .bg-calo .bg-display-calo .boxcenter .bg-calo-left {
-  width: 50%;
+  width: 45%;
   height: 100%;
   /* background-color: yellow; */
   padding: 30px 70px;
@@ -762,7 +762,7 @@ article .bg-calo .bg-display-calo .boxcenter .bg-calo-left .bg-calo-form form .f
 }
 
 article .bg-calo .bg-display-calo .boxcenter .bg-calo-right {
-  width: 50%;
+  width: 55%;
   min-height: 100%;
   /* background-color: red; */
 }
@@ -830,7 +830,7 @@ article .bg-bmi .bg-display-bmi .boxcenter {
 }
 
 article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-left {
-  width: 50%;
+  width: 55%;
   min-height: 100%;
   /* background-color: yellow; */
 }
@@ -856,7 +856,7 @@ article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-left .bg-bmi-show .bmi-about-
 }
 
 article .bg-bmi .bg-display-bmi .boxcenter .bg-bmi-right {
-  width: 50%;
+  width: 45%;
   min-height: 25rem;
   /* background-color: red; */
   padding: 30px 70px;
@@ -966,7 +966,7 @@ article .bg-ti_le_mo .bg-display-bmi .boxcenter {
 }
 
 article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-left {
-  width: 50%;
+  width: 55%;
   min-height: 100%;
   /* background-color: yellow; */
 }
@@ -992,7 +992,7 @@ article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-left .bg-bmi-show .bmi-a
 }
 
 article .bg-ti_le_mo .bg-display-bmi .boxcenter .bg-bmi-right {
-  width: 50%;
+  width: 45%;
   min-height: 25rem;
   /* background-color: red; */
   padding: 30px 70px;
@@ -1267,12 +1267,35 @@ article .bg-calo {
 .opacity-1 {
   opacity: 1;
 }
-/*# sourceMappingURL=home.css.map */
 
 .mt-Down50 {
-  margin: -50px;
+  margin: -75px;
+}
+
+.mt-Down50 .calo-about-title {
+  font-weight: bold;
+  color: #7c0e0e;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.mt-Down50 .button-tdee {
+  padding: 10px 50px;
+  /* background-color: rgb(236, 236, 236); */
+  background: none;
+  margin: 20px 0px 20px 0px;
+  border: 2px solid #d35252;
+  color: #b32b2b;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.mt-Down50 table {
+  border: 1px solid #d35252;
+  color: #b32b2b;
 }
 
 .w-90 {
-  width: 90%!important;
+  width: 90% !important;
 }
+/*# sourceMappingURL=home.css.map */

@@ -617,7 +617,7 @@ article{
                 border-radius: 10px;
                 display: flex;
                 .bg-calo-left{
-                    width: 50%;
+                    width: 45%;
                     height: 100%;
                     /* background-color: yellow; */
                     padding: 30px 70px;
@@ -680,7 +680,7 @@ article{
                     }
                 }
                 .bg-calo-right{
-                    width: 50%;
+                    width: 55%;
                     min-height: 100%;
                     /* background-color: red; */
                     .bg-calo-show{
@@ -750,7 +750,7 @@ article{
                 border-radius: 10px;
                 display: flex;
                 .bg-bmi-left{
-                    width: 50%;
+                    width: 55%;
                     min-height: 100%;
                     /* background-color: yellow; */
                     .bg-bmi-show{
@@ -773,7 +773,7 @@ article{
                     }
                 }
                 .bg-bmi-right{
-                    width: 50%;
+                    width: 45%;
                     min-height: 25rem;
                     /* background-color: red; */
                     padding: 30px 70px;
@@ -882,7 +882,7 @@ article{
                 border-radius: 10px;
                 display: flex;
                 .bg-bmi-left{
-                    width: 50%;
+                    width: 55%;
                     min-height: 100%;
                     /* background-color: yellow; */
                     .bg-bmi-show{
@@ -905,7 +905,7 @@ article{
                     }
                 }
                 .bg-bmi-right{
-                    width: 50%;
+                    width: 45%;
                     min-height: 25rem;
                     /* background-color: red; */
                     padding: 30px 70px;
@@ -1148,7 +1148,27 @@ article .bg-ti_le_mo {
   }
 
   .mt-Down50 {
-    margin: -50px;
+    margin: -75px;
+    .calo-about-title{
+        font-weight: bold;
+        color: rgb(124, 14, 14);
+        font-family: 'Merriweather Sans', sans-serif;
+    }
+    .button-tdee{
+        padding: 10px 50px;
+        /* background-color: rgb(236, 236, 236); */
+        background: none;
+        margin: 20px 0px 20px 0px;
+        border: 2px solid rgb(211, 82, 82);
+        color: rgb(179, 43, 43);
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1vw;
+    }
+    table{
+        border: 1px solid rgb(211, 82, 82);
+        color: rgb(179, 43, 43);
+    }
   }
 
   .w-90 {

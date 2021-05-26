@@ -69,7 +69,7 @@ function makeResultHtmlCalo(TDEE) {
   var str = `
     <div id="cl_result" class="mt-Down50">
       <div class="calo-about-title">Lượng Calories cơ thể cần trong ngày</div>
-      <button class=""><span class="tdee">`+ TDEE +`</span> Calories/ngày</button>
+      <button class="button-tdee"><span class="tdee">`+ TDEE +`</span> Calories/ngày</button>
       <table border=1 class="w-90 mx-auto">
         <tr>
           <td colspan="2">Giữ cân</td>
@@ -82,7 +82,7 @@ function makeResultHtmlCalo(TDEE) {
         <tr>
           <td>Giảm cân nhẹ (0.25kg/tuần)</td>
           <td><span class="tdDown1">`+ dt.tdDown1 +` </span><br>Calories/ngày(86%)</td>
-          <td>Giảm cân Tăng cân nhẹ(0.25kg/tuần)</td>
+          <td>Tăng cân nhẹ(0.25kg/tuần)</td>
           <td><span class="tdUp1">`+ dt.tdUp1 +` </span><br>Calories/ngày(114%)</td>
         </tr>
         <tr>
