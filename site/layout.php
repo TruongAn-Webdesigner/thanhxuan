@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
     <!-- /google font -->
     <!-- fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,7 +38,7 @@
                     <li><a href="<?=SITE_URL?>">Home</a></li>
                     <li><a href="http://">About</a></li>
                     <li><a href="http://">Tính Calo</a></li>
-                    <li><a href="http://">Tính BMI</a></li>
+                    <li><a href="<?=SITE_URL?>/?act=thucdon">Thực đơn</a></li>
                     <li><a href="<?=SITE_URL?>/?act=blog">Blog</a></li>
                     <li><a href="http://">Login</a></li>
                 </ul>
@@ -51,7 +52,6 @@
           require_once "$page_file";
       }
     ?>
-
 
 
     <footer>
