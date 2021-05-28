@@ -18,4 +18,5 @@ class model_home extends model_system
         $kq = $this->query($sql);
         return $kq;
     }
+    
 }
