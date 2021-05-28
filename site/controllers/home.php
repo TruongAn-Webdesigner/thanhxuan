@@ -17,7 +17,7 @@ class home
             case "home":$this->home();break;
             case "blog":$this->blog();break;
             case "blogDetail":$this->blogDetail();break;
-
+            case "thucdon":$this->thucdon();break;
         }
         //$this->$act;
     }
@@ -26,6 +26,11 @@ class home
     {
         // $list = $this->model->listLoaitin();
         $page_file = "views/home.php";
+        require_once "layout.php";
+    }
+
+    public function thucdon() {
+        $page_file = "views/thucdon.php";
         require_once "layout.php";
     }
 

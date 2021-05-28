@@ -283,7 +283,6 @@
                         <div class="bg-bmi-right">
                             <div class="bg-bmi-form">
                                 <div class="bmi-form-title">
-
                                         Mục tiêu
                                     <div class="bmi-form-title-small">
                                         cân đối
