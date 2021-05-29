@@ -85,9 +85,9 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?=ADMIN_URL?>/?ctrl=blog&act=addnew">
+                <a class="nav-link collapsed" href="<?=ADMIN_URL?>/?ctrl=home">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Thêm bài viết</span>
+                    <span>Loại tin</span>
                 </a>
             </li>
 
