@@ -101,7 +101,7 @@
               </table>
               <div class="controls_thucdon_1 bd-highlight">
                 <button class="click_up_thucdon_1">Thêm thực phẩm</button>
-                <button class="click_down_thucdon_1 removeAllRow">Xóa thực phẩm</button>
+                <button class="click_down_thucdon_1 removeAllRow">Xóa tất cả</button>
               </div>
             </div>
 

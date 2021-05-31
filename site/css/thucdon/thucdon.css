@@ -165,6 +165,11 @@ article .bg-thuc-don-parent .boxcenter .bg-thuc-don-right .row-handmake .thucdon
   color: white;
 }
 
+article .bg-thuc-don-parent .boxcenter .bg-thuc-don-right .row-handmake .thucdon .box_thucdon #body_thucdon_1 button {
+  padding: 1px 15px;
+  border: none;
+}
+
 article .bg-thuc-don-parent .boxcenter .bg-thuc-don-right .row-handmake .thucdon .ketqua-thucdon {
   /* background-color: yellowgreen; */
   margin-top: 5rem;
@@ -197,7 +202,6 @@ article .bg-thuc-don-parent .boxcenter .bg-thuc-don-right .row-handmake .thucdon
   margin-bottom: 5px;
   margin-top: 20px;
 }
-/*# sourceMappingURL=thucdon.css.map */
 
 .mt-d50 {
   margin-top: -50px;
@@ -211,3 +215,4 @@ article .bg-thuc-don-parent .boxcenter .bg-thuc-don-right .row-handmake .thucdon
 .input_thucdon {
   padding: 10px 8px;
 }
+/*# sourceMappingURL=thucdon.css.map */

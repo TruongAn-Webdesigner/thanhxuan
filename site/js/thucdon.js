@@ -53,7 +53,7 @@ function newCol(soluong, data_food) {
     <td class="fat_`+ soluong + `">...</td>
     <td class="carb_`+ soluong + `">...</td>
     <td class="calo_`+ soluong + `">...</td>
-    <td class="down"><button onclick="downRow(` + soluong + `)">-</button></td>
+    <td class="down"><button onclick="downRow(` + soluong + `)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
   </tr>
   `;
 
