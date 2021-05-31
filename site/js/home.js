@@ -154,3 +154,112 @@ $('#selectCount').change(function (e) {
     }, 1200);
   }
 });
+
+
+
+$('#form_bmi').submit(function (e) {
+  e.preventDefault();
+  var arrId = ['bmi_chieucao', 'bmi_cannang'];
+  var valById = getValueById(arrId);
+
+  var met = valById.bmi_chieucao / 100;
+  var BMI = valById.bmi_cannang / (met * met);
+  var data = getMoTaBMI(BMI);
+  BMI = BMI.toFixed(2);
+
+  if ($('#result_bmi').length == 1)
+  {
+    $('._bmi').html(BMI);
+    $('.type_bmi').html(data.type);
+    $('.mota_bmi').html(data.str);
+  }
+  else
+  {
+    var html = makeResultHtmlBMI(BMI, data.type, data.str);
+    showResult('.bmi_about', '#box_bmi', html);
+  }
+});
+
+function getMoTaBMI(bmi) { // nguồn https://thegioidiengiai.com/cach-tinh-bmi-nu
+  var str;
+  var type;
+  if (bmi < 18.5) {
+    type = 'Gầy';
+    str = 'Chỉ số BMI đang ở mức thấp. Cần cố gắng bổ sung đầy đủ chất dinh dưỡng, nước và tập thể dục đều đặn để đạt mức bình thường.';
+  }
+
+  if (bmi > 18.5 && bmi < 24.9) {
+    type = 'Bình thường';
+    str = 'Chỉ số BMI nằm trong phạm vi bình thường. Cố gắng duy trì nhé !';
+  }
+
+  if (bmi >= 24.9 && bmi < 29.9) {
+    type = 'Hơi béo';
+    str = 'Bạn đang hơi béo! Hãy tập thể dục nhiều hơn và cắt giảm các thực phẩm có đường và chất béo';
+  }
+
+  if (bmi >= 29.9 && bmi < 34.9) {
+    type = 'Béo phì cấp độ 1 !';
+    str = 'Nguy cơ phát triển bệnh cao. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể';
+  }
+
+  if (bmi >= 34.9 && bmi < 39.9) {
+    type = 'Béo phì cấp độ 2 !';
+    str = 'Nguy cơ phát triển bệnh RẤT CAO. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể';
+  }
+
+  if (bmi >= 39.9) {
+    type = 'Béo phì cấp độ 3 !';
+    str = 'Nguy cơ phát triển bệnh ở mức NGUY HIỂM. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể';
+  }
+
+  return {
+    'type': type,
+    'str': str
+  }
+}
+
+function makeResultHtmlBMI(bmi, type, mota) {
+  var str =
+  `
+    <div id="result_bmi" class="mt-d50">
+      <h3>Chỉ số BMI</h3>
+      <h1 class="_bmi">24.4</h1>
+      <div class="mt-2">
+        <div class="type_bmi"><h3>Bình thường</h3></div>
+        <div class="mota_bmi">Chỉ số BMI đang ở mức thấp. Cần cố gắng bổ sung đầy đủ chất dinh dưỡng, nước và tập thể dục đều đặn để đạt mức bình thường.</div>
+      </div>
+    </div>
+  `;
+
+  return str;
+}
+
+function showResult(slideUpClass, idAppend, html) {
+  $(slideUpClass).slideUp(function() {
+    $(idAppend).append(html);
+  });
+}
+
+$('#form_mo').submit(function (e) { // https://www.thehinhvip.com/2019/05/body-fat-la-gi.html
+  e.preventDefault();
+  var arrId = ['mo_chieucao', 'mo_chuvico', 'mo_vongeo', 'mo_vonghong']
+  var gioitinh = $('input[name=mo_gioitinh]:checked', '#form_mo').val();
+  var valById = getValueById(arrId);
+  console.log(gioitinh);
+  console.log(valById);
+
+});
+
+
+var rad = document.form_mo.mo_gioitinh;
+var prev = null;
+for(var i = 0; i < rad.length; i++) {
+    rad[i].onclick = function () {
+        (prev)? console.log(prev.value):null;
+        if(this !== prev) {
+            prev = this;
+        }
+        console.log(this.value)
+    };
+}

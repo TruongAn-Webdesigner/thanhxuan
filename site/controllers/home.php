@@ -1,12 +1,12 @@
 <?php
-// require_once "models/model_home.php"; //nạp model để có các hàm tương tác db
+require_once "models/model_home.php"; //nạp model để có các hàm tương tác db
 // require_once "../admin/models/model_blog.php";
 
 class home
 {
     public function __construct()
     {
-        // $this->model = new model_home();
+        $this->model = new model_home();
 
         $act = "home"; //chức năng mặc định
         if (isset($_GET["act"]) == true) {
@@ -18,6 +18,7 @@ class home
             case "blog":$this->blog();break;
             case "blogDetail":$this->blogDetail();break;
             case "thucdon":$this->thucdon();break;
+            case "getAllFood":$this->getAllFood();break;
         }
         //$this->$act;
     }
@@ -46,6 +47,20 @@ class home
         // $list = $this->model->listLoaitin();
         $page_file = "views/blogchitiet.php";
         require_once "layout.php";
+    }
+
+    public function getAllFood() {
+      $array = array();
+      $pdoQuery = $this->model->getAllFood();
+
+      // var_dump($pdoQuery->fetchAll()); exit();
+
+      $a = $pdoQuery->fetchAll();
+
+      foreach ($pdoQuery as $item) {
+        $array[] = $item;
+      }
+      echo json_encode($a);
     }
 
 } //class home

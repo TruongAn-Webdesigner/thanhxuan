@@ -198,3 +198,16 @@ article .bg-thuc-don-parent .boxcenter .bg-thuc-don-right .row-handmake .thucdon
   margin-top: 20px;
 }
 /*# sourceMappingURL=thucdon.css.map */
+
+.mt-d50 {
+  margin-top: -50px;
+}
+
+.select {
+  width: 130px;
+  padding: 10px 8px;
+}
+
+.input_thucdon {
+  padding: 10px 8px;
+}

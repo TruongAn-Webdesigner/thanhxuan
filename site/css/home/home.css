@@ -1298,4 +1298,9 @@ article .bg-calo {
 .w-90 {
   width: 90% !important;
 }
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: rgb(211, 82, 82)!important;
+  opacity: 1;
+}
 /*# sourceMappingURL=home.css.map */

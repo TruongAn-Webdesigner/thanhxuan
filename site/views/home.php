@@ -215,38 +215,6 @@
                                       Tuy nhiên, không có quy định chung cho mức calo của mọi người vì mỗi cá nhân sẽ có lượng calo tiêu thụ khác nhau.
                                   </div>
                                 </div>
-                                <!-- <div id="cl_result" class="" class="mt-Down50">
-                                  <div class="calo-about-title">Lượng Calories cơ thể cần trong ngày</div>
-                                  <button>1806 Calories/ngày</button>
-                                  <table border=1 class="w-100">
-                                    <tr>
-                                      <td colspan="2">Giữ cân</td>
-                                      <td colspan="2">1806 Calories/ngày</td>
-                                    </tr>
-                                    <tr col="4">
-                                      <td colspan="2">Giảm cân</td>
-                                      <td colspan="2">Tăng cân</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Giảm cân nhẹ (0.25kg/tuần)</td>
-                                      <td>1556 Calories/ngày(86%)</td>
-                                      <td>Giảm cân Tăng cân nhẹ(0.25kg/tuần)</td>
-                                      <td>2056 Calories/ngày(114%)</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Giảm cân(0.5kg/tuần)</td>
-                                      <td>1306 Calories/ngày(72%)</td>
-                                      <td>Tăng cân(0.5kg/tuần)</td>
-                                      <td>2306 Calories/ngày(128%)</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Giảm cân nhiều(1kg/tuần)</td>
-                                      <td>806 Calories/ngày(45%)</td>
-                                      <td>Tăng cân nhiều(1kg/tuần)</td>
-                                      <td>2806 Calories/ngày(155%)</td>
-                                    </tr>
-                                  </table>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -271,12 +239,15 @@
                     <div class="boxcenter">
                         <div class="bg-bmi-left">
                             <div class="bg-bmi-show">
-                                <div class="row-handmake">
-                                    <div class="bmi-about-title">BMI</div>
-                                    <div class="bmi-about">
-                                        là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi.
-                                        Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ.
-                                    </div>
+                                <div class="row-handmake" id="box_bmi">
+                                  <div class="bmi_about">
+                                      <div class="bmi-about-title">BMI</div>
+                                      <div class="bmi-about">
+                                          là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi.
+                                          Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ.
+                                      </div>
+                                  </div>
+
                                 </div>
                             </div>
                         </div>
@@ -287,54 +258,20 @@
                                     <div class="bmi-form-title-small">
                                         cân đối
                                     </div>
-
                                 </div>
-                                <form>
+                                <form id="form_bmi">
                                     <div class="form-group row">
-                                    <label for="" class="col-4">Tuổi:</label>
-                                    <input type="text" class="form-control col-8" id="" aria-describedby="emailHelp" placeholder="Tuổi">
-                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                                    </div>
-                                    <div class="form-group row">
-                                    <label for="" class="col-4">Chiều cao:</label>
-                                    <input type="text" class="form-control col-8" id="" placeholder="Chiều cao">
+                                      <label for="" class="col-4">Chiều cao:</label>
+                                      <input type="number" class="form-control col-8" id="bmi_chieucao" placeholder="Chiều cao (cm)">
                                     </div>
                                     <div class="form-group row">
                                         <label for="" class="col-4">Cân nặng:</label>
-                                        <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
+                                        <input type="number" class="form-control col-8" id="bmi_cannang" placeholder="Cân nặng">
                                     </div>
-
-
-                                    <div class="form-group row">
-                                    <label for="" class="col-4">Giới tính:</label>
-                                        <div class="col-8">
-                                    <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Nam</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Nữ</label>
-                                    </div>
-                                    </div>
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                        <label for="" class="col-4">Hoạt động:</label>
-                                        <select class="form-control col-8" id="">
-                                          <option value="1.2">Ít vận động: ít hoặc không tập thể dục</option>
-                                          <option value="1.375">Nhẹ: tập thể dục 1-3 lần/tuần</option>
-                                          <option value="1.55">Vừa: tập thể dục 3-5 lần/tuần</option>
-                                          <option value="1.725">Mạnh: tập thể dục hằng ngày hoặc vận động cường độ cao 6-7 lần/tuần</option>
-                                          <option value="1.9">Đặc biệt: vận động cường độ cao hằng ngày hoặc công việc nặng</option>
-                                        </select>
-
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-4"></label>
-                                        <button type="submit" class="calc col-8">Tính</button>
-                                    </div>
+                                  <div class="form-group row">
+                                      <label for="" class="col-4"></label>
+                                      <button type="submit" class="calc col-8">Tính</button>
+                                  </div>
                                 </form>
                             </div>
                         </div>
@@ -375,46 +312,36 @@
                                         giảm mỡ
                                     </div>
                                 </div>
-                                <form>
+                                <form id="form_mo" name="form_mo">
                                     <div class="form-group row">
-                                    <label for="" class="col-4">Tuổi:</label>
-                                    <input type="text" class="form-control col-8" id="" aria-describedby="emailHelp" placeholder="Tuổi">
-                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                                    </div>
-                                    <div class="form-group row">
-                                    <label for="" class="col-4">Chiều cao:</label>
-                                    <input type="text" class="form-control col-8" id="" placeholder="Chiều cao">
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-4">Cân nặng:</label>
-                                        <input type="text" class="form-control col-8" id="" placeholder="Cân nặng">
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                    <label for="" class="col-4">Giới tính:</label>
+                                        <label for="" class="col-4">Giới tính:</label>
                                         <div class="col-8">
-                                    <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Nam</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Nữ</label>
-                                    </div>
-                                    </div>
-                                    </div>
+                                          <div class="form-check form-check-inline">
+                                              <input class="form-check-input " type="radio" name="mo_gioitinh" checked value="1">
+                                              <label class="form-check-label">Nữ</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input " type="radio" name="mo_gioitinh" value="0">
+                                            <label class="form-check-label">Nam</label>
+                                          </div>
 
-
+                                        </div>
+                                    </div>
                                     <div class="form-group row">
-                                        <label for="" class="col-4">Hoạt động:</label>
-                                        <select class="form-control col-8" id="">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        </select>
+                                        <label for="" class="col-4">Chiều cao</label>
+                                        <input type="text" class="form-control col-8" id="mo_chieucao" placeholder="Cm">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-4">Chu vi cổ</label>
+                                        <input type="text" class="form-control col-8" id="mo_chuvico" placeholder="Cm">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-4">Vòng eo</label>
+                                        <input type="text" class="form-control col-8" id="mo_vongeo" placeholder="Cm">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-4">Vòng hông</label>
+                                        <input type="text" class="form-control col-8" id="mo_vonghong" disabled placeholder="Cm">
                                     </div>
                                     <div class="form-group row">
                                         <label for="" class="col-4"></label>

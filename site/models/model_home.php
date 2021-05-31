@@ -106,35 +106,6 @@
       $this->execute($sql);
     }
 
-    function luudonhangnhe($idDH, $ht, $email, $sdt, $diachi, $ghichu, $phuongthuctt, $phuongthucgh, $tongtien){
-      if ($idDH==-1){
-        $sql = "INSERT INTO donhang SET tennguoinhan='$ht', emailnguoinhan='$email'," . "thoidiemdathang=Now(), anhien=1, dienthoainguoinhan='$sdt', diachinguoinhan='$diachi', ghichucuakhach='$ghichu', phuongthucthanhtoan=$phuongthuctt, phuongthucgiaohang=$phuongthucgh, tongtienhoadon=$tongtien";
-        $kq= $this->query($sql);
-        if (!$kq) return FASLSE;
-        else return $this->conn->lastInsertId();
-      } else {
-        $sql = "UPDATE donhang SET tennguoinhan='$ht', emailnguoinhan='$email'," . "thoidiemdathang=Now(), anhien=1, dienthoainguoinhan='$sdt', diachinguoinhan='$diachi', ghichucuakhach='$ghichu' where iddh=$idDH, phuongthucthanhtoan=$phuongthuctt, phuongthucgiaohang=$phuongthucgh, tongtienhoadon=$tongtien";
-        $kq= $this->query($sql);
-        if (!$kq) return FASLSE;
-        else return $idDH;
-        }
-    }//function luudonhangnh
-
-    function luugiohangnhe($idDH, $giohang){
-      $sql = "DELETE FROM donhangchitiet WHERE idDH='$idDH'";
-      $this->query($sql);
-      foreach ($giohang as $idDT=>$dt){
-        $tenDT = $dt['TenDT'];
-        $gia= $dt['Gia'];
-        $urlhinh= $dt['urlhinh'];
-        $Amount= $dt['Amount'];
-        $sql = "INSERT INTO donhangchitiet SET iddh='$idDH', iddt= '$idDT', " . "tendt='{$tenDT}', gia='{$gia}', soluong='$Amount', urlhinh='$urlhinh'";
-        $sql1 = "UPDATE `dienthoai` SET  `solanmua` = solanmua + $Amount, `soluongtonkho` = soluongtonkho - $Amount WHERE `dienthoai`.`iddt` = $idDT";
-        $kq= $this->query($sql);
-        $kq1= $this->query($sql1);
-      }//foreach
-    }
-
     function doipass($pass, $email) {
       $sql = "UPDATE `users` SET `password` = '$pass' WHERE `email` = '$email'";
       $this->execute($sql);
@@ -143,6 +114,11 @@
     function infobyusername($username) {
       $sql = "SELECT * from users where username='$username'";
       return $this->queryOne($sql);
+    }
+
+    function getAllFood() {
+      $sql = "SELECT * FROM `thucpham` WHERE anhien = 1";
+      return $this->query($sql);
     }
   }//class
 ?>

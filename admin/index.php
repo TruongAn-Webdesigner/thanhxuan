@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once ("../system/config.php");
-    define("ARR_CONTROLLER", ["home", "blog"]);
+    define("ARR_CONTROLLER", ["home", "blog", "thucpham"]);
     $ctrl='home';
     if(isset($_GET['ctrl'])==true) $ctrl=$_GET['ctrl'];
     if (in_array($ctrl, ARR_CONTROLLER)==false) die("Không tồn tại địa chỉ");
