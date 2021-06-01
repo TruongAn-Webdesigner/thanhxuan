@@ -57,15 +57,15 @@
 
                         <div class="box-news">
                             <div class="bg-news-img">
-                                <img src="../<?=$list['urlHinh']?>" alt="">
+                                <img src="../<?= $list['urlHinh'] ?>" alt="">
                             </div>
                             <div class="bg-news-title">
                                 <div class="box-news-title">
-                                    <a href="http://"><?=$list['TieuDe']?></a>
+                                    <a href="http://"><?= $list['TieuDe'] ?></a>
                                 </div>
                                 <div class="box-news-infor">
-                                    <i class="fa fa-user" aria-hidden="true"> <?=$list['NguoiDang']?></i>
-                                    <i class="fa fa-calendar" aria-hidden="true"> (<?=$list['Ngay']?>)</i>
+                                    <i class="fa fa-user" aria-hidden="true"> <?= $list['NguoiDang'] ?></i>
+                                    <i class="fa fa-calendar" aria-hidden="true"> (<?= $list['Ngay'] ?>)</i>
                                 </div>
                                 <div class="box-news-button">
                                     <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?> ">Đọc tiếp</a>
@@ -76,22 +76,22 @@
 
                         <!-- blog nhỏ -->
                         <div class="bg-news-small">
-                        <?php foreach ($list3 as $ds ){?>
-                            <div class="box-news-small">
-                                <div class="box-news-small-img" style="height: 8rem;">
-                                    <img src="../<?=$ds['urlHinh']?>" alt="" srcset="">
-                                </div>
-                                <div class="box-news-small-infor">
-                                    <div class="box-news-small-title">
-                                        <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?>"><?=$ds['TieuDe']?> </a>
+                            <?php foreach ($list3 as $ds) { ?>
+                                <div class="box-news-small">
+                                    <div class="box-news-small-img" style="height: 8rem;">
+                                        <img src="../<?= $ds['urlHinh'] ?>" alt="" srcset="">
                                     </div>
-                                    <div class="box-news-small-day">
-                                        <i class="fa fa-calendar" aria-hidden="true"> </i><?=$ds['Ngay']?>
+                                    <div class="box-news-small-infor">
+                                        <div class="box-news-small-title">
+                                            <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?>"><?= $ds['TieuDe'] ?> </a>
+                                        </div>
+                                        <div class="box-news-small-day">
+                                            <i class="fa fa-calendar" aria-hidden="true"> </i><?= $ds['Ngay'] ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                         <?php } ?>
+                            <?php } ?>
 
 
                         </div>
@@ -332,7 +332,7 @@
                             $this->model = new model_home();
                             $list = $this->model->listLoaitin();
                             foreach ($list as $ds) { ?>
-                                <div class="cata-name"><a href=""><?=$ds['Ten']?></a> </div>
+                                <div class="cata-name"><a href=""><?= $ds['Ten'] ?></a> </div>
                             <?php } ?>
                         </div>
                     </div>
@@ -404,64 +404,80 @@
 
 <!-- Modal -->
 <div class="modal fade" id="dangbai" tabindex="-1" role="dialog" aria-labelledby="dangbaiLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="dangbaiLabel">Trở thành tác giả</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="">Ảnh đại diện</label>
-            <input type="file" class="form-control" id="" >
-          </div>
-          <div class="form-group">
-            <label for="">Tiêu đề</label>
-            <input type="text" class="form-control" id="" placeholder="Bửa ăn sáng dinh dưỡng của tôi,...">
-          </div>
-          <div class="row">
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="">Tag</label>
-                  <input type="text" class="form-control" id="" placeholder="Ăn uống, tập luyện, sức khỏe,... ">
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="inputState">State</label>
-                  <select id="inputState" class="form-control">
-                    <option selected value="vi">VI</option>
-                    <option>...</option>
-                  </select>
-                </div>
-              </div>
-          </div>
-          <div id="editor"></div>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dangbaiLabel">Trở thành tác giả</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= SITE_URL ?>/?act=addnew" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="">Ảnh đại diện</label>
+                        <input type="file" name="hinh" class="form-control" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tiêu đề</label>
+                        <input type="text" name="tieude" class="form-control" id="" placeholder="Bửa ăn sáng dinh dưỡng của tôi,...">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="inputState">Loại tin</label>
+                                <select id="inputState" name="idLT" class="form-control" require>
+                                    <?php require_once "models/model_home.php";
+                                    $this->model = new model_home();
+                                    $loaitin = $this->model->listLoaiTin();
+                                    foreach ($loaitin as $lt) { ?>
+                                        <option value="<?= $lt['idLT'] ?>" selected="selected" require> <?= $lt['Ten'] ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected value="vi">VI</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div  id="editor" name="noidung"></div>
+                    <?php if (!isset($_SESSION['user'])) { ?>
+                        <div class="form-group">
+                            <label class="text-danger">Bạn cần đăng nhập để có thể đăng bài viết !</label>
+                        </div>
+                    <?php } ?>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <?php if (!isset($_SESSION['user'])) { ?>
+                            <button type="button" class="btn btn-disabled">Save changes</button>
+                        <?php } else { ?>
+                            <button type="submit" class="btn btn-success">Save changes</button>
+                        <?php } ?>
+                    </div>
+                </form>
+            </div>
 
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <script src="js/blog.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
 <script>
     ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
 </script>
 <style>
-.ck-editor__editable_inline {
-    min-height: 200px;
-}
+    .ck-editor__editable_inline {
+        min-height: 200px;
+    }
 </style>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </head>
+
 <body>
     <!-- menu -->
     <div class="bg-menu" id="menu">
@@ -35,23 +37,43 @@
             <div class="logo">Logo</div>
             <div class="menu">
                 <ul>
-                    <li><a href="<?=SITE_URL?>">Home</a></li>
+                    <li><a href="<?= SITE_URL ?>">Home</a></li>
                     <li><a href="http://">About</a></li>
                     <li><a href="http://">Tính Calo</a></li>
-                    <li><a href="<?=SITE_URL?>/?act=thucdon">Thực đơn</a></li>
-                    <li><a href="<?=SITE_URL?>/?act=blog">Blog</a></li>
-                    <li><a href="http://">Viết Blog</a></li>
-                    <li><a href="http://">Login</a></li>
+                    <li><a href="<?= SITE_URL ?>/?act=thucdon">Thực đơn</a></li>
+                    <li><a href="<?= SITE_URL ?>/?act=blog">Blog</a></li>
+
+                    <li class="nav-item dropdown">
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <?= $_SESSION['user'] ?>
+                            </a>
+
+                        <?php } else { ?>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tài khoản
+                            </a>
+                        <?php } ?>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <?php if (!isset($_SESSION['user'])) { ?>
+                                <a class="dropdown-item" href="<?= SITE_URL ?>/?act=login">Đăng nhập</a>
+                                <a class="dropdown-item" href="/banhang/quen-mat-khau/">Quên mật khẩu</a>
+                                <a class="dropdown-item" href="/banhang/dang-ky/">Đăng ký thành viên</a>
+                            <?php } ?>
+                            <a class="dropdown-item" href="<?= SITE_URL ?>/?act=logout">Đăng xuất</a>
+                            <a class="dropdown-item" href="/banhang/doi-mat-khau/">Đổi mật khẩu</a>
+                        </div>
+
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 
     <?php
-      if (isset($page_file)==true)
-      {
-          require_once "$page_file";
-      }
+    if (isset($page_file) == true) {
+        require_once "$page_file";
+    }
     ?>
 
 
@@ -98,5 +120,5 @@
         </div>
     </footer>
 </body>
-</html>
 
+</html>

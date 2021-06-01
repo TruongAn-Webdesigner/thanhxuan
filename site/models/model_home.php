@@ -170,6 +170,12 @@
         }
     }
 
+    function dangnhap($tentk, $matkhau)
+    {
+        $sql = "SELECT count(*) as sodong FROM users WHERE username='$tentk' and password='$matkhau'";
+        $kq = $this->query($sql);
+        $row = $kq->fetch();
+        $rowcount = $row['sodong'];
+        return $rowcount > 0;
+    }
   } //class
-
-?>

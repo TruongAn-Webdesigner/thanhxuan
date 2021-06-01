@@ -14,12 +14,31 @@ class home
         }
         //chức năng user request
         switch ($act) {
-            case "home":$this->home();break;
-            case "blog":$this->blog();break;
-            // case "detail":$this->detail();break;
-            case "blogDetail":$this->blogDetail();break;
-            case "thucdon":$this->thucdon();break;
-            case "getAllFood":$this->getAllFood();break;
+            case "home":
+                $this->home();
+                break;
+            case "login":
+                $this->login();
+                break;
+            case "logout":
+                $this->logout();
+                break;
+            case "check_form_login":
+                $this->check_form_login();
+                break;
+            case "blog":
+                $this->blog();
+                break;
+                // case "detail":$this->detail();break;
+            case "blogDetail":
+                $this->blogDetail();
+                break;
+            case "thucdon":
+                $this->thucdon();
+                break;
+            case "getAllFood":
+                $this->getAllFood();
+                break;
         }
         //$this->$act;
     }
@@ -31,7 +50,36 @@ class home
         require_once "layout.php";
     }
 
-    public function thucdon() {
+    function login()
+    {
+        require "views/login.php";
+    }
+    function check_form_login()
+    {
+        $tentk = trim(strip_tags($_POST['taikhoan']));
+        $matkhau = trim(strip_tags($_POST['pass']));
+        // if (isset($_POST['nhomatkhau']) == true) $nhomatkhau = $_POST['nhomatkhau'];
+        if ($this->model->dangnhap($tentk, $matkhau) == true) {
+           
+            $_SESSION['user'] = $tentk;
+            header('location:index.php');
+        } else {
+            $erro = 1;
+            header('location:index.php');
+        }
+        $this->index();
+    }
+
+    function logout()
+    {
+        if (isset($_SESSION['user'])) {
+            unset($_SESSION['user']); // xóa session login
+        }
+        $this->blog();
+    }
+
+    public function thucdon()
+    {
         $page_file = "views/thucdon.php";
         require_once "layout.php";
     }
@@ -53,18 +101,18 @@ class home
         require_once "layout.php";
     }
 
-    public function getAllFood() {
-      $array = array();
-      $pdoQuery = $this->model->getAllFood();
+    public function getAllFood()
+    {
+        $array = array();
+        $pdoQuery = $this->model->getAllFood();
 
-      // var_dump($pdoQuery->fetchAll()); exit();
+        // var_dump($pdoQuery->fetchAll()); exit();
 
-      $a = $pdoQuery->fetchAll();
+        $a = $pdoQuery->fetchAll();
 
-      foreach ($pdoQuery as $item) {
-        $array[] = $item;
-      }
-      echo json_encode($a);
+        foreach ($pdoQuery as $item) {
+            $array[] = $item;
+        }
+        echo json_encode($a);
     }
-
 } //class home
