@@ -216,3 +216,7 @@ article .bg-thuc-don-parent .boxcenter .bg-thuc-don-right .row-handmake .thucdon
   padding: 10px 8px;
 }
 /*# sourceMappingURL=thucdon.css.map */
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred {
+  min-height: 300px;
+}

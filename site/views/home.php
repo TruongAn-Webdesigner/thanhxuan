@@ -127,19 +127,27 @@
                 <div class="box-help-text">
                     Bạn <span class="span1">có thể</span> <br> trở nên <span class="span2">khỏe đẹp hơn</span> những gì mà bạn nghĩ
                 </div>
+                <?php require_once "models/model_home.php";
+                $this->model = new model_home();
+                $tin1 = $this->model->chitiet(1);
+                $tin2 = $this->model->chitiet(2);
+                $tin3 = $this->model->chitiet(3);
+                $tin4 = $this->model->chitiet(4);
+                ?>
                 <div class="box-help-img-left">
                     <div class="box-help-img-1">
-                        <img src="../img/women.jpg" alt="" srcset="">
-                        <div class="title-help-1">Tiêu đề</div>
+                        <img src="../<?=$tin2['urlHinh']?>" alt="" srcset="">
+                        <div class="title-help-1"><?=$tin2['TieuDe']?></div>
                     </div>
+
                     <div class="box-help-img-2">
                         <div class="box-help-img-2a">
-                            <img src="../img/women.jpg" alt="" srcset="">
-                            <div class="title-help-2a">Tiêu đề</div>
+                            <img src="../<?=$tin1['urlHinh']?>" alt="" srcset="">
+                            <div class="title-help-2a"><?=$tin1['TieuDe']?></div>
                         </div>
                         <div class="box-help-img-2b">
-                            <img src="../img/women.jpg" alt="" srcset="">
-                            <div class="title-help-2b">Tiêu đề</div>
+                            <img src="../<?=$tin3['urlHinh']?>" alt="" srcset="">
+                            <div class="title-help-2b"><?=$tin3['TieuDe']?></div>
                         </div>
                     </div>
                 </div>
@@ -147,8 +155,8 @@
             <div class="box-help-right">
                 <div class="box-help-img-right">
                     <div class="box-help-img-3">
-                        <img src="../img/women.jpg" alt="" srcset="">
-                        <div class="title-help">Tiêu đề</div>
+                        <img src="../<?=$tin4['urlHinh']?>" alt="" srcset="">
+                        <div class="title-help"><?=$tin4['TieuDe']?></div>
                     </div>
                 </div>
             </div>
