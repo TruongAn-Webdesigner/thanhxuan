@@ -117,7 +117,7 @@
     }
 
     function getAllFood() {
-      $sql = "SELECT * FROM `thucpham` WHERE anhien = 1";
+      $sql = "SELECT * FROM `thucpham` WHERE anhien = 1 ORDER BY ten ASC";
       return $this->query($sql);
     }
   }//class
