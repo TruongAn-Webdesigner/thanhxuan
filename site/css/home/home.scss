@@ -83,8 +83,21 @@ header{
                         width: 25%;
                         height: 1rem;
                         border-radius: 50px;
-                        background-color: yellow;
+                       /*  background-color: yellow ; */
                         margin: 10px auto;
+                        .manual-btn{
+                            border: 2px solid #d67272;
+                            padding: 5px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            transition: 1s;
+                        }
+                        .manual-btn:not(:last-child){
+                            margin-right: 1px;
+                        }
+                        .manual-btn:hover{
+                            background-color: brown;
+                        }
                     }
                     .line{
                         width: 3px;
@@ -138,39 +151,48 @@ header{
                 height: 50rem;
                 /* background-color: blue; */
                 display: flex;
-                margin-top: 50px;
+                margin-top: 27px;
+                transition: 1s;
                 .bg-img-left{
                     width: 70%;
                     height: 50rem;
                     /* background-color: cornsilk; */
-                    position: relative;
-                    img{
+                    .slider{
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
-                        display: block;
+                        overflow: hidden;
+                        margin-top: 1.5rem;
+                        .slides{
+                            width: 400%;
+                            height: 100%;
+                            display: flex;
+                        .slide{
+                            width: 25%;
+                            transition: 2s;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                display: block;
+                            }
+                        }
+                        #radio1:checked ~ .first{
+                            margin-left: 0;
+                        }
+                         #radio2:checked ~ .first{
+                             margin-left: -25%;
+                         }
+                         #radio3:checked ~ .first{
+                             margin-left: -50%;
+                         }
+
+                       }
+                       .slides input{
+                           display: none;
+                       }
+                        
                     }
-                    .button-next{
-                        position: absolute;
-                        top: 22rem;
-                        right: -2rem;
-                        width: 15%;
-                        height: 8%;
-                        border-radius: 50px;
-                        background-color: rgb(245, 159, 159);
-                        z-index: 1;
-                        text-align: center;
-                        line-height: 4rem;
-                        box-shadow:
-                        0 0.1px 0.5px rgba(0, 0, 0, 0.025),
-                        0 0.4px 1.1px rgba(0, 0, 0, 0.036),
-                        0 0.8px 2.1px rgba(0, 0, 0, 0.045),
-                        0 1.5px 3.8px rgba(0, 0, 0, 0.054),
-                        0 2.9px 7.1px rgba(0, 0, 0, 0.065),
-                        0 7px 17px rgba(0, 0, 0, 0.09)
-                        ;
-                        /* animation: next 1s infinite; */
-                    }
+
                 }
                 .bg-number{
                     width: 20%;
@@ -178,15 +200,40 @@ header{
                     /* background-color: chocolate; */
                     position: absolute;
                     top: 3.2rem;
-                    left: -10px;
+                    left: -190px;
+                    z-index: -1;
+                    transition: 1s;
                     .number{
                         font-size: 18vw;
-                        margin-top: -6.13rem;
-                        margin-left: -0.5rem;
+                        margin-top: -6.1rem;
+                        margin-left: 12rem;
                         font-family: 'Anton', sans-serif;
                         color: rgba(240, 70, 70, 0.527);
-                        letter-spacing: 35px;
+                        letter-spacing: 0px;
+                        z-index: 11;
+                        transition: 1s;
                     }
+                }
+                .button-next{
+                    position: absolute;
+                    top: 22rem;
+                    left: 41rem;
+                    width: 3.5%;
+                    height: 3.8rem;
+                    border-radius: 50px;
+                    background-color: rgb(245, 159, 159);
+                    z-index: 1;
+                    text-align: center;
+                    line-height: 4rem;
+                    box-shadow:
+                    0 0.1px 0.5px rgba(0, 0, 0, 0.025),
+                    0 0.4px 1.1px rgba(0, 0, 0, 0.036),
+                    0 0.8px 2.1px rgba(0, 0, 0, 0.045),
+                    0 1.5px 3.8px rgba(0, 0, 0, 0.054),
+                    0 2.9px 7.1px rgba(0, 0, 0, 0.065),
+                    0 7px 17px rgba(0, 0, 0, 0.09)
+                    ;
+                    /* animation: next 1s infinite; */
                 }
             }
             .bg-right{

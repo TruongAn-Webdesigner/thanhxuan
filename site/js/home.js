@@ -263,3 +263,9 @@ for(var i = 0; i < rad.length; i++) {
         console.log(this.value)
     };
 }
+
+
+function innerNumberSlide(num) {
+  document.getElementById("slide_number").innerHTML = "0" + num;
+}
+

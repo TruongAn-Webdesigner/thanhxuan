@@ -40,6 +40,7 @@
                     <li><a href="http://">Tính Calo</a></li>
                     <li><a href="<?=SITE_URL?>/?act=thucdon">Thực đơn</a></li>
                     <li><a href="<?=SITE_URL?>/?act=blog">Blog</a></li>
+                    <li><a href="http://">Viết Blog</a></li>
                     <li><a href="http://">Login</a></li>
                 </ul>
             </div>

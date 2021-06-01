@@ -57,18 +57,19 @@
 
                         <div class="box-news">
                             <div class="bg-news-img">
-                                <img src="../<?=$list['urlHinh']?>" alt="">
+                                <img src="../img/women.jpg" alt="">
                             </div>
                             <div class="bg-news-title">
                                 <div class="box-news-title">
-                                    <a href="http://"><?=$list['TieuDe']?></a>
+                                    <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. </a>
                                 </div>
                                 <div class="box-news-infor">
-                                    <i class="fa fa-user" aria-hidden="true"> <?=$list['NguoiDang']?></i>
-                                    <i class="fa fa-calendar" aria-hidden="true"> (<?=$list['Ngay']?>)</i>
+                                    <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
+                                    <i class="fa fa-calendar" aria-hidden="true"> (Ngày đăng)</i>
                                 </div>
                                 <div class="box-news-button">
-                                    <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?> ">Đọc tiếp</a>
+                                    <a href="http://">Đọc tiếp</a>
                                 </div>
                             </div>
                         </div>
@@ -76,24 +77,50 @@
 
                         <!-- blog nhỏ -->
                         <div class="bg-news-small">
-                        <?php foreach ($list3 as $ds ){?>
                             <div class="box-news-small">
                                 <div class="box-news-small-img" style="height: 8rem;">
-                                    <img src="../<?=$ds['urlHinh']?>" alt="" srcset="">
+                                    <img src="../img/women.jpg" alt="" srcset="">
                                 </div>
                                 <div class="box-news-small-infor">
                                     <div class="box-news-small-title">
-                                        <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?>"><?=$ds['TieuDe']?> </a>
+                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry. </a>
                                     </div>
                                     <div class="box-news-small-day">
-                                        <i class="fa fa-calendar" aria-hidden="true"> </i><?=$ds['Ngay']?>
+                                        <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
                                     </div>
                                 </div>
                             </div>
 
-                         <?php } ?>
+                            <div class="box-news-small">
+                                <div class="box-news-small-img" style="height: 8rem;">
+                                    <img src="../img/women.jpg" alt="" srcset="">
+                                </div>
+                                <div class="box-news-small-infor">
+                                    <div class="box-news-small-title">
+                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry. </a>
+                                    </div>
+                                    <div class="box-news-small-day">
+                                        <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
+                                    </div>
+                                </div>
+                            </div>
 
-
+                            <div class="box-news-small">
+                                <div class="box-news-small-img" style="height: 8rem;">
+                                    <img src="../img/women.jpg" alt="" srcset="">
+                                </div>
+                                <div class="box-news-small-infor">
+                                    <div class="box-news-small-title">
+                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry. </a>
+                                    </div>
+                                    <div class="box-news-small-day">
+                                        <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- /blog nhỏ -->
                     </div>
@@ -337,14 +364,6 @@
                     </div>
                     <div class="bg-aside-cata">
                         <div class="cata-title">
-                            Đăng bài
-                        </div>
-                        <div class="">
-                            <button type="button" data-toggle="modal" data-target="#dangbai">Đăng bài</button>
-                        </div>
-                    </div>
-                    <div class="bg-aside-cata">
-                        <div class="cata-title">
                             CATEGORIES
                         </div>
                         <div class="cata-list">
@@ -422,66 +441,4 @@
     <!-- /blog -->
 </article>
 
-<!-- Modal -->
-<div class="modal fade" id="dangbai" tabindex="-1" role="dialog" aria-labelledby="dangbaiLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="dangbaiLabel">Trở thành tác giả</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="">Ảnh đại diện</label>
-            <input type="file" class="form-control" id="" >
-          </div>
-          <div class="form-group">
-            <label for="">Tiêu đề</label>
-            <input type="text" class="form-control" id="" placeholder="Bửa ăn sáng dinh dưỡng của tôi,...">
-          </div>
-          <div class="row">
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="">Tag</label>
-                  <input type="text" class="form-control" id="" placeholder="Ăn uống, tập luyện, sức khỏe,... ">
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="inputState">State</label>
-                  <select id="inputState" class="form-control">
-                    <option selected value="vi">VI</option>
-                    <option>...</option>
-                  </select>
-                </div>
-              </div>
-          </div>
-          <div id="editor"></div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script src="js/blog.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
-<style>
-.ck-editor__editable_inline {
-    min-height: 200px;
-}
-</style>
