@@ -128,7 +128,7 @@
 
                         <div class="bg-news-theo-muc">
                             <div class="news-theo-muc-title-big">Tâm lý</div>
-                            <!-- box bên trái -->
+                            <!-- box  -->
                             <div class="bg-news-theo-muc-box">
 
                                 <div class="box-news-theo-muc">
@@ -159,12 +159,6 @@
                                         </div>
                                     </div>
 
-                                </div>
-                                <!-- /box bên trái -->
-
-                                <!-- box bên phải -->
-                                <div class="box-news-theo-muc">
-
                                     <div class="box-news-theo-muc-bao">
                                         <div class="box-news-theo-muc-img">
                                             <img src="../img/women.jpg" alt="" srcset="">
@@ -194,16 +188,17 @@
                                     </div>
 
                                 </div>
-                                <!-- /box bên phải -->
+                                <!-- /box  -->
+
                             </div>
 
                         </div>
                         <!-- /blog tấm lý -->
 
-                        <!-- blog tâm lý -->
+                        <!-- blog sức khỏe -->
                         <div class="bg-news-theo-muc">
                             <div class="news-theo-muc-title-big">Bữa ăn hằng ngày</div>
-                            <!-- box bên trái -->
+                            <!-- box  -->
                             <div class="bg-news-theo-muc-box">
 
                                 <div class="box-news-theo-muc">
@@ -234,12 +229,6 @@
                                         </div>
                                     </div>
 
-                                </div>
-                                <!-- /box bên trái -->
-
-                                <!-- box bên phải -->
-                                <div class="box-news-theo-muc">
-
                                     <div class="box-news-theo-muc-bao">
                                         <div class="box-news-theo-muc-img">
                                             <img src="../img/women.jpg" alt="" srcset="">
@@ -269,17 +258,17 @@
                                     </div>
 
                                 </div>
-                                <!-- /box bên phải -->
+                                <!-- /box  -->
                             </div>
 
                         </div>
-                        <!-- /blog tấm lý -->
+                        <!-- /blog sức khỏe -->
 
 
-                        <!-- blog tâm lý -->
+                        <!-- blog bữa ăn hằng ngày -->
                         <div class="bg-news-theo-muc">
                             <div class="news-theo-muc-title-big">Sức khỏe</div>
-                            <!-- box bên trái -->
+                            <!-- box  -->
                             <div class="bg-news-theo-muc-box">
 
                                 <div class="box-news-theo-muc">
@@ -310,12 +299,6 @@
                                         </div>
                                     </div>
 
-                                </div>
-                                <!-- /box bên trái -->
-
-                                <!-- box bên phải -->
-                                <div class="box-news-theo-muc">
-
                                     <div class="box-news-theo-muc-bao">
                                         <div class="box-news-theo-muc-img">
                                             <img src="../img/women.jpg" alt="" srcset="">
@@ -345,11 +328,12 @@
                                     </div>
 
                                 </div>
-                                <!-- /box bên phải -->
+                                <!-- /box -->
+
                             </div>
 
                         </div>
-                        <!-- /blog tấm lý -->
+                        <!-- /blog bữa ăn hằng ngày -->
 
                     </div>
                     <!-- blog -->

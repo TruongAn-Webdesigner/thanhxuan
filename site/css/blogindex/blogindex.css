@@ -449,16 +449,22 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc 
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc {
-  width: 50%;
+  width: 100%;
   min-height: 27rem;
   /* background-color: darkgreen; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc .box-news-theo-muc-bao {
-  width: 95%;
+  width: 48%;
   height: 20rem;
   /* background-color: darkgrey; */
   margin-bottom: 5rem;
+  margin-right: 2%;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc .box-news-theo-muc-bao .box-news-theo-muc-img {
