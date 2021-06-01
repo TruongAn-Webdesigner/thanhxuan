@@ -57,18 +57,19 @@
 
                         <div class="box-news">
                             <div class="bg-news-img">
-                                <img src="../<?=$list['urlHinh']?>" alt="">
+                                <img src="../img/women.jpg" alt="">
                             </div>
                             <div class="bg-news-title">
                                 <div class="box-news-title">
-                                    <a href="http://"><?=$list['TieuDe']?></a>
+                                    <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. </a>
                                 </div>
                                 <div class="box-news-infor">
-                                    <i class="fa fa-user" aria-hidden="true"> <?=$list['NguoiDang']?></i>
-                                    <i class="fa fa-calendar" aria-hidden="true"> (<?=$list['Ngay']?>)</i>
+                                    <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
+                                    <i class="fa fa-calendar" aria-hidden="true"> (Ngày đăng)</i>
                                 </div>
                                 <div class="box-news-button">
-                                    <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?> ">Đọc tiếp</a>
+                                    <a href="http://">Đọc tiếp</a>
                                 </div>
                             </div>
                         </div>
@@ -76,24 +77,50 @@
 
                         <!-- blog nhỏ -->
                         <div class="bg-news-small">
-                        <?php foreach ($list3 as $ds ){?>
                             <div class="box-news-small">
                                 <div class="box-news-small-img" style="height: 8rem;">
-                                    <img src="../<?=$ds['urlHinh']?>" alt="" srcset="">
+                                    <img src="../img/women.jpg" alt="" srcset="">
                                 </div>
                                 <div class="box-news-small-infor">
                                     <div class="box-news-small-title">
-                                        <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?>"><?=$ds['TieuDe']?> </a>
+                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry. </a>
                                     </div>
                                     <div class="box-news-small-day">
-                                        <i class="fa fa-calendar" aria-hidden="true"> </i><?=$ds['Ngay']?>
+                                        <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
                                     </div>
                                 </div>
                             </div>
 
-                         <?php } ?>   
+                            <div class="box-news-small">
+                                <div class="box-news-small-img" style="height: 8rem;">
+                                    <img src="../img/women.jpg" alt="" srcset="">
+                                </div>
+                                <div class="box-news-small-infor">
+                                    <div class="box-news-small-title">
+                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry. </a>
+                                    </div>
+                                    <div class="box-news-small-day">
+                                        <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
+                                    </div>
+                                </div>
+                            </div>
 
-                            
+                            <div class="box-news-small">
+                                <div class="box-news-small-img" style="height: 8rem;">
+                                    <img src="../img/women.jpg" alt="" srcset="">
+                                </div>
+                                <div class="box-news-small-infor">
+                                    <div class="box-news-small-title">
+                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry. </a>
+                                    </div>
+                                    <div class="box-news-small-day">
+                                        <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- /blog nhỏ -->
                     </div>
@@ -131,7 +158,7 @@
                                             typesetting industry. </a>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <!-- /box bên trái -->
 

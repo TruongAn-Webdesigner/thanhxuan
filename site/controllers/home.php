@@ -16,6 +16,7 @@ class home
         switch ($act) {
             case "home":$this->home();break;
             case "blog":$this->blog();break;
+            case "detail":$this->detail();break;
             case "blogDetail":$this->blogDetail();break;
             case "thucdon":$this->thucdon();break;
             case "getAllFood":$this->getAllFood();break;
@@ -25,7 +26,7 @@ class home
 
     public function home()
     {
-        // $list = $this->model->listLoaitin();
+       
         $page_file = "views/home.php";
         require_once "layout.php";
     }
@@ -37,7 +38,10 @@ class home
 
     public function blog()
     {
-        // $list = $this->model->listLoaitin();
+        $list = $this->model->chitiet(1);
+       
+        $list3 = $this->model->listTinSL(3);
+        
         $page_file = "views/blog.php";
         require_once "layout.php";
     }
