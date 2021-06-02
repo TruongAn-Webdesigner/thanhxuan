@@ -284,7 +284,7 @@
                         <div class="cata-title">
                             Đăng bài
                         </div>
-                        <div class="">
+                        <div class="button-dangbai">
                             <button type="button" data-toggle="modal" data-target="#dangbai">Đăng bài</button>
                         </div>
                     </div>

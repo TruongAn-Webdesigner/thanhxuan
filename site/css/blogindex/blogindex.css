@@ -390,7 +390,7 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .bg-
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .bg-news-small .box-news-small .box-news-small-infor .box-news-small-title {
   width: 100%;
-  min-height: 4rem;
+  min-height: 1rem;
   /* background-color: rgb(223, 115, 115); */
   font-size: 0.8vw;
   padding: 5px 5px;
@@ -559,6 +559,17 @@ article .boxcenter .bg-news-parent .bg-news .bg-news-right-aside .bg-aside-cata 
 
 article .boxcenter .bg-news-parent .bg-news .bg-news-right-aside .bg-aside-cata .cata-list .cata-name a {
   color: #ca4e4e;
+}
+
+article .boxcenter .bg-news-parent .bg-news .bg-news-right-aside .bg-aside-cata .button-dangbai button {
+  border: none;
+  background-color: #db6f6f;
+  padding: 5px 20px;
+  color: white;
+}
+
+article .boxcenter .bg-news-parent .bg-news .bg-news-right-aside .bg-aside-cata .button-dangbai button:hover {
+  cursor: pointer;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bg-news-right-aside .bg-aside-popu {
