@@ -178,4 +178,10 @@
         $rowcount = $row['sodong'];
         return $rowcount > 0;
     }
+    function addnewTin($TieuDe,$Content,$idLT,$Ngay,$AnHien,$NoiBat,$urlHinhA,$NguoiDang)
+    { //hàm lưu 1 record vào table
+        $sql = "insert into Tin (TieuDe,Content,idLT,Ngay,AnHien,NoiBat,urlHinh,NguoiDang) 
+              values('$TieuDe','$Content','$idLT','$Ngay','$AnHien','$NoiBat','$urlHinhA','$NguoiDang')";
+        $this->execute($sql);
+    }
   } //class

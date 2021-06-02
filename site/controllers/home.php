@@ -29,6 +29,9 @@ class home
             case "blog":
                 $this->blog();
                 break;
+            case "addnew":
+                $this->addnew();
+                break;
                 // case "detail":$this->detail();break;
             case "blogDetail":
                 $this->blogDetail();
@@ -60,14 +63,14 @@ class home
         $matkhau = trim(strip_tags($_POST['pass']));
         // if (isset($_POST['nhomatkhau']) == true) $nhomatkhau = $_POST['nhomatkhau'];
         if ($this->model->dangnhap($tentk, $matkhau) == true) {
-           
+
             $_SESSION['user'] = $tentk;
             header('location:index.php');
+            $this->index();
         } else {
             $erro = 1;
-            header('location:index.php');
+            $this->login();
         }
-        $this->index();
     }
 
     function logout()
@@ -93,7 +96,21 @@ class home
         $page_file = "views/blog.php";
         require_once "layout.php";
     }
-
+    public function  addnew()
+    {
+        $TieuDe = trim(strip_tags($_POST['TieuDe']));
+        $Content = trim(strip_tags($_POST['NoiDung']));
+        $idLT = $_POST['idLT'];
+        $Ngay = date("m.d.y");
+        $AnHien = 0;
+        $NoiBat = 0;
+        $NguoiDang = $_SESSION['user'];
+        $urlHinh = $_FILES["urlHinh"]["name"];
+        $urlHinhA = "uploads/images/$urlHinh";
+        move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
+        $this->model->addnewTin($TieuDe, $Content, $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang);
+        $this->blog();
+    }
     public function blogdetail()
     {
         // $list = $this->model->listLoaitin();

@@ -81,6 +81,7 @@ class blog
     $Ngay = $_POST['Ngay'];
     $AnHien = $_POST['AnHien'];
     $NoiBat = $_POST['NoiBat'];
+    
     $this->model->updateTin($TieuDe, $idTin, $TomTat, $Content, $idLT, $Ngay, $AnHien, $NoiBat);
     $list = $this->model->chitiet($idTin);
     $page_title = "Chi tiết";

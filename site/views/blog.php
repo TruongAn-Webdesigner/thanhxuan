@@ -416,11 +416,11 @@
                 <form action="<?= SITE_URL ?>/?act=addnew" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="">Ảnh đại diện</label>
-                        <input type="file" name="hinh" class="form-control" id="">
+                        <input type="file" name="urlHinh" class="form-control" id="">
                     </div>
                     <div class="form-group">
                         <label for="">Tiêu đề</label>
-                        <input type="text" name="tieude" class="form-control" id="" placeholder="Bửa ăn sáng dinh dưỡng của tôi,...">
+                        <input type="text" name="TieuDe" class="form-control" id="" placeholder="Bửa ăn sáng dinh dưỡng của tôi,...">
                     </div>
                     <div class="row">
                         <div class="col-6">
@@ -446,7 +446,9 @@
                             </div>
                         </div>
                     </div>
-                    <div  id="editor" name="noidung"></div>
+                
+                    <textarea id="editor" name="NoiDung" ></textarea>
+                    </div>
                     <?php if (!isset($_SESSION['user'])) { ?>
                         <div class="form-group">
                             <label class="text-danger">Bạn cần đăng nhập để có thể đăng bài viết !</label>
