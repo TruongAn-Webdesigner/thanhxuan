@@ -33,8 +33,8 @@ class home
                 $this->addnew();
                 break;
                 // case "detail":$this->detail();break;
-            case "blogDetail":
-                $this->blogDetail();
+            case "blogdetail":
+                $this->blogdetail();
                 break;
             case "thucdon":
                 $this->thucdon();
@@ -89,18 +89,21 @@ class home
 
     public function blog()
     {
-        $list = $this->model->chitiet(813);
+        $list = $this->model->chitiet(1);
         $list3 = $this->model->listTinSL(3);
         $tinTL = $this->model->listTinTL(4);
         $tinSK = $this->model->listTinSK(4);
         $tinBA = $this->model->listTinBA(4);
+        $tinTapLuyen = $this->model->listTinTapLuyen(4);
+
         $page_file = "views/blog.php";
         require_once "layout.php";
     }
     public function  addnew()
     {
         $TieuDe = trim(strip_tags($_POST['TieuDe']));
-        $Content = trim(strip_tags($_POST['NoiDung']));
+        $Content = $_POST['NoiDung'];
+
         $idLT = $_POST['idLT'];
         $Ngay = date('Y-m-d');
         $AnHien = 0;
@@ -114,6 +117,8 @@ class home
     }
     public function blogdetail()
     {
+        $id = $_GET['id'];
+        $blogById = $this->model->chitiet($id);
         // $list = $this->model->listLoaitin();
         $page_file = "views/blogchitiet.php";
         require_once "layout.php";
@@ -127,10 +132,9 @@ class home
         // var_dump($pdoQuery->fetchAll()); exit();
 
         $a = $pdoQuery->fetchAll();
-
         foreach ($pdoQuery as $item) {
             $array[] = $item;
         }
         echo json_encode($a);
     }
-} //class home
+}

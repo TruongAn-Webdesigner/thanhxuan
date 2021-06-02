@@ -21,7 +21,7 @@ body{
     position: fixed;
     z-index: 90;
     transition:all 0.5s;
-    
+
     &.menuShadow{
         background-color: rgb(255, 189, 189);
         box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
@@ -67,7 +67,7 @@ body{
 
 /* article */
 .row-handmake{
-    article{  
+    article{
             .boxcenter{
                 .bg-news{
                     width: 100%;
@@ -109,9 +109,8 @@ body{
                         .bg-noi-dung{
                             width: 95%;
                             min-height: 5rem;
-                            background-color: yellow;
                             margin-bottom: 1rem;
-                           
+
                         }
                         .noi-dung-nguoi-dang{
                             width: 95%;
@@ -198,7 +197,7 @@ body{
                                     font-size: 1vw;
                                     font-family: 'Asap Condensed', sans-serif;
                                     margin-bottom: 30px;
-                                    
+
                                     a{
                                         color: rgb(219, 114, 114);
                                     }
@@ -207,7 +206,7 @@ body{
                                     width: 100%;
                                     height: 2rem;
                                     margin-top: 7px auto;
-                                    
+
                                     a{
                                         padding: 10px 20px;
                                         background-color: rgb(209, 148, 35);
@@ -343,7 +342,7 @@ body{
                                         width: 100%;
                                         min-height: 5rem;
                                         font-family: 'Asap Condensed', sans-serif;
-                                        padding:20px; 
+                                        padding:20px;
                                         border-radius: 5px;
                                         border: 1px solid rgb(221, 221, 221);
                                     }
@@ -351,14 +350,14 @@ body{
                                 }
                             }
                             /* /phần show bình luận */
-                            
+
                         }
 
                     }
                     .bg-news-right-aside{
                         width: 25%;
                         height: 45rem;
-                        
+
                         /* background-color: rgb(197, 38, 38); */
                         .bg-aside-search{
                             width: 100%;
@@ -396,11 +395,11 @@ body{
                                 padding:35px 40px;
                                 .cata-name{
                                     width: 100%;
-                                    min-height: 2.5rem;                               
+                                    min-height: 2.5rem;
                                     border-bottom: 1px solid rgb(221, 221, 221);
                                     font-size: 1vw;
                                     font-family: 'Asap Condensed', sans-serif;
-                                    padding:19px 0px 20px 0px;                          
+                                    padding:19px 0px 20px 0px;
                                     a{
                                         color: rgb(202, 78, 78);
                                     }
@@ -444,7 +443,7 @@ body{
                                         font-size: 1vw;
                                         font-family: 'Asap Condensed', sans-serif;
                                         margin-bottom: 30px;
-                                        
+
                                         a{
                                             color: rgb(219, 114, 114);
                                         }
@@ -490,13 +489,13 @@ body{
                                     font-size: 0.8vw;
                                     font-family: 'Asap Condensed', sans-serif;
                                     margin-bottom: 30px;
-    
+
                                 }
                                 .box-subs-button{
                                     width: 100%;
                                     height: 2rem;
                                     margin-top: 7px auto;
-                                    
+
                                     a{
                                         padding: 10px 20px;
                                         background-color: rgb(209, 148, 35);

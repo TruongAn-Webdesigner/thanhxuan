@@ -144,6 +144,12 @@
         $kq = $this->query($sql);
         return $kq;
     }
+
+    function listTinTapLuyen($sl) {
+        $sql = "SELECT * FROM tin  Where idLT='4' ORDER BY Ngay Desc Limit 0,$sl ";
+        $kq = $this->query($sql);
+        return $kq;
+    }
     function listTinBA($sl)
     {
         $sql = "SELECT * FROM tin  Where idLT='3' ORDER BY Ngay Desc Limit 0,$sl ";
@@ -198,7 +204,7 @@
     }
     function addnewTin($TieuDe,$Content,$idLT,$Ngay,$AnHien,$NoiBat,$urlHinhA,$NguoiDang)
     { //hàm lưu 1 record vào table
-        $sql = "insert into Tin (TieuDe,Content,idLT,Ngay,AnHien,NoiBat,urlHinh,NguoiDang) 
+        $sql = "insert into Tin (TieuDe,Content,idLT,Ngay,AnHien,NoiBat,urlHinh,NguoiDang)
               values('$TieuDe','$Content','$idLT','$Ngay','$AnHien','$NoiBat','$urlHinhA','$NguoiDang')";
         $this->execute($sql);
     }

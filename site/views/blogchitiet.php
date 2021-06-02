@@ -5,22 +5,17 @@
                     <!-- blog -->
                     <div class="bg-news-left">
                         <div class="box-news-img">
-                            <img src="../img/women.jpg" alt="">
+                            <img src="../<?=$blogById['urlHinh']?>" alt="">
                         </div>
                         <div class="box-news-infor">
-                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
-                            <i class="fa fa-calendar" aria-hidden="true"> (Ngày đăng)</i>
+                            <i class="fa fa-user" aria-hidden="true"> Admin </i>
+                            <i class="fa fa-calendar" aria-hidden="true"> <?=$blogById['Ngay']?></i>
                         </div>
                         <div class="box-news-title">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            <?=$blogById['TieuDe']?>
                         </div>
                         <div class="bg-noi-dung">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <?=$blogById['Content']?>
                         </div>
                         <div class="noi-dung-nguoi-dang">
                             <div class="box-nguoi-dang-img">

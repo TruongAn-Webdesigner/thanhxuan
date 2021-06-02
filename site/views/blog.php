@@ -68,7 +68,7 @@
                                     <i class="fa fa-calendar" aria-hidden="true"> (<?= $list['Ngay'] ?>)</i>
                                 </div>
                                 <div class="box-news-button">
-                                    <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?> ">Đọc tiếp</a>
+                                    <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $list['idTin'] ?> ">Đọc tiếp</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="box-news-small-infor">
                                         <div class="box-news-small-title">
-                                            <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?>"><?= $ds['TieuDe'] ?> </a>
+                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $ds['idTin'] ?>"><?= $ds['TieuDe'] ?> </a>
                                         </div>
                                         <div class="box-news-small-day">
                                             <i class="fa fa-calendar" aria-hidden="true"> </i><?= $ds['Ngay'] ?>
@@ -116,7 +116,7 @@
                                                 <i class="fa fa-calendar" aria-hidden="true"> </i> <?=$BA['Ngay']?>
                                                 <i class="fa fa-user" aria-hidden="true"> <?=$BA['NguoiDang']?></i>
                                             </div>
-                                            <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?> "><?=$BA['TieuDe']?> </a>
+                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $ds['idTin'] ?> "><?=$BA['TieuDe']?> </a>
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -149,7 +149,7 @@
                                                 <i class="fa fa-calendar" aria-hidden="true"> </i> <?=$TL['Ngay']?>
                                                 <i class="fa fa-user" aria-hidden="true"> <?=$TL['NguoiDang']?></i>
                                             </div>
-                                            <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?> "><?=$TL['TieuDe']?> </a>
+                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $TL['idTin'] ?> "><?=$TL['TieuDe']?> </a>
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -163,65 +163,26 @@
 
                     <!-- blog bữa ăn hằng ngày -->
                     <div class="bg-news-theo-muc">
-                        <div class="news-theo-muc-title-big">Bữa ăn hằng ngày</div>
+                        <div class="news-theo-muc-title-big">Tập luyện</div>
                         <!-- box -->
                         <div class="bg-news-theo-muc-box">
 
                             <div class="box-news-theo-muc">
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
+                                <?php
+                                foreach ( $tinTapLuyen as $TapLuyen) { ?>
+                                    <div class="box-news-theo-muc-bao">
+                                        <div class="box-news-theo-muc-img">
+                                            <img src="../<?=$TapLuyen['urlHinh']?>" alt="" srcset="">
                                         </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
-                                    </div>
-                                </div>
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
+                                        <div class="box-news-theo-muc-title">
+                                            <div class="title-ngay-dang-user">
+                                                <i class="fa fa-calendar" aria-hidden="true"> </i> <?=$TapLuyen['Ngay']?>
+                                                <i class="fa fa-user" aria-hidden="true"> <?=$TapLuyen['NguoiDang']?></i>
+                                            </div>
+                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $list['idTin'] ?> "><?=$TapLuyen['TieuDe']?> </a>
                                         </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
                                     </div>
-                                </div>
-
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
-                                        </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
-                                    </div>
-                                </div>
-
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
-                                        </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
-                                    </div>
-                                </div>
+                                <?php } ?>
 
                             </div>
                             <!-- /box-->
@@ -372,8 +333,9 @@
                             </div>
                         </div>
                     </div>
+                    <textarea cols="40" id="editor1" name="NoiDung" rows="5" data-sample-short>Nhập nội dung bài viết ở đây</textarea>
 
-                    <textarea id="editor" name="NoiDung"></textarea>
+                    <!-- <textarea id="editor" name=""></textarea> -->
             </div>
             <?php if (!isset($_SESSION['user'])) { ?>
                 <div class="form-group">
@@ -396,16 +358,10 @@
 </div>
 
 <script src="js/blog.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'))
-        .catch(error => {
-            console.error(error);
-        });
-</script>
-<style>
-    .ck-editor__editable_inline {
-        min-height: 200px;
-    }
-</style>
+    CKEDITOR.replace('editor1', {
+      height: 400,
+      baseFloatZIndex: 10005
+    });
+  </script>
