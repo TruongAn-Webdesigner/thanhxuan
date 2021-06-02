@@ -90,9 +90,10 @@ class home
     public function blog()
     {
         $list = $this->model->chitiet(1);
-
         $list3 = $this->model->listTinSL(3);
-
+        $tinTL = $this->model->listTinTL(4);
+        $tinSK = $this->model->listTinSK(4);
+        $tinBA = $this->model->listTinBA(4);
         $page_file = "views/blog.php";
         require_once "layout.php";
     }
@@ -101,7 +102,7 @@ class home
         $TieuDe = trim(strip_tags($_POST['TieuDe']));
         $Content = trim(strip_tags($_POST['NoiDung']));
         $idLT = $_POST['idLT'];
-        $Ngay = date("m.d.y");
+        $Ngay = date('Y-m-d');
         $AnHien = 0;
         $NoiBat = 0;
         $NguoiDang = $_SESSION['user'];
@@ -109,7 +110,7 @@ class home
         $urlHinhA = "uploads/images/$urlHinh";
         move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
         $this->model->addnewTin($TieuDe, $Content, $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang);
-        $this->blog();
+        header('location:index.php');
     }
     public function blogdetail()
     {

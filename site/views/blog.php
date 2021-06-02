@@ -105,60 +105,25 @@
                         <div class="bg-news-theo-muc-box">
 
                             <div class="box-news-theo-muc">
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
+                                <?php 
+                                foreach ( $tinTL as $TL) { ?>
+                                    <div class="box-news-theo-muc-bao">
+                                        <div class="box-news-theo-muc-img">
+                                            <img src="../<?=$TL['urlHinh']?>" alt="" srcset="">
                                         </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
-                                    </div>
-                                </div>
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
+                                        <div class="box-news-theo-muc-title">
+                                            <div class="title-ngay-dang-user">
+                                                <i class="fa fa-calendar" aria-hidden="true"> </i> <?=$TL['Ngay']?>
+                                                <i class="fa fa-user" aria-hidden="true"> <?=$TL['NguoiDang']?></i>
+                                            </div>
+                                            <a href="<?= SITE_URL ?>/?act=detail&id=<?= $list['idTin'] ?> "><?=$TL['TieuDe']?> </a>
                                         </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
                                     </div>
-                                </div>
+                                <?php } ?>
 
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
-                                        </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
-                                    </div>
-                                </div>
 
-                                <div class="box-news-theo-muc-bao">
-                                    <div class="box-news-theo-muc-img">
-                                        <img src="../img/women.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="box-news-theo-muc-title">
-                                        <div class="title-ngay-dang-user">
-                                            <i class="fa fa-calendar" aria-hidden="true"> </i> 12/12/2012
-                                            <i class="fa fa-user" aria-hidden="true"> (Tên người đăng)</i>
-                                        </div>
-                                        <a href="http://">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. </a>
-                                    </div>
-                                </div>
+
+
                             </div>
                             <!-- /box -->
                         </div>
@@ -446,27 +411,27 @@
                             </div>
                         </div>
                     </div>
-                
-                    <textarea id="editor" name="NoiDung" ></textarea>
-                    </div>
-                    <?php if (!isset($_SESSION['user'])) { ?>
-                        <div class="form-group">
-                            <label class="text-danger">Bạn cần đăng nhập để có thể đăng bài viết !</label>
-                        </div>
-                    <?php } ?>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <?php if (!isset($_SESSION['user'])) { ?>
-                            <button type="button" class="btn btn-disabled">Save changes</button>
-                        <?php } else { ?>
-                            <button type="submit" class="btn btn-success">Save changes</button>
-                        <?php } ?>
-                    </div>
-                </form>
-            </div>
 
+                    <textarea id="editor" name="NoiDung"></textarea>
+            </div>
+            <?php if (!isset($_SESSION['user'])) { ?>
+                <div class="form-group">
+                    <label class="text-danger">Bạn cần đăng nhập để có thể đăng bài viết !</label>
+                </div>
+            <?php } ?>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <?php if (!isset($_SESSION['user'])) { ?>
+                    <button type="button" class="btn btn-disabled">Save changes</button>
+                <?php } else { ?>
+                    <button type="submit" class="btn btn-success">Save changes</button>
+                <?php } ?>
+            </div>
+            </form>
         </div>
+
     </div>
+</div>
 </div>
 
 <script src="js/blog.js"></script>

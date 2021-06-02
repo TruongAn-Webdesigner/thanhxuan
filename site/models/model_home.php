@@ -132,6 +132,24 @@
         $kq = $this->query($sql);
         return $kq;
     }
+    function listTinTL($sl)
+    {
+        $sql = "SELECT * FROM tin  Where idLT='1' ORDER BY Ngay Desc Limit 0,$sl ";
+        $kq = $this->query($sql);
+        return $kq;
+    }
+    function listTinSK($sl)
+    {
+        $sql = "SELECT * FROM tin  Where idLT='2' ORDER BY Ngay Desc Limit 0,$sl ";
+        $kq = $this->query($sql);
+        return $kq;
+    }
+    function listTinBA($sl)
+    {
+        $sql = "SELECT * FROM tin  Where idLT='3' ORDER BY Ngay Desc Limit 0,$sl ";
+        $kq = $this->query($sql);
+        return $kq;
+    }
     function listLoaiTin()
     {
         $sql = "SELECT * FROM loaitin";
