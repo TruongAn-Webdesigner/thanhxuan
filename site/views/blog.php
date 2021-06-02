@@ -179,7 +179,7 @@
                                                 <i class="fa fa-calendar" aria-hidden="true"> </i> <?=$TapLuyen['Ngay']?>
                                                 <i class="fa fa-user" aria-hidden="true"> <?=$TapLuyen['NguoiDang']?></i>
                                             </div>
-                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $list['idTin'] ?> "><?=$TapLuyen['TieuDe']?> </a>
+                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $TapLuyen['idTin'] ?> "><?=$TapLuyen['TieuDe']?> </a>
                                         </div>
                                     </div>
                                 <?php } ?>

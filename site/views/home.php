@@ -128,11 +128,11 @@
                     Bạn <span class="span1">có thể</span> <br> trở nên <span class="span2">khỏe đẹp hơn</span> những gì mà bạn nghĩ
                 </div>
                 <?php require_once "models/model_home.php";
-                $this->model = new model_home();
-                $tin1 = $this->model->chitiet(812);
-                $tin2 = $this->model->chitiet(813);
-                $tin3 = $this->model->chitiet(817);
-                $tin4 = $this->model->chitiet(1);
+                  $this->model = new model_home();
+                  $tin1 = $this->model->chitiet(2);
+                  $tin2 = $this->model->chitiet(3);
+                  $tin3 = $this->model->chitiet(4);
+                  $tin4 = $this->model->chitiet(1);
                 ?>
                 <div class="box-help-img-left">
                     <div class="box-help-img-1">
