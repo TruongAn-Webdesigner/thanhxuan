@@ -311,3 +311,23 @@ function makeResultHtmlBodyFat(bodyfat) {
 
   return str;
 }
+
+/* animation */
+$(() => {
+  $(window).scroll(() => {
+      var windowTop = $(window).scrollTop();
+      if(windowTop > 450){
+        $('#icon1').addClass('instagram');
+        $('#icon2').addClass('twitter');
+        $('#icon3').addClass('facebook');
+        $('#icon4').addClass('pinterest');
+      }
+      else{
+        $('#icon1').removeClass('instagram');
+        $('#icon2').removeClass('twitter');
+        $('#icon3').removeClass('facebook');
+        $('#icon4').removeClass('pinterest');
+      }
+    });
+  });
+/* animation */

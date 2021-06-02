@@ -242,6 +242,8 @@ body{
                     height: 39rem;
                     /* background-color: rgb(247, 189, 189); */
                     display: flex;
+
+                    /* blog to */
                     .box-news{
                         width: 60%;
                         margin-bottom: 12rem;
@@ -249,13 +251,17 @@ body{
                             width: 100%;
                             height: 25.3rem;
                             /* background-color: rgb(252, 121, 121); */
+                            overflow: hidden;
+                            
                             img{
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
                                 display: block;
+                                transition: 0.5s;
                             }
                         }
+
                         .bg-news-title{
                             width: 100%;
                             height: 4rem;
@@ -299,6 +305,16 @@ body{
                             }
                         }
                     } 
+                    .box-news:hover .bg-news-img img{
+                        filter: brightness(50%);
+                        transform: scale(1.1);
+                    }
+                    .box-news:hover .bg-news-title .box-news-title a{
+                        color: rgb(163, 51, 51);
+                        transition: 0.5s;
+                    }
+                    /* blog to */
+
                     /* blog nhỏ phổ biến */
                     .bg-news-small{
                         width: 35%;
@@ -401,11 +417,13 @@ body{
                                     width: 100%;
                                     height: 15rem;
                                     /* background-color: darkkhaki; */
+                                    overflow: hidden;
                                     img{
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
                                         display: block;
+                                        transition: 0.5s;
                                     }
                                 }
                                 .box-news-theo-muc-title{
@@ -425,6 +443,11 @@ body{
                                         padding: 10px 0px;
                                     }
                                 }
+                            }
+                            .box-news-theo-muc-bao:hover .box-news-theo-muc-img img{
+                                filter: brightness(50%);
+                                transform: scale(1.1);
+                                transition: 0.5s;
                             }
                         }
                     }
