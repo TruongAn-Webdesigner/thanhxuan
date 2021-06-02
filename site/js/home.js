@@ -195,22 +195,22 @@ function getMoTaBMI(bmi) { // nguồn https://thegioidiengiai.com/cach-tinh-bmi-
 
   if (bmi >= 24.9 && bmi < 29.9) {
     type = 'Hơi béo';
-    str = 'Bạn đang hơi béo! Hãy tập thể dục nhiều hơn và cắt giảm các thực phẩm có đường và chất béo';
+    str = 'Bạn đang hơi béo! Hãy tập thể dục nhiều hơn và cắt giảm các thực phẩm có đường và chất béo.';
   }
 
   if (bmi >= 29.9 && bmi < 34.9) {
     type = 'Béo phì cấp độ 1 !';
-    str = 'Nguy cơ phát triển bệnh cao. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể';
+    str = 'Nguy cơ phát triển bệnh cao. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể.';
   }
 
   if (bmi >= 34.9 && bmi < 39.9) {
     type = 'Béo phì cấp độ 2 !';
-    str = 'Nguy cơ phát triển bệnh RẤT CAO. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể';
+    str = 'Nguy cơ phát triển bệnh RẤT CAO. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể.';
   }
 
   if (bmi >= 39.9) {
     type = 'Béo phì cấp độ 3 !';
-    str = 'Nguy cơ phát triển bệnh ở mức NGUY HIỂM. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể';
+    str = 'Nguy cơ phát triển bệnh ở mức NGUY HIỂM. Hãy chuẩn bị hành trang và kiến thức để giảm cân sớm nhất có thể.';
   }
 
   return {
@@ -224,10 +224,10 @@ function makeResultHtmlBMI(bmi, type, mota) {
   `
     <div id="result_bmi" class="mt-d50">
       <h3>Chỉ số BMI</h3>
-      <h1 class="_bmi">24.4</h1>
+      <h1 class="_bmi">`+ bmi +`</h1>
       <div class="mt-2">
-        <div class="type_bmi"><h3>Bình thường</h3></div>
-        <div class="mota_bmi">Chỉ số BMI đang ở mức thấp. Cần cố gắng bổ sung đầy đủ chất dinh dưỡng, nước và tập thể dục đều đặn để đạt mức bình thường.</div>
+        <div class="type_bmi"><h3>`+ type +`</h3></div>
+        <div class="mota_bmi">`+ mota +`</div>
       </div>
     </div>
   `;
@@ -246,26 +246,68 @@ $('#form_mo').submit(function (e) { // https://www.thehinhvip.com/2019/05/body-f
   var arrId = ['mo_chieucao', 'mo_chuvico', 'mo_vongeo', 'mo_vonghong']
   var gioitinh = $('input[name=mo_gioitinh]:checked', '#form_mo').val();
   var valById = getValueById(arrId);
-  console.log(gioitinh);
-  console.log(valById);
 
+  var bodyFat = countBodyFat(gioitinh, valById);
+
+  if ($('#result_bodyfat').length == 1)
+  {
+    $('._bodyfat').html(bodyFat + ' %');
+  }
+  else
+  {
+    var html = makeResultHtmlBodyFat(bodyFat);
+    showResult('#about_bodyFat', '#result_bodyFat', html);
+  }
 });
+
+function countBodyFat(gioitinh, data) {
+  var bodyFat;
+  if (gioitinh == 0) {
+    bodyFat = 495/(1.0324 - 0.19077 * log(10, (data.mo_vongeo - data.mo_chuvico)) + 0.15456 * log(10, data.mo_chieucao)) - 450;
+  }
+
+  if (gioitinh == 1) {
+    var nu = parseInt(data.mo_vongeo) + parseInt(data.mo_vonghong) - parseInt(data.mo_chuvico);
+    bodyFat = 495/(1.29579 - 0.35004 * log(10, nu) + 0.221 * log(10, data.mo_chieucao)) - 450;
+  }
+
+  return bodyFat.toFixed(2);
+}
+
+function log(base, number) {
+  return Math.log(number) / Math.log(base);
+}
 
 
 var rad = document.form_mo.mo_gioitinh;
 var prev = null;
 for(var i = 0; i < rad.length; i++) {
     rad[i].onclick = function () {
-        (prev)? console.log(prev.value):null;
         if(this !== prev) {
             prev = this;
         }
-        console.log(this.value)
+        if (this.value == 0) {
+          $('#mo_vonghong').val('');
+          $('#mo_vonghong').attr("disabled", true);
+        }
+        if (this.value == 1) {
+          $('#mo_vonghong').attr("disabled", false);
+        }
     };
 }
-
 
 function innerNumberSlide(num) {
   document.getElementById("slide_number").innerHTML = "0" + num;
 }
 
+function makeResultHtmlBodyFat(bodyfat) {
+  var str =
+  `
+    <div id="result_bodyfat" class="mt-d50">
+      <h3>Tỉ lệ Body Fat</h3>
+      <h1 class="_bodyfat">` + bodyfat + ` %</h1>
+    </div>
+  `;
+
+  return str;
+}

@@ -21,7 +21,7 @@
         </div>
 
         <!--       <div class="navigation-manual">
-            
+
             <label for="radio2" class="manual-btn"></label>
             <label for="radio3" class="manual-btn"></label>
             <label for="radio4" class="manual-btn"></label>
@@ -129,10 +129,10 @@
                 </div>
                 <?php require_once "models/model_home.php";
                 $this->model = new model_home();
-                $tin1 = $this->model->chitiet(1);
-                $tin2 = $this->model->chitiet(2);
-                $tin3 = $this->model->chitiet(3);
-                $tin4 = $this->model->chitiet(4);
+                $tin1 = $this->model->chitiet(812);
+                $tin2 = $this->model->chitiet(813);
+                $tin3 = $this->model->chitiet(817);
+                $tin4 = $this->model->chitiet(1);
                 ?>
                 <div class="box-help-img-left">
                     <div class="box-help-img-1">
@@ -336,14 +336,15 @@
             <div class="bg-display-bmi">
                 <div class="boxcenter">
                     <div class="bg-bmi-left">
-                        <div class="bg-bmi-show">
-                            <div class="row-handmake">
-                                <div class="bmi-about-title">Tỉ lệ mỡ</div>
-                                <div class="bmi-about">
-                                    là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi.
-                                    Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ.
-                                </div>
-                            </div>
+                        <div class="bg-bmi-show" id="result_bodyFat">
+                              <div class="row-handmake" id="about_bodyFat">
+                                  <div class="bmi-about-title">Tỉ lệ mỡ</div>
+                                  <div class="bmi-about">
+                                      là chỉ số tiêu chuẩn để xác định tình trạng mập ốm của cơ thể dựa trên chiều cao, cân nặng và độ tuổi.
+                                      Nó được sử dụng rộng rãi như một chỉ số chung để xác định nếu một người có cân nặng hợp lý so với chiều cao của họ.
+                                  </div>
+                              </div>
+
                         </div>
                     </div>
                     <div class="bg-bmi-right">
@@ -371,19 +372,19 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-4">Chiều cao</label>
-                                    <input type="text" class="form-control col-8" id="mo_chieucao" placeholder="Cm">
+                                    <input type="number" class="form-control col-8" id="mo_chieucao" placeholder="Cm">
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-4">Chu vi cổ</label>
-                                    <input type="text" class="form-control col-8" id="mo_chuvico" placeholder="Cm">
+                                    <input type="number" class="form-control col-8" id="mo_chuvico" placeholder="Cm">
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-4">Vòng eo</label>
-                                    <input type="text" class="form-control col-8" id="mo_vongeo" placeholder="Cm">
+                                    <input type="number" class="form-control col-8" id="mo_vongeo" placeholder="Cm">
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-4">Vòng hông</label>
-                                    <input type="text" class="form-control col-8" id="mo_vonghong" disabled placeholder="Cm">
+                                    <input type="number" class="form-control col-8" id="mo_vonghong" placeholder="Cm">
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-4"></label>

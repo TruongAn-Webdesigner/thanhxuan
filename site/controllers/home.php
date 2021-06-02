@@ -89,7 +89,7 @@ class home
 
     public function blog()
     {
-        $list = $this->model->chitiet(1);
+        $list = $this->model->chitiet(813);
         $list3 = $this->model->listTinSL(3);
         $tinTL = $this->model->listTinTL(4);
         $tinSK = $this->model->listTinSK(4);
