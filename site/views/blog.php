@@ -138,7 +138,7 @@
                             <!-- /box -->
                         </div>
                         <div class="w-100 text-center">
-                            <button type="button" onclick="docthem(3)">Đọc thêm</button>
+                            <button type="button" class="docthem_3" onclick="docthem(3)">Đọc thêm</button>
                         </div>  
 
                     </div>
@@ -150,7 +150,7 @@
                         <!-- box-->
                         <div class="bg-news-theo-muc-box">
 
-                            <div class="box-news-theo-muc" id="tinhthan">
+                            <div class="box-news-theo-muc" id="lt_1">
                                 <?php foreach ($mentalityBlog as $tinhthan) { ?>
                                 <div class="box-news-theo-muc-bao">
                                     <div class="box-news-theo-muc-img">
@@ -173,7 +173,7 @@
                             <!-- /box-->
                         </div>
                         <div class="w-100 text-center">
-                            <button>Đọc thêm</button>
+                            <button type="button" class="docthem_1" onclick="docthem(1)">Đọc thêm</button>
                         </div>
                     </div>
                     <!-- /blog sức khỏe -->
@@ -185,7 +185,7 @@
                         <!-- box -->
                         <div class="bg-news-theo-muc-box">
 
-                            <div class="box-news-theo-muc" id="tapluyen">
+                            <div class="box-news-theo-muc" id="lt_4">
                                 <?php foreach ($sportsBlog as $sport) { ?>
                                 <div class="box-news-theo-muc-bao">
                                     <div class="box-news-theo-muc-img">
@@ -207,7 +207,7 @@
                             <!-- /box-->
                         </div>
                         <div class="w-100 text-center">
-                            <button>Đọc thêm</button>
+                            <button type="button" class="docthem_4" onclick="docthem(4)">Đọc thêm</button>
                         </div>
                     </div>
                     <!-- /blog bữa ăn hằng ngày -->

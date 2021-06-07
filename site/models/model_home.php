@@ -198,10 +198,10 @@
         return $this->query($sql);
     }
 
-    function getMoreBlogs($idlt, $from, $to) {
+    function getMoreBlogs($idlt, $from) {
         $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
         FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
-        WHERE t.idLT = $idlt ORDER BY Ngay DESC LIMIT $from, $to";
+        WHERE t.idLT = $idlt ORDER BY Ngay DESC LIMIT $from, 4";
         return $this->query($sql);
     }
   } //class

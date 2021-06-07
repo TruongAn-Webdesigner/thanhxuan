@@ -153,9 +153,8 @@ class home
     {
         $idlt = $_GET['idlt'];
         $from = $_GET['from'];
-        $to   = $_GET['to'];
         
-        $blog = $this->model->getMoreBlogs($idlt, $from, $to);
-        echo json_encode($blog);        
+        $blog = $this->model->getMoreBlogs($idlt, $from);
+        echo json_encode($blog->fetchAll());        
     }
-}
+}   
