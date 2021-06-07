@@ -278,6 +278,8 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* blog to */
+  /* blog to */
   /* blog nhỏ phổ biến */
   /* blog nhỏ phổ biến */
 }
@@ -291,6 +293,7 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .box
   width: 100%;
   height: 25.3rem;
   /* background-color: rgb(252, 121, 121); */
+  overflow: hidden;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .box-news .bg-news-img img {
@@ -299,6 +302,8 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .box
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .box-news .bg-news-title {
@@ -348,6 +353,19 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .box
   background-color: #e76e6e;
   color: white;
   text-decoration: none;
+}
+
+article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .box-news:hover .bg-news-img img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .box-news:hover .bg-news-title .box-news-title a {
+  color: #a33333;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .bg-news-small {
@@ -471,6 +489,7 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc 
   width: 100%;
   height: 15rem;
   /* background-color: darkkhaki; */
+  overflow: hidden;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc .box-news-theo-muc-bao .box-news-theo-muc-img img {
@@ -479,6 +498,8 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc 
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc .box-news-theo-muc-bao .box-news-theo-muc-title {
@@ -499,6 +520,15 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc 
   font-size: 0.8vw;
   color: #888888;
   padding: 10px 0px;
+}
+
+article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc .box-news-theo-muc-bao:hover .box-news-theo-muc-img img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bg-news-right-aside {

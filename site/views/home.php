@@ -107,10 +107,10 @@
                         </p>
                         <div class="box-button-about">
                             <div class="icon-about">
-                                <i class="instagram fa fa-instagram" aria-hidden="true"></i>
-                                <i class="twitter fa fa-twitter" aria-hidden="true"></i> <br>
-                                <i class="facebook fa fa-facebook" aria-hidden="true"></i>
-                                <i class="pinterest fa fa-pinterest-p" aria-hidden="true"></i>
+                                <i id="icon1" class="instagram fa fa-instagram" aria-hidden="true"></i>
+                                <i id="icon2" class="twitter fa fa-twitter" aria-hidden="true"></i> <br>
+                                <i id="icon3" class="facebook fa fa-facebook" aria-hidden="true"></i>
+                                <i id="icon4" class="pinterest fa fa-pinterest-p" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>

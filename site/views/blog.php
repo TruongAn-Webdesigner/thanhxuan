@@ -97,8 +97,8 @@
                         </div>
                         <!-- /blog nhỏ -->
                     </div>
-                    <!-- blog tâm lý bỏ -->
 
+                    <!-- blog tâm lý -->
                     <div class="bg-news-theo-muc">
                         <div class="news-theo-muc-title-big">Bửa Ăn</div>
                         <!-- box  -->
@@ -120,9 +120,6 @@
                                         </div>
                                     </div>
                                 <?php } ?>
-
-
-
 
                             </div>
                             <!-- /box -->
