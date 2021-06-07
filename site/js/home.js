@@ -13,7 +13,7 @@ function linkCssHome() {
 
 $('#tinhcalo').submit(function (e) {
   e.preventDefault();
-  var arrId = ['cl_tuoi', 'cl_chieucao', 'cl_cannang', 'cl_Vandong']
+  var arrId = ['cl_tuoi', 'cl_chieucao', 'cl_cannang', 'cl_Vandong'];
   var gioitinh = $('input[name=cl_gioitinh]:checked', '#tinhcalo').val();
   var valById = getValueById(arrId);
 

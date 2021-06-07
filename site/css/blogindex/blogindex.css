@@ -273,7 +273,7 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left {
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left {
   width: 100%;
-  height: 39rem;
+  /* height: 39rem; */
   /* background-color: rgb(247, 189, 189); */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,7 +372,7 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .bg-
   width: 35%;
   min-height: 20rem;
   /* background-color: blanchedalmond; */
-  margin-left: 1%;
+  margin-left: 18px;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .bg-news-small .box-news-small {
@@ -383,7 +383,7 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .bg-
   display: -ms-flexbox;
   display: flex;
   border: 1px solid #dddddd;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
 }
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-left .bg-news-small .box-news-small .box-news-small-img {
@@ -479,9 +479,9 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc 
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc .box-news-theo-muc-bao {
   width: 48%;
-  height: 20rem;
+  height: auto;
   /* background-color: darkgrey; */
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
   margin-right: 2%;
 }
 
@@ -504,7 +504,7 @@ article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc 
 
 article .boxcenter .bg-news-parent .bg-news .bao-bg-news-left .bg-news-theo-muc .bg-news-theo-muc-box .box-news-theo-muc .box-news-theo-muc-bao .box-news-theo-muc-title {
   width: 100%;
-  height: 8rem;
+  height: auto;
   /*  background-color: darkmagenta; */
   font-family: 'Lexend Deca', sans-serif;
   font-weight: bold;
@@ -827,3 +827,29 @@ footer .icon .boxcenter i {
 
 /* /footer */
 /*# sourceMappingURL=blogindex.css.map */
+
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+
+.bottom-blog {
+    font-weight: 400;
+    color: #707070;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.row_2 {
+    -webkit-line-clamp: 2;
+}
+
+.box-news-theo-muc-bao {
+    margin-bottom: 25px;
+}

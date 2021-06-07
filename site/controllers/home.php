@@ -42,6 +42,9 @@ class home
             case "getAllFood":
                 $this->getAllFood();
                 break;
+            case "getBlog":
+                $this->getBlog();
+                break;
         }
         //$this->$act;
     }
@@ -89,21 +92,29 @@ class home
 
     public function blog()
     {
-        $list = $this->model->chitiet(1);
-        $list3 = $this->model->listTinSL(3);
-        $tinTL = $this->model->listTinTL(4);
-        $tinSK = $this->model->listTinSK(4);
-        $tinBA = $this->model->listTinBA(4);
-        $tinTapLuyen = $this->model->listTinTapLuyen(4);
+        $foodBlogId       = 3;
+        $heathyBlogId     = 2;
+        $sportsBlogId     = 4;
+        $mentalityBlogId  = 1;
+
+        $getTheLatestPost = $this->model->getTheLatestPost();
+        $foodBlog         = $this->model->getblog($foodBlogId);
+        $heathyBlog       = $this->model->getblog($heathyBlogId);
+        $sportsBlog       = $this->model->getblog($sportsBlogId);
+        $mentalityBlog    = $this->model->getblog($mentalityBlogId);
+
+        $listHead         = $this->model->getheaderBlog();
+
 
         $page_file = "views/blog.php";
+        // $cssFile = 'abc.css';
         require_once "layout.php";
     }
     public function  addnew()
     {
         $TieuDe = trim(strip_tags($_POST['TieuDe']));
         $Content = $_POST['NoiDung'];
-
+        $TomTat = trim(strip_tags($_POST['TomTat']));
         $idLT = $_POST['idLT'];
         $Ngay = date('Y-m-d');
         $AnHien = 0;
@@ -112,7 +123,7 @@ class home
         $urlHinh = $_FILES["urlHinh"]["name"];
         $urlHinhA = "uploads/images/$urlHinh";
         move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
-        $this->model->addnewTin($TieuDe, $Content, $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang);
+        $this->model->addnewTin($TieuDe, $Content, $TomTat, $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang);
         header('location:index.php');
     }
     public function blogdetail()
@@ -136,5 +147,15 @@ class home
             $array[] = $item;
         }
         echo json_encode($a);
+    }
+
+    public function getBlog() 
+    {
+        $idlt = $_GET['idlt'];
+        $from = $_GET['from'];
+        $to   = $_GET['to'];
+        
+        $blog = $this->model->getMoreBlogs($idlt, $from, $to);
+        echo json_encode($blog);        
     }
 }

@@ -603,3 +603,17 @@ footer .icon .boxcenter i {
 
 /* /footer */
 /*# sourceMappingURL=blog.css.map */
+
+.text {
+    display: block;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bottom-blog {
+    font-weight: 400;
+    color: #707070;
+    font-size: 14px;
+}

@@ -1,38 +1,6 @@
 <?php
   require_once '../system/model_system.php';
   class model_home extends model_system {
-    function sanphamMoi($page_num, $page_size) {
-      $start_row = ($page_num - 1) * $page_size;
-      $sql = "SELECT dt.iddt, dt.tendt, dt.gia, dt.giakm, dt.urlhinh, dt.Thoidiemnhap, dt.mota, dt.solanxem, dt.solanmua, dt.hot, dt.idnsx, dt.anhien, dt.soluongtonkho, dt.idnsx, nsx.tennsx FROM dienthoai dt inner join nhasanxuat nsx on nsx.idnsx = dt.idnsx WHERE dt.anhien=1 ORDER BY Thoidiemnhap DESC LIMIT $start_row, $page_size";
-      $kq= $this->query($sql);
-      return $kq;
-    }
-
-    function spmoi() {
-      $sql = "SELECT dt.iddt, dt.tendt, dt.gia, dt.giakm, dt.urlhinh, dt.Thoidiemnhap, dt.mota, dt.solanxem, dt.solanmua, dt.hot, dt.idnsx, dt.anhien, dt.soluongtonkho, dt.idnsx, nsx.tennsx FROM dienthoai dt inner join nhasanxuat nsx on nsx.idnsx = dt.idnsx WHERE dt.anhien=1 ORDER BY Thoidiemnhap DESC LIMIT 3";
-      $kq= $this->query($sql);
-      return $kq;
-    }
-
-    function spxemnhieu() {
-      $sql = "SELECT dt.iddt, dt.tendt, dt.gia, dt.giakm, dt.urlhinh, dt.Thoidiemnhap, dt.mota, dt.solanxem, dt.solanmua, dt.hot, dt.idnsx, dt.anhien, dt.soluongtonkho, dt.idnsx, nsx.tennsx FROM dienthoai dt inner join nhasanxuat nsx on nsx.idnsx = dt.idnsx WHERE dt.anhien=1 ORDER BY solanxem DESC LIMIT 3";
-      $kq= $this->query($sql);
-      return $kq;
-    }
-
-    function spbanchay() {
-      $sql = "SELECT dt.iddt, dt.tendt, dt.gia, dt.giakm, dt.urlhinh, dt.Thoidiemnhap, dt.mota, dt.solanxem, dt.solanmua, dt.hot, dt.idnsx, dt.anhien, dt.soluongtonkho, dt.idnsx, nsx.tennsx FROM dienthoai dt inner join nhasanxuat nsx on nsx.idnsx = dt.idnsx WHERE dt.anhien=1 ORDER BY solanmua DESC LIMIT 3";
-      $kq= $this->query($sql);
-      return $kq;
-    }
-
-    function sanphammoitheoidnsx($page_num, $page_size, $idnsx) {
-      $start_row = ($page_num - 1) * $page_size;
-      $sql = "SELECT dt.iddt, dt.tendt, dt.gia, dt.giakm, dt.urlhinh, dt.Thoidiemnhap, dt.mota, dt.solanxem, dt.solanmua, dt.hot, dt.idnsx, dt.anhien, dt.soluongtonkho, dt.idnsx, nsx.tennsx FROM dienthoai dt inner join nhasanxuat nsx on nsx.idnsx = dt.idnsx WHERE nsx.idnsx = $idnsx and dt.anhien=1 ORDER BY Thoidiemnhap DESC LIMIT $start_row, $page_size";
-      $kq= $this->query($sql);
-      return $kq;
-    }
-
     function countPDbynsx($idnsx) {
       $sql="SELECT count(*) as sodong  FROM dienthoai where idnsx=$idnsx";
       return $this->queryOne($sql);
@@ -202,10 +170,38 @@
         $rowcount = $row['sodong'];
         return $rowcount > 0;
     }
-    function addnewTin($TieuDe,$Content,$idLT,$Ngay,$AnHien,$NoiBat,$urlHinhA,$NguoiDang)
-    { //hàm lưu 1 record vào table
-        $sql = "insert into Tin (TieuDe,Content,idLT,Ngay,AnHien,NoiBat,urlHinh,NguoiDang)
-              values('$TieuDe','$Content','$idLT','$Ngay','$AnHien','$NoiBat','$urlHinhA','$NguoiDang')";
+    function addnewTin($TieuDe, $Content, $TomTat,$idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang)
+    { 
+        $sql = "insert into Tin (TieuDe, Content, TomTat, idLT, Ngay,AnHien,NoiBat,urlHinh,NguoiDang)
+                values('$TieuDe','$Content', '$TomTat','$idLT','$Ngay','$AnHien','$NoiBat','$urlHinhA','$NguoiDang')";
         $this->execute($sql);
+    }
+
+    function getTheLatestPost() {
+        $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
+        FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
+        ORDER BY Ngay desc LIMIT 1";
+        return $this->queryOne($sql);
+    }
+
+    function getblog($idlt) {
+        $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
+        FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
+        WHERE t.idLT = $idlt ORDER BY Ngay DESC LIMIT 4";
+        return $this->query($sql);
+    }
+
+    function getheaderBlog() {
+        $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
+        FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
+        ORDER BY Ngay desc LIMIT 1, 4";
+        return $this->query($sql);
+    }
+
+    function getMoreBlogs($idlt, $from, $to) {
+        $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
+        FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
+        WHERE t.idLT = $idlt ORDER BY Ngay DESC LIMIT $from, $to";
+        return $this->query($sql);
     }
   } //class
