@@ -136,7 +136,7 @@
                 ?>
                 <div class="box-help-img-left">
                     <div class="box-help-img-1">
-                        <img src="../<?=$tin2['urlHinh']?>" alt="" srcset="">
+                        <a></a><img src="../<?=$tin2['urlHinh']?>" alt="" srcset="">
                         <div class="title-help-1"><?=$tin2['TieuDe']?></div>
                     </div>
 
