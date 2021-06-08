@@ -26,9 +26,6 @@
 
     <!-- code login cũ -->
         <!-- <div class="row justify-content-center">
-
-
-
             <div class="col-xl-10 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
@@ -80,7 +77,7 @@
         <!-- code login mới-->
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="#">
+                <form method="POST" action="/thanhxuan/site/?act=signup">
                     <h1>Create Account</h1>
                     <div class="social-container">
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -88,9 +85,9 @@
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <span>or use your email for registration</span>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="text" name="taoten" placeholder="Name" />
+                    <input type="text" name="taotk" placeholder="Email" />
+                    <input type="password" name="taopw" placeholder="Password" />
                     <button>Sign Up</button>
                 </form>
             </div>
@@ -104,9 +101,8 @@
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <span>or use your account</span>
-                    <input type="email" name="taikhoan" placeholder="Email" /> <!-- tài khoản -->
+                    <input type="text" name="taikhoan" placeholder="Email" /> <!-- tài khoản -->
                     <input type="password" name="pass" placeholder="Password" /> <!-- mật khẩu -->
-
                     <div class="form-group">
                         <!-- phần ghi nhớ và hiện lỗi -->
                         <div class="custom-control custom-checkbox small">

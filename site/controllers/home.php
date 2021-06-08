@@ -17,6 +17,9 @@ class home
             case "home":
                 $this->home();
                 break;
+            case "signup":
+                $this->signup();
+                break;
             case "login":
                 $this->login();
                 break;
@@ -36,6 +39,7 @@ class home
             case "blogdetail":
                 $this->blogdetail();
                 break;
+            case "comment";
             case "thucdon":
                 $this->thucdon();
                 break;
@@ -44,6 +48,9 @@ class home
                 break;
             case "getBlog":
                 $this->getBlog();
+                break;
+            case "addComment":
+                $this->addComment();
                 break;
         }
         //$this->$act;
@@ -56,6 +63,15 @@ class home
         require_once "layout.php";
     }
 
+    public function signup(){
+        $hotennew = trim(strip_tags($_POST['taoten']));
+        $tknew = trim(strip_tags($_POST['taotk']));
+        $passnew = trim(strip_tags($_POST['taopw']));;
+
+        $this->model->addNewAcc($tknew, $passnew, $hotennew);
+        $this->login();
+    }
+
     function login()
     {
         require "views/login.php";
@@ -66,7 +82,6 @@ class home
         $matkhau = trim(strip_tags($_POST['pass']));
         // if (isset($_POST['nhomatkhau']) == true) $nhomatkhau = $_POST['nhomatkhau'];
         if ($this->model->dangnhap($tentk, $matkhau) == true) {
-
             $_SESSION['user'] = $tentk;
             header('location:index.php');
             $this->index();
@@ -128,8 +143,17 @@ class home
     }
     public function blogdetail()
     {
+        if(isset($_SESSION['user']) == true){
+            $tenuser = $_SESSION['user'];
+            $layinfor = $this->model->inforUser($tenuser);
+        }
         $id = $_GET['id'];
         $blogById = $this->model->chitiet($id);
+       
+       
+        
+        $comment = $this->model->getCommentByIdBlog($blogById['0']);
+
         // $list = $this->model->listLoaitin();
         $page_file = "views/blogchitiet.php";
         require_once "layout.php";
@@ -156,5 +180,18 @@ class home
         
         $blog = $this->model->getMoreBlogs($idlt, $from);
         echo json_encode($blog->fetchAll());        
+    }
+
+    public function addComment() 
+    {
+        $noidungcomment = trim(strip_tags($_POST['noidungcomment']));
+        $iduser = $_POST['iduser'];
+        $idtin = $_POST['idtin'];
+        $datetime = $_POST['datetime'];
+
+        $this->model->addBlogComment($noidungcomment, $iduser, $idtin, $datetime);
+        $lastBlog = $this->model->getLastBlog();
+        
+        echo json_encode($lastBlog);
     }
 }   
