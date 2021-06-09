@@ -177,6 +177,13 @@
         $this->execute($sql);
     }
 
+    function addNewAcc($tknew, $passnew, $hotennew)
+    {
+      $sql = "insert into users (username, password, hoten)
+              values('$tknew', '$passnew', '$hotennew')";
+      $this->execute($sql);
+    }
+
     function getTheLatestPost() {
         $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
         FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
@@ -203,5 +210,26 @@
         FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
         WHERE t.idLT = $idlt ORDER BY Ngay DESC LIMIT $from, 4";
         return $this->query($sql);
+    }
+
+    function inforUser($tenuser){
+      $sql = "select idUser from users where username='$tenuser'";
+      return $this->queryOne($sql);
+    }
+
+    function addBlogComment($noidungcomment, $iduser, $idtin, $datetime) {
+      $sql = "INSERT INTO `comment` (`idtin`, `idUser`, `noidung`, `ngaygio`) 
+              VALUES ('$idtin', '$iduser', '$noidungcomment', '$datetime')";
+      $this->execute($sql);      
+    }
+
+    function getLastBlog() {
+      $sql = "SELECT * FROM `comment` ORDER BY id DESC limit 1";
+      return $this->queryOne($sql);
+    }
+
+    function getCommentByIdBlog($idTin) {
+      $sql = "SELECT * FROM `comment` WHERE idtin = $idTin ORDER BY ngaygio DESC LIMIT 5";
+      return $this->query($sql);
     }
   } //class

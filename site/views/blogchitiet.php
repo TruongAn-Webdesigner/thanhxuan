@@ -70,32 +70,49 @@
                         <div class="bg-comment">
                             <div class="box-comment-title">Bình luận</div>
                             <!-- phần đăng bình luận -->
-                            <div class="post-comment">
-                                <div class="post-comment-img"><img src="../img/women.jpg" alt="" srcset=""></div>
+                            <form action="" id="danglala">
+                                <div class="post-comment">
+                                    <div class="post-comment-img"><img src="../img/women.jpg" alt="" srcset=""></div>
 
-                                <div class="form-group">
-                                    <div class="text-binh-luan"></div>
-                                    <textarea placeholder="Bình luận của bạn" name="" id="" cols="50" rows="5" ></textarea>
-                                    <div class="box-news-button">
-                                        <a href="http://">Đăng</a>
+                                    <div class="form-group">
+                                        <div class="text-binh-luan"></div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="layiduser" value="<?=$layinfor[0]?>">
+                                            <input type="hidden" id="layidtin" value="<?=$blogById['idTin']?>">
+                                        </div>
+                                        <textarea placeholder="Bình luận của bạn" name="noidung" id="laynoidung" cols="50" rows="5" ></textarea>
+                                        <?php 
+                                            if (isset($_SESSION['user']) == true) { ?>
+                                                <div class="box-news-button">
+                                                <button type="submit" >Đăng</button>
+                                            </div>
+                                            <?php } else { ?>
+                                                <div class="box-news-button">
+                                                <button type="submit" >Đăng nhập</button>
+                                                </div>
+                                            <?php } ?>
                                     </div>
-                                  </div>
-                            </div>
+                                </div>
+                            </form>
 
                             <!-- /phần đăng bình luận -->
 
                             <!-- show bình luận -->
-                            <div class="show-comment">
-                                <div class="show-comment-img"><img src="../img/women.jpg" alt=""></div>
+                            <?php foreach ($comment as $itemCmt) { ?>
+                                <div id="box_comment">
+                                    <div class="show-comment">
+                                        <div class="show-comment-img"><img src="../img/women.jpg" alt=""></div>
 
-                                <div class="show-comment-infor">
-                                    <div class="show-comment-name-time">
-                                        <div class="name">User</div>
-                                        <div class="time">12/12/12</div>
+                                        <div class="show-comment-infor">
+                                            <div class="show-comment-name-time">
+                                                <div class="name">user</div>
+                                                <div class="time"><?= $itemCmt['ngaygio']?></div>
+                                            </div>
+                                            <div class="show-comment-chat"><?= $itemCmt['noidung'] ?></div>
+                                        </div>
                                     </div>
-                                    <div class="show-comment-chat">abcd</div>
-                                </div>
-                            </div>
+                                </div>                            
+                            <?php } ?>
                             <!-- /show bình luận -->
 
                         </div>
@@ -182,6 +199,5 @@
             <!-- /blog -->
         </article>
     </div>
-
 
 <script src="js/blogdetail.js"></script>
