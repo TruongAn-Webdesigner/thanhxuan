@@ -60,6 +60,7 @@ class home
     {
         require "views/login.php";
     }
+    
     function check_form_login()
     {
         $tentk = trim(strip_tags($_POST['taikhoan']));

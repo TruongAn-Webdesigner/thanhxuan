@@ -51,7 +51,7 @@ function getBlog(idlt, from) {
     });
     return JSON.parse(data.responseText);
 }
-  
+
 function createHtmlBlog(blog) {
     var str = `
     <div class="box-news-theo-muc-bao">
@@ -73,3 +73,8 @@ function createHtmlBlog(blog) {
 
     return str;
 }
+
+$(selector).submit(function (e) { 
+    e.preventDefault();
+    
+});
