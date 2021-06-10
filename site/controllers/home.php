@@ -115,12 +115,10 @@ class home
 
         $getTheLatestPost = $this->model->getTheLatestPost();
         $foodBlog         = $this->model->getblog($foodBlogId);
-        $heathyBlog       = $this->model->getblog($heathyBlogId);
+        $heathyBlog       = $this->model->getblog($heathyBlogId);       
         $sportsBlog       = $this->model->getblog($sportsBlogId);
         $mentalityBlog    = $this->model->getblog($mentalityBlogId);
-
         $listHead         = $this->model->getheaderBlog();
-
 
         $page_file = "views/blog.php";
         // $cssFile = 'abc.css';
@@ -153,7 +151,7 @@ class home
        
        
         
-        $comment = $this->model->getCommentByIdBlog($blogById['0']);
+        // $comment = $this->model->getCommentByIdBlog($blogById['0']);
 
         // $list = $this->model->listLoaitin();
         $page_file = "views/blogchitiet.php";

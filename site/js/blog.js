@@ -11,8 +11,10 @@ function linkCssBlog() {
 
 var loaitin = [
     {'idlt': 1, 'soluong': 4},
+    {'idlt': 2, 'soluong': 4},
     {'idlt': 3, 'soluong': 4},
     {'idlt': 4, 'soluong': 4}
+    
 ]
 
 function docthem(idLT) {
@@ -73,8 +75,3 @@ function createHtmlBlog(blog) {
 
     return str;
 }
-
-$(selector).submit(function (e) { 
-    e.preventDefault();
-    
-});
