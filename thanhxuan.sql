@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 07, 2021 lúc 03:38 PM
--- Phiên bản máy phục vụ: 10.4.19-MariaDB
--- Phiên bản PHP: 8.0.6
+-- Host: 127.0.0.1
+-- Generation Time: Jun 09, 2021 at 01:08 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,44 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `thanhxuan`
+-- Database: `thanhxuan`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaitin`
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id` int(10) NOT NULL,
+  `idtin` int(50) NOT NULL,
+  `idUser` int(50) NOT NULL,
+  `noidung` text NOT NULL,
+  `ngaygio` datetime NOT NULL,
+  `anhien` tinyint(1) DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `idtin`, `idUser`, `noidung`, `ngaygio`, `anhien`) VALUES
+(1, 3, 3, 'longdeptrai', '2021-06-18 19:45:01', 1),
+(2, 1, 4, 'longdeptrai', '2021-06-08 19:50:44', 1),
+(3, 1, 4, 'longdeptrai', '2021-06-08 19:55:02', 1),
+(4, 1, 4, 'longdeptrai somuch', '2021-06-08 19:56:02', 1),
+(5, 1, 4, 'longdeptr', '2021-06-08 19:57:11', 1),
+(6, 1, 4, 'long', '2021-06-08 20:11:10', 1),
+(7, 1, 4, 'long', '2021-06-08 20:11:25', 1),
+(8, 1, 4, 'ththhed6h', '2021-06-08 20:22:38', 1),
+(9, 1, 4, 'ẩeraergaerg', '2021-06-08 20:30:37', 1),
+(10, 1, 4, 'An bánh Flan', '2021-06-08 20:31:02', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loaitin`
 --
 
 CREATE TABLE `loaitin` (
@@ -37,7 +68,7 @@ CREATE TABLE `loaitin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `loaitin`
+-- Dumping data for table `loaitin`
 --
 
 INSERT INTO `loaitin` (`idLT`, `lang`, `Ten`, `ThuTu`, `AnHien`, `idTL`) VALUES
@@ -49,7 +80,7 @@ INSERT INTO `loaitin` (`idLT`, `lang`, `Ten`, `ThuTu`, `AnHien`, `idTL`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thucpham`
+-- Table structure for table `thucpham`
 --
 
 CREATE TABLE `thucpham` (
@@ -64,7 +95,7 @@ CREATE TABLE `thucpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `thucpham`
+-- Dumping data for table `thucpham`
 --
 
 INSERT INTO `thucpham` (`id`, `ten`, `protein`, `fat`, `carb`, `calo`, `mota`, `anhien`) VALUES
@@ -87,7 +118,7 @@ INSERT INTO `thucpham` (`id`, `ten`, `protein`, `fat`, `carb`, `calo`, `mota`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tin`
+-- Table structure for table `tin`
 --
 
 CREATE TABLE `tin` (
@@ -109,7 +140,7 @@ CREATE TABLE `tin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tin`
+-- Dumping data for table `tin`
 --
 
 INSERT INTO `tin` (`idTin`, `lang`, `TieuDe`, `TomTat`, `urlHinh`, `Ngay`, `idUser`, `Content`, `idLT`, `SoLanXem`, `NoiBat`, `AnHien`, `tags`, `Duyet`, `NguoiDang`) VALUES
@@ -133,7 +164,7 @@ INSERT INTO `tin` (`idTin`, `lang`, `TieuDe`, `TomTat`, `urlHinh`, `Ngay`, `idUs
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -147,18 +178,19 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`idUser`, `username`, `password`, `hoten`, `vaitro`, `sdt`, `email`) VALUES
 (1, 'admin', '123456', '', 1, 0, ''),
 (2, 'khai637116', '123456', '', 0, 123456, 'admin@gmail.com'),
-(3, 'user', '123456', 'Võ Hoàng Thy', 0, 0, '');
+(3, 'user', '123456', 'Võ Hoàng Thy', 0, 0, ''),
+(4, 'test2', '12345678', 'Nguyễn Trường An', 0, 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ykien`
+-- Table structure for table `ykien`
 --
 
 CREATE TABLE `ykien` (
@@ -172,7 +204,7 @@ CREATE TABLE `ykien` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `ykien`
+-- Dumping data for table `ykien`
 --
 
 INSERT INTO `ykien` (`idYKien`, `idTin`, `Ngay`, `NoiDung`, `Email`, `HoTen`, `AnHien`) VALUES
@@ -196,72 +228,97 @@ INSERT INTO `ykien` (`idYKien`, `idTin`, `Ngay`, `NoiDung`, `Email`, `HoTen`, `A
 (25, 788, '2018-12-19 20:42:55', 'Lãnh đạo nhân dân đánh thắng quân Nguyên hùng mạnh, xuất hiện chữ Viết riêng của người Việt, phát triển nền tảng triết học Phật giáo Trúc Lâm Yên Tử, mọi lĩnh vực của đất nước từ văn hóa, kinh tế, quân sự, chính trị... đều phát triễn đến mức độ cao, rực rỡ. \r\nĐó là thời Trần, công của Phật Hoàng với dân tộc, con cháu lớn lắm.', 'as@dd.com', 'Thanh Niên', 1);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `loaitin`
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_idUserCom_idUserUser` (`idUser`),
+  ADD KEY `fk_idtinCom_idtinTin` (`idtin`);
+
+--
+-- Indexes for table `loaitin`
 --
 ALTER TABLE `loaitin`
   ADD PRIMARY KEY (`idLT`);
 
 --
--- Chỉ mục cho bảng `thucpham`
+-- Indexes for table `thucpham`
 --
 ALTER TABLE `thucpham`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tin`
+-- Indexes for table `tin`
 --
 ALTER TABLE `tin`
   ADD PRIMARY KEY (`idTin`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`idUser`);
 
 --
--- Chỉ mục cho bảng `ykien`
+-- Indexes for table `ykien`
 --
 ALTER TABLE `ykien`
   ADD PRIMARY KEY (`idYKien`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `loaitin`
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `loaitin`
 --
 ALTER TABLE `loaitin`
   MODIFY `idLT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
--- AUTO_INCREMENT cho bảng `thucpham`
+-- AUTO_INCREMENT for table `thucpham`
 --
 ALTER TABLE `thucpham`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT cho bảng `tin`
+-- AUTO_INCREMENT for table `tin`
 --
 ALTER TABLE `tin`
   MODIFY `idTin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=841;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `ykien`
+-- AUTO_INCREMENT for table `ykien`
 --
 ALTER TABLE `ykien`
   MODIFY `idYKien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `comment`
+--
+ALTER TABLE `comment`
+  ADD CONSTRAINT `fk_idUserCom_idUserUser` FOREIGN KEY (`idUser`) REFERENCES `users` (`idUser`),
+  ADD CONSTRAINT `fk_idtinCom_idtinTin` FOREIGN KEY (`idtin`) REFERENCES `tin` (`idTin`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
