@@ -330,4 +330,69 @@ $(() => {
       }
     });
   });
+
+
+  $(() => {
+    $(window).scroll(() => {
+        var windowTop = $(window).scrollTop();
+  
+        /*1. cua body-first */
+        windowTop > 100 ? $('#text-number').addClass('text-number') : $('#text-number').removeClass('text-number');
+
+        windowTop > 100 ? $('#text-title').addClass('text-title') : $('#text-title').removeClass('text-title');
+
+        windowTop > 100 ? $('#text-title-2').addClass('text-title-2') : $('#text-title-2').removeClass('text-title-2');
+
+        windowTop > 100 ? $('#text-small').addClass('text-small') : $('#text-small').removeClass('text-small'); 
+
+        windowTop > 100 ? $('#icon-join').addClass('icon-join') : $('#icon-join').removeClass('icon-join');
+        /* cua hinh */
+        windowTop > 100 ? $('#img1').addClass('img1') : $('#img1').removeClass('img1');
+
+        windowTop > 100 ? $('#img2').addClass('img2') : $('#img2').removeClass('img2');
+
+        windowTop > 100 ? $('#img3').addClass('img3') : $('#img3').removeClass('img3');
+        /*1. cua hinh */
+
+        /*2. cua body-first */
+
+        /* cua body-second */
+        windowTop > 1100 ? $('#text-number-second').addClass('text-number-second') : $('#text-number-second').removeClass('text-number-second');
+
+        windowTop > 1100 ? $('#text-title-second').addClass('text-title-second') : $('#text-title-second').removeClass('text-title-second');
+
+        windowTop > 1100 ? $('#text-title-2-second').addClass('text-title-2-second') : $('#text-title-2-second').removeClass('text-title-2-second');
+
+        windowTop > 1100 ? $('#text-small-second').addClass('text-small-second') : $('#text-small-second').removeClass('text-small-second');
+
+        windowTop > 1100 ? $('#icon-join2').addClass('icon-join2') : $('#icon-join2').removeClass('icon-join2');
+        /* cua hinh */
+        windowTop > 1100 ? $('#img1-second').addClass('img1-second') : $('#img1-second').removeClass('img1-second');
+
+        windowTop > 1100 ? $('#img3-second').addClass('img3-second') : $('#img3-second').removeClass('img3-second');
+
+        /* cua hinh */
+        /* cua body-second */
+
+        /* cua body-thirt */
+        windowTop > 2100 ? $('#text-number-thirt').addClass('text-number-thirt') : $('#text-number-thirt').removeClass('text-number-thirt');
+
+        windowTop > 2100 ? $('#text-title-thirt').addClass('text-title-thirt') : $('#text-title-thirt').removeClass('text-title-thirt');
+
+        windowTop > 2100 ? $('#text-title-2-thirt').addClass('text-title-2-thirt') : $('#text-title-2-thirt').removeClass('text-title-2-thirt');
+
+        windowTop > 2100 ? $('#text-small-thirt').addClass('text-small-thirt') : $('#text-small-thirt').removeClass('text-small-thirt');
+
+        windowTop > 2100 ? $('#icon-join3').addClass('icon-join3') : $('#icon-join3').removeClass('icon-join3');
+        /* cua hinh */
+        windowTop > 2100 ? $('#img1-thirt').addClass('img1-thirt') : $('#img1-thirt').removeClass('img1-thirt');
+
+        windowTop > 2100 ? $('#img2-thirt').addClass('img2-thirt') : $('#img2-thirt').removeClass('img2-thirt');
+
+        windowTop > 2100 ? $('#img3-thirt').addClass('img3-thirt') : $('#img3-thirt').removeClass('img3-thirt');
+        /* cua hinh */
+        /* cua body-thirt */
+    });
+});
 /* animation */
+

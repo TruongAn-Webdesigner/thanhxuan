@@ -17,6 +17,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Srisakdi:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <!-- /google font -->
     <!-- fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -77,49 +83,50 @@
     }
     ?>
 
-
-    <footer>
-
-        <div class="bg-footer">
-            <div class="boxcenter">
-                <div class="bg-title-find">Find us</div>
-            </div>
-            <div class="boxcenter">
-                <div class="box-find-1">
-                    <div class="title-1">
-                        <i class="fa fa-phone" aria-hidden="true"></i> SĐT
+    <div class="row-handmake">
+        <footer>
+            <div class="bg-footer">
+                <div class="boxcenter">
+                    <div class="bg-title-find">Find us</div>
+                </div>
+                <div class="boxcenter">
+                    <div class="box-find-1">
+                        <div class="title-1">
+                            <i class="fa fa-phone" aria-hidden="true"></i> SĐT
+                        </div>
+                        <div class="infor-1">
+                            +0283 382 38329 <br>
+                            +3847 3728 38293
+                        </div>
                     </div>
-                    <div class="infor-1">
-                        +0283 382 38329 <br>
-                        +3847 3728 38293
+                    <div class="box-find-2">
+                        <div class="title-2">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i> Địa chỉ
+                        </div>
+                        <div class="infor-2">
+                            4 đường abc, cầu abc, lalala
+                        </div>
+                    </div>
+                    <div class="box-find-3">
+                        <div class="title-3">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i> Email
+                        </div>
+                        <div class="infor-3">
+                            + abc@gmail.com
+                        </div>
                     </div>
                 </div>
-                <div class="box-find-2">
-                    <div class="title-2">
-                        <i class="fa fa-address-book-o" aria-hidden="true"></i> Địa chỉ
-                    </div>
-                    <div class="infor-2">
-                        4 đường abc, cầu abc, lalala
-                    </div>
-                </div>
-                <div class="box-find-3">
-                    <div class="title-3">
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i> Email
-                    </div>
-                    <div class="infor-3">
-                        + abc@gmail.com
-                    </div>
+            </div>
+            <div class="icon">
+                <div class="boxcenter">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
                 </div>
             </div>
-        </div>
-        <div class="icon">
-            <div class="boxcenter">
-                <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    
 </body>
 
 </html>
