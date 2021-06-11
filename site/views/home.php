@@ -160,12 +160,11 @@
                                 <div id="text-title-second">
                                     Tâm hồn bên trong bạn
                                 </div>
-                                <div id="text-title-2-second">Quyến rũ mọi con tim.</div>
+                                <div id="text-title-2-second">Mạnh mẽ như những vì sao</div>
                                 <div id="text-small-second">
-                                    Tượng trưng cho một tình yêu thuần khiết, trong sáng và ngây thơ. 
-                                    Là chiếc chuông của những vị thần làm rơi vào khu vườn 
-                                    và làm sáng của một góc trời. 
-                                    Hoa tulip trắng với ẩn ý là vẻ đẹp của người phụ nữ với hương thơm ngây ngất quyến rũ cả lòng người.
+                                    Nhiều người họ thường đánh giá bạn qua bìa quyển sách nhưng cũng rất nhiều người họ đánh giá quyển sách bằng cách đọc bên trong. Vì vậy
+                                    nếu bề ngoài bạn không được như mình mong muốn thì cũng đừng vội trách mình mà hãy cảm nhận bên trong tâm hồn bạn. Tâm hồn của bạn sẽ 
+                                    là thứ thay thế bề ngoài và hãy dùng nó để tiếp cần và người ta cũng sẽ nhìn nhận bạn thông qua tâm hồn ấy.
                                 </div>
                                 <div id="icon-join2">
                                     <i class="instagram fa fa-instagram" aria-hidden="true"></i>
@@ -192,7 +191,7 @@
                             </div>
                             <div class="text-child">
                                 <div id="text-title-thirt">
-                                    Hãy khám phá
+                                    Tự tin đối mặt
                                 </div>
                                 <div id="text-title-2-thirt">Hãy tự tin!</div>
                                 <div id="text-small-thirt">
@@ -238,15 +237,13 @@
                 </div>
                 <div class="bg-text-about">
                     <div class="box-text">
-                        <div class="title-about">ABOUT US</div>
+                        <div class="title-about">Về chúng tôi</div>
                         <div class="text-about">
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, w
-                                hen an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                Chúng tôi cũng từng là những người bị miệt thị, nên hiểu ra rằng chúng tôi cần phải tạo
+                                một cộng đồng nơi mà mọi người có thể tự nâng cao khả năng nhận thức của mình về Body shaming 
+                                cũng như đây sẽ là nơi mà chúng ta có thể san sẻ cho nhau những tinh thần và trách nhiệm về cộng đồng nói
+                                không với body shaming.
                             </p>
                             <div class="box-button-about">
                                 <div class="icon-about">
