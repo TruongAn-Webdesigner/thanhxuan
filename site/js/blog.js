@@ -11,8 +11,10 @@ function linkCssBlog() {
 
 var loaitin = [
     {'idlt': 1, 'soluong': 4},
+    {'idlt': 2, 'soluong': 4},
     {'idlt': 3, 'soluong': 4},
     {'idlt': 4, 'soluong': 4}
+    
 ]
 
 function docthem(idLT) {
@@ -51,7 +53,7 @@ function getBlog(idlt, from) {
     });
     return JSON.parse(data.responseText);
 }
-  
+
 function createHtmlBlog(blog) {
     var str = `
     <div class="box-news-theo-muc-bao">

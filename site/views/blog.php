@@ -212,9 +212,45 @@
                     </div>
                     <!-- /blog bữa ăn hằng ngày -->
 
+
+                    <!-- blog Dinh dưỡng mỗi ngày -->
+                    <div class="bg-news-theo-muc mt-5">
+                        <div class="news-theo-muc-title-big">Dinh dưỡng mỗi ngày</div>
+                        <!-- box-->
+                        <div class="bg-news-theo-muc-box">
+
+                            <div class="box-news-theo-muc" id="lt_2">
+                                <?php foreach ($heathyBlog as $heathy) { ?>
+                                <div class="box-news-theo-muc-bao">
+                                    <div class="box-news-theo-muc-img">
+                                        <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$heathy['idTin']?>"><img src="../<?=$heathy['urlHinh']?>" alt="" srcset=""></a>
+                                    </div>
+                                    <div class="box-news-theo-muc-title">
+                                        <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$heathy['idTin']?>"><?=$heathy['TieuDe']?> </a>
+                                        <div class="tomtat mt-1">
+                                            <span class="text"><?=$heathy['TomTat']?></span>
+                                        </div>
+                                        <div class="mt-1">
+                                            <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$heathy['hoten']?></span>
+                                            <span class="bottom-blog"><i class="fa fa-calendar" aria-hidden="true"> </i> <?=$heathy['Ngay']?></span>                                            
+                                        </div>
+                                    </div>                                      
+                                </div>
+                                <?php } ?>                               
+                            </div>
+                            
+                            <!-- /box-->
+                        </div>
+                        <div class="w-100 text-center">
+                            <button type="button" class="docthem_2" onclick="docthem(2)">Đọc thêm</button>
+                        </div>
+                    </div>
+                    <!-- /blog Dinh dưỡng mỗi ngày -->
                 </div>
                 <!-- blog -->
 
+      
+                
                 <!-- aside -->
                 <div class="bg-news-right-aside">
                     <div class="bg-aside-search">
