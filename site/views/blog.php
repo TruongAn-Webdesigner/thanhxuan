@@ -45,7 +45,7 @@
 <!-- /header -->
 
 <!-- article -->
-<article>
+<article class="mb-5">
     <div class="boxcenter">
         <div class="bg-news-parent">
             <div class="bg-news-title-big">Blog phổ biến</div>

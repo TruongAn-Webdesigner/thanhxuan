@@ -192,6 +192,7 @@
     function getTheLatestPost() {
         $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
         FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
+        WHERE t.Duyet = 1
         ORDER BY Ngay desc LIMIT 1";
         return $this->queryOne($sql);
     }
@@ -199,13 +200,13 @@
     function getblog($idlt) {
         $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
         FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
-        WHERE t.idLT = $idlt ORDER BY Ngay DESC LIMIT 4";
+        WHERE t.idLT = $idlt AND t.Duyet = 1 ORDER BY Ngay DESC LIMIT 4";
         return $this->query($sql);
     }
 
     function getheaderBlog() {
         $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
-        FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
+        FROM `tin` t INNER JOIN users us on t.idUser = us.idUser WHERE t.Duyet = 1
         ORDER BY Ngay desc LIMIT 1, 4";
         return $this->query($sql);
     }
@@ -213,7 +214,7 @@
     function getMoreBlogs($idlt, $from) {
         $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
         FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
-        WHERE t.idLT = $idlt ORDER BY Ngay DESC LIMIT $from, 4";
+        WHERE t.idLT = $idlt AND t.Duyet = 1 ORDER BY Ngay DESC LIMIT $from, 4";
         return $this->query($sql);
     }
 
