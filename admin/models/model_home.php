@@ -5,7 +5,7 @@ class model_home extends model_system
 
     function dangnhap($tentk, $matkhau)
     {
-        $sql = "SELECT count(*) as sodong FROM users WHERE username='$tentk' and password='$matkhau' and vaitro='0'";
+        $sql = "SELECT count(*) as sodong FROM users WHERE username='$tentk' and password='$matkhau' and vaitro='1'";
         $kq = $this->query($sql);
         $row = $kq->fetch();
         $rowcount = $row['sodong'];

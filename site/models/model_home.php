@@ -141,16 +141,21 @@
             }
         }
     }
+
     function xoa($idTin)
     {
         $sql = "DELETE FROM tin WHERE idTin='$idTin'";
         $this->execute($sql);
     }
+
     function chitiet($idTin)
     {
-        $sql = "SELECT * FROM tin WHERE idTin='$idTin'";
+        $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
+                FROM `tin` t INNER JOIN users us on t.idUser = us.idUser 
+                WHERE t.idTin = $idTin"; 
         return $this->queryOne($sql);
     }
+
     function updateTin($TieuDe,$idTin, $TomTat, $Content, $idLT, $Ngay, $AnHien, $NoiBat)
     {
         try {
@@ -170,10 +175,10 @@
         $rowcount = $row['sodong'];
         return $rowcount > 0;
     }
-    function addnewTin($TieuDe, $Content, $TomTat,$idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang)
+    function addnewTin($TieuDe, $Content, $TomTat, $iduser, $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang)
     { 
-        $sql = "insert into Tin (TieuDe, Content, TomTat, idLT, Ngay,AnHien,NoiBat,urlHinh,NguoiDang)
-                values('$TieuDe','$Content', '$TomTat','$idLT','$Ngay','$AnHien','$NoiBat','$urlHinhA','$NguoiDang')";
+        $sql = "insert into Tin (TieuDe, Content, TomTat, idUser,idLT, Ngay,AnHien,NoiBat,urlHinh,NguoiDang)
+                values('$TieuDe','$Content', '$TomTat', '$iduser','$idLT','$Ngay','$AnHien','$NoiBat','$urlHinhA','$NguoiDang')";
         $this->execute($sql);
     }
 

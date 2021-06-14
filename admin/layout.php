@@ -1,8 +1,8 @@
 <?php
-    if (!isset($_SESSION['admin'])) {
-         header('location:views/login.php');
-     }
-    ?> 
+if (!isset($_SESSION['admin'])) {
+    header('Location:http://localhost/thanhxuan/admin/?ctrl=home&act=logout');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +44,7 @@
 <!-- Button trigger modal -->
     <!-- Modal -->
 
-    
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -317,7 +317,7 @@
                                     Activity Log
                                 </a> -->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<?= ADMIN_URL ?>/?ctrl=home&act=logout" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="<?=ADMIN_URL?>/?ctrl=home&act=logout" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Đăng xuất
                                 </a>
@@ -340,8 +340,11 @@
 
                     <!-- Content Row -->
                     <!-- <h1 class="h5 py-2 border-bottom text-danger">
-                    <?=(isset($page_title)==true) ? $page_title:"TRANG QUẢN TRỊ";?> </h1> -->
-                    <?php if (isset($page_title)==true) require_once "$page_file"; ?>
+                    <?=(isset($page_title) == true) ? $page_title : "TRANG QUẢN TRỊ";?> </h1> -->
+                    <?php if (isset($page_title) == true) {
+    require_once "$page_file";
+}
+?>
 
 
 
@@ -423,8 +426,8 @@
 
 </html>
 <?php
-    $bien = 0;
-if (isset($_SESSION['sptruocsua'])==true) { ?>
+$bien = 0;
+if (isset($_SESSION['sptruocsua']) == true) {?>
 <script>
     $(document).ready(function () {
         setTimeout(() => {
@@ -432,4 +435,4 @@ if (isset($_SESSION['sptruocsua'])==true) { ?>
         }, 500);
     });
 </script>
-<?php } ?>
+<?php }?>

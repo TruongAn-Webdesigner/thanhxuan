@@ -73,14 +73,28 @@ class blog
   }
   function update()
   {
-    $TieuDe = trim(strip_tags($_POST['TieuDe']));
-    $TomTat = trim(strip_tags($_POST['TomTat']));
-    $Content = trim(strip_tags($_POST['Content']));
-    $idLT = $_POST['idLT'];
-    $idTin = $_POST['idTin'];
-    $Ngay = $_POST['Ngay'];
-    $AnHien = $_POST['AnHien'];
-    $NoiBat = $_POST['NoiBat'];
+    $TieuDe     = trim(strip_tags($_POST['TieuDe']));
+    $TomTat     = trim(strip_tags($_POST['TomTat']));
+    $Content    = trim(strip_tags($_POST['Content']));
+    $idLT       = $_POST['idLT'];
+    $idTin      = $_POST['idTin'];
+    $Ngay       = $_POST['Ngay'];
+    $AnHien      = $_POST['AnHien'];
+    $NoiBat     = $_POST['NoiBat'];
+    $imgNew     = $_FILES['img-new'];
+    
+    if ($imgNew == '') {
+        $image = $_POST['img-old'];
+        echo $image;
+        exit();
+    } else {        
+        $urlHinh = $_FILES["img-new"];
+        echo $urlHinh;
+        echo $imgNew;
+        exit();
+        $urlHinhA = "uploads/images/$urlHinh";
+        move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
+    }
     
     $this->model->updateTin($TieuDe, $idTin, $TomTat, $Content, $idLT, $Ngay, $AnHien, $NoiBat);
     $list = $this->model->chitiet($idTin);

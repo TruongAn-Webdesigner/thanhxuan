@@ -8,7 +8,7 @@ else ?>
         </div>
         <div class="row p-2">
             <div class="col-md-5">
-                <img src="/<?= $list['urlHinh'] ?>" width="600px" height="400px">
+                <img src="../<?= $list['urlHinh'] ?>" width="100%" height="auto">
             </div>
             <div class="col-md-7">
                 <ul class="list-group">
@@ -30,9 +30,12 @@ else ?>
 
             </div>
         </div>
-        <div class="row p-2">
-            <div class="col-12">
-                <?= $list['Content']; ?>
+        <div class="container">
+            <div class="row p-2">           
+                <div class="col-12">
+                    <hr>
+                    <?= $list['Content']; ?>
+                </div>
             </div>
         </div>
     </div>

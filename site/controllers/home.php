@@ -126,19 +126,27 @@ class home
     }
     public function  addnew()
     {
-        $TieuDe = trim(strip_tags($_POST['TieuDe']));
-        $Content = $_POST['NoiDung'];
-        $TomTat = trim(strip_tags($_POST['TomTat']));
-        $idLT = $_POST['idLT'];
-        $Ngay = date('Y-m-d');
-        $AnHien = 0;
-        $NoiBat = 0;
-        $NguoiDang = $_SESSION['user'];
-        $urlHinh = $_FILES["urlHinh"]["name"];
-        $urlHinhA = "uploads/images/$urlHinh";
-        move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
-        $this->model->addnewTin($TieuDe, $Content, $TomTat, $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang);
-        header('location:index.php');
+        if(isset($_SESSION['user']) == true){
+            $tenuser = $_SESSION['user'];
+            $iduser = $this->model->inforUser($tenuser);
+       
+            $TieuDe = trim(strip_tags($_POST['TieuDe']));
+            $Content = $_POST['NoiDung'];
+            $TomTat = trim(strip_tags($_POST['TomTat']));
+            $idLT = $_POST['idLT'];
+            $Ngay = date('Y-m-d');
+            $AnHien = 0;
+            $NoiBat = 0;
+
+            $NguoiDang = $_SESSION['user'];
+            
+            $urlHinh = $_FILES["urlHinh"]["name"];
+            $urlHinhA = "uploads/images/$urlHinh";
+            move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
+
+            $this->model->addnewTin($TieuDe, $Content, $TomTat, $iduser[0], $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang);
+            header('location:index.php');
+        }
     }
     public function blogdetail()
     {
@@ -147,12 +155,9 @@ class home
             $layinfor = $this->model->inforUser($tenuser);
         }
         $id = $_GET['id'];
-        $blogById = $this->model->chitiet($id);
-       
-       
         
-        // $comment = $this->model->getCommentByIdBlog($blogById['0']);
-
+        $blogById = $this->model->chitiet($id);        
+        $comment = $this->model->getCommentByIdBlog($blogById['0']);        
         // $list = $this->model->listLoaitin();
         $page_file = "views/blogchitiet.php";
         require_once "layout.php";

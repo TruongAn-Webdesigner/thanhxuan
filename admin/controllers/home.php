@@ -49,18 +49,19 @@ class home
 
     function check_form_login()
     {
+        echo '1';
         $tentk = trim(strip_tags($_POST['taikhoan']));
         $matkhau = trim(strip_tags($_POST['pass']));
-        // if (isset($_POST['nhomatkhau']) == true) $nhomatkhau = $_POST['nhomatkhau'];
+        
         if ($this->model->dangnhap($tentk,$matkhau) == true) {
             $_SESSION['admin'] = $tentk;
-            header('location:index.php');
+
+            header('location:http://localhost/thanhxuan/admin/?ctrl=home');
         }
         else{
-            $erro=1;
-            header('location:index.php');
-        }
-        $this->index();
+            $erro = 1;           
+            $this->login();
+        }       
     }
 
     function logout()

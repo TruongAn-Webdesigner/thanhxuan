@@ -57,15 +57,24 @@
 
                         <div class="box-news">
                             <div class="bg-news-img">
+                                <?php if ($getTheLatestPost['urlHinh'] == '') { ?>
+                                    <img src="../img/women.jpg" class="hover_imgae" alt="">
+                                <?php } else { ?>
                                 <img src="../<?= $getTheLatestPost['urlHinh'] ?>" class="hover_imgae" alt="">
+                                <?php } ?>
                             </div>
                             <div class="bg-news-title">
                                 <div class="box-news-title">
                                     <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?=$getTheLatestPost['idTin']?>"><?= $getTheLatestPost['TieuDe'] ?></a>
                                 </div>
-                                <div class="tomtat">
-                                    <span class="text"><?=$getTheLatestPost['TomTat']?></span>
-                                </div>
+
+                                <?php 
+                                if ($getTheLatestPost['TomTat'] != null) { ?>
+                                    <div class="tomtat">
+                                        <span class="text"><?=$getTheLatestPost['TomTat']?></span>
+                                    </div>
+                                <?php } ?>                                
+                                                                
                                 <div class="box-news-infor d-inline-block">
                                     <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$getTheLatestPost['hoten']?></span>
                                     <span class="bottom-blog"><i class="fa fa-calendar" aria-hidden="true"> </i> <?=$getTheLatestPost['Ngay']?></span>                                            
@@ -86,7 +95,11 @@
                             <?php foreach ($listHead as $ds) { ?>
                                 <div class="box-news-small">
                                     <div class="box-news-small-img" style="height: 8rem;">
-                                        <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?=$ds['idTin']?>"><img src="../<?= $ds['urlHinh'] ?>" alt="" srcset=""></a>
+                                        <?php if ($ds['urlHinh'] == '') { ?>
+                                            <img src="../img/women.jpg" class="hover_imgae" alt="">
+                                        <?php } else { ?>
+                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?=$ds['idTin']?>"><img src="../<?= $ds['urlHinh'] ?>" alt="" srcset=""></a>
+                                        <?php } ?>                                        
                                     </div>
                                     <div class="box-news-small-infor p-2">
                                         <div class="box-news-small-title p-0">
@@ -98,9 +111,9 @@
                                         <div class="box-news-infor d-inline-block">
                                             <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$ds['hoten']?></span>
                                         </div>
-                                        <!-- <div class="box-news-small-day">
+                                        <div class="box-news-small-day">
                                             <i class="fa fa-calendar" aria-hidden="true"> </i><?= $ds['Ngay'] ?>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
 
@@ -119,13 +132,21 @@
                                 <?php foreach ($foodBlog as $BA) { ?>
                                 <div class="box-news-theo-muc-bao">
                                     <div class="box-news-theo-muc-img">
-                                        <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$BA['idTin']?>"><img src="../<?=$BA['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php if ($BA['urlHinh'] == '') { ?>
+                                            <img src="../img/women.jpg" class="hover_imgae" alt="">
+                                        <?php } else { ?>
+                                            <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$BA['idTin']?>"><img src="../<?=$BA['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php } ?>   
+                                      
                                     </div>
                                     <div class="box-news-theo-muc-title">
                                         <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $BA['idTin'] ?> "><?=$BA['TieuDe']?> </a>
-                                        <div class="tomtat mt-1">
-                                            <span class="text"><?=$BA['TomTat']?></span>
-                                        </div>
+                                        <?php if ($BA['TomTat'] != null) { ?>
+                                            <div class="tomtat mt-1">
+                                                <span class="text"><?=$BA['TomTat']?></span>
+                                            </div>
+                                        <?php } ?>    
+                                        
                                         <div class="mt-1">
                                             <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$BA['hoten']?></span>
                                             <span class="bottom-blog"><i class="fa fa-calendar" aria-hidden="true"> </i> <?=$BA['Ngay']?></span>                                            
@@ -154,13 +175,20 @@
                                 <?php foreach ($mentalityBlog as $tinhthan) { ?>
                                 <div class="box-news-theo-muc-bao">
                                     <div class="box-news-theo-muc-img">
-                                        <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$tinhthan['idTin']?>"><img src="../<?=$tinhthan['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php if ($tinhthan['urlHinh'] == '') { ?>
+                                            <img src="../img/women.jpg" class="hover_imgae" alt="">
+                                        <?php } else { ?>
+                                            <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$tinhthan['idTin']?>"><img src="../<?=$tinhthan['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php } ?>                                       
                                     </div>
                                     <div class="box-news-theo-muc-title">
                                         <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$tinhthan['idTin']?>"><?=$tinhthan['TieuDe']?> </a>
-                                        <div class="tomtat mt-1">
-                                            <span class="text"><?=$tinhthan['TomTat']?></span>
-                                        </div>
+                                        <?php if ($tinhthan['TomTat'] != null) { ?>
+                                            <div class="tomtat mt-1">
+                                                <span class="text"><?=$tinhthan['TomTat']?></span>
+                                            </div>
+                                        <?php } ?>  
+                                      
                                         <div class="mt-1">
                                             <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$tinhthan['hoten']?></span>
                                             <span class="bottom-blog"><i class="fa fa-calendar" aria-hidden="true"> </i> <?=$tinhthan['Ngay']?></span>                                            
@@ -189,13 +217,20 @@
                                 <?php foreach ($sportsBlog as $sport) { ?>
                                 <div class="box-news-theo-muc-bao">
                                     <div class="box-news-theo-muc-img">
-                                        <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $sport['idTin']?>"><img src="../<?=$sport['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php if ($sport['urlHinh'] == '') { ?>
+                                            <img src="../img/women.jpg" class="hover_imgae" alt="">
+                                        <?php } else { ?>
+                                            <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $sport['idTin']?>"><img src="../<?=$sport['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php } ?>   
                                     </div>
                                     <div class="box-news-theo-muc-title">
                                         <a href="<?= SITE_URL ?>/?act=blogdetail&id=<?= $sport['idTin']?>"><?=$sport['TieuDe']?> </a>
-                                        <div class="tomtat mt-1">
-                                            <span class="text"><?=$sport['TomTat']?></span>
-                                        </div>
+                                        
+                                        <?php if ($sport['TomTat'] != null) { ?>
+                                            <div class="tomtat mt-1">
+                                                <span class="text"><?=$sport['TomTat']?></span>
+                                            </div>
+                                        <?php } ?>  
                                         <div class="mt-1">
                                             <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$sport['hoten']?></span>
                                             <span class="bottom-blog"><i class="fa fa-calendar" aria-hidden="true"> </i> <?=$sport['Ngay']?></span>                                            
@@ -223,12 +258,20 @@
                                 <?php foreach ($heathyBlog as $heathy) { ?>
                                 <div class="box-news-theo-muc-bao">
                                     <div class="box-news-theo-muc-img">
-                                        <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$heathy['idTin']?>"><img src="../<?=$heathy['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php if ($heathy['urlHinh'] == '') { ?>
+                                            <img src="../img/women.jpg" class="hover_imgae" alt="">
+                                        <?php } else { ?>
+                                            <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$heathy['idTin']?>"><img src="../<?=$heathy['urlHinh']?>" alt="" srcset=""></a>
+                                        <?php } ?> 
                                     </div>
                                     <div class="box-news-theo-muc-title">
                                         <a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$heathy['idTin']?>"><?=$heathy['TieuDe']?> </a>
                                         <div class="tomtat mt-1">
-                                            <span class="text"><?=$heathy['TomTat']?></span>
+                                            <?php if ($heathy['TomTat'] != null) { ?>
+                                                <div class="tomtat mt-1">
+                                                    <span class="text"><?=$heathy['TomTat']?></span>
+                                                </div>
+                                            <?php } ?>  
                                         </div>
                                         <div class="mt-1">
                                             <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$heathy['hoten']?></span>

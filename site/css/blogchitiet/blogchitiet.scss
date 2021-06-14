@@ -104,7 +104,7 @@ body{
                             color: #e26363;
                             font-family: 'Asap Condensed', sans-serif;
                             font-size: 2vw;
-                            margin-bottom: 65px;
+                            margin-bottom: 1.2em;
                         }
                         .bg-noi-dung{
                             width: 95%;
@@ -610,3 +610,12 @@ footer{
     }
 }
 /* /footer */
+
+
+
+.box-news-tomtat {
+    background: #d1d1d1;
+    padding: 1em 1.2em 0.1em 1.2em;
+    margin-bottom: 1.2em;
+    width: 95%;
+}

@@ -5,40 +5,24 @@
                     <!-- blog -->
                     <div class="bg-news-left">
                         <div class="box-news-img">
-                            <img src="../<?=$blogById['urlHinh']?>" alt="">
+                            <img src="../<?=$blogById['urlHinh']?>" alt="">                            
                         </div>
-                        <div class="box-news-infor">
-                            <i class="fa fa-user" aria-hidden="true"> Admin </i>
-                            <i class="fa fa-calendar" aria-hidden="true"> <?=$blogById['Ngay']?></i>
+                        <div class="box-news-infor">                        
+                            <span class="bottom-blog"><i class="fa fa-user" aria-hidden="true"></i> <?=$blogById['hoten']?></span>
+                            <span class="bottom-blog"><i class="fa fa-calendar" aria-hidden="true"> </i> <?=$blogById['Ngay']?></span>                                                                                
                         </div>
                         <div class="box-news-title">
                             <?=$blogById['TieuDe']?>
                         </div>
+                        <div class="box-news-tomtat">
+                            <div class="container">
+                                <p><?=$blogById['TomTat']?></p>
+                            </div>
+                        </div>
                         <div class="bg-noi-dung">
                             <?=$blogById['Content']?>
                         </div>
-                        <div class="noi-dung-nguoi-dang">
-                            <div class="box-nguoi-dang-img">
-                                <img src="../img/women.jpg" alt="" srcset="">
-                            </div>
-                            <div class="box-nguoi-dang-infor">
-                                <div class="nguoi-dang-title">Về bản thân mình</div>
-                                <div class="nguoi-dang-more">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    <div class="nguoi-dang-icon" style="float: right; margin-top: 2rem;">
-                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
                         <div class="bg-related-post">
                             <div class="related-title">Bài đọc gần đây</div>
                             <div class="related-post">
