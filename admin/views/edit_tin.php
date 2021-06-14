@@ -5,7 +5,7 @@
             <h6 class="m-0 font-weight-bold text-primary"><?=$page_title?></h6>
         </div>
         <div class="card-body">
-            <form method="post" action="<?=ADMIN_URL?>/?ctrl=blog&act=update">
+            <form method="post" action="<?=ADMIN_URL?>/?ctrl=blog&act=update" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="" class="form-label">Ảnh đại diện</label>
                     <input accept="image/*" type='file' name="img-new" id="imgInp"/>

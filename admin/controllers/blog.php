@@ -83,20 +83,16 @@ class blog
     $NoiBat     = $_POST['NoiBat'];
     $imgNew     = $_FILES['img-new'];
     
+
     if ($imgNew == '') {
-        $image = $_POST['img-old'];
-        echo $image;
-        exit();
+        $image = $_POST['img-old'];        
     } else {        
-        $urlHinh = $_FILES["img-new"];
-        echo $urlHinh;
-        echo $imgNew;
-        exit();
-        $urlHinhA = "uploads/images/$urlHinh";
-        move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
+        $urlHinh = $_FILES["img-new"]["name"];
+        $image = "uploads/images/$Ngay-$urlHinh";        
+        move_uploaded_file($_FILES["img-new"]["tmp_name"], "../uploads/images/$Ngay-$urlHinh");        
     }
     
-    $this->model->updateTin($TieuDe, $idTin, $TomTat, $Content, $idLT, $Ngay, $AnHien, $NoiBat);
+    $this->model->updateTin($TieuDe, $idTin, $image, $TomTat, $Content, $idLT, $Ngay, $AnHien, $NoiBat);
     $list = $this->model->chitiet($idTin);
     $page_title = "Chi tiết";
     $page_file = "views/detail.php";

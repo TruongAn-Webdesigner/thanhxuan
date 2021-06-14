@@ -36,10 +36,10 @@ class model_blog extends model_system
         $sql = "SELECT * FROM tin WHERE idTin='$idTin'";
         return $this->queryOne($sql);
     }
-    function updateTin($TieuDe,$idTin, $TomTat, $Content, $idLT, $Ngay, $AnHien, $NoiBat)
+    function updateTin($TieuDe, $idTin, $image, $TomTat, $Content, $idLT, $Ngay, $AnHien, $NoiBat)
     {
         try {
-            $sql = "UPDATE tin SET TieuDe='$TieuDe',TomTat='$TomTat',Content='$Content',idLT=' $idLT',Ngay='$Ngay',AnHien='$AnHien',NoiBat=' $NoiBat' WHERE idTin='$idTin'";
+            $sql = "UPDATE tin SET TieuDe='$TieuDe', urlHinh='$image', TomTat='$TomTat',Content='$Content',idLT=' $idLT',Ngay='$Ngay',AnHien='$AnHien',NoiBat=' $NoiBat' WHERE idTin='$idTin'";
             $this->execute($sql);
         } catch (Exception  $e) {
             print_r($e->errorInfo);

@@ -141,8 +141,8 @@ class home
             $NguoiDang = $_SESSION['user'];
             
             $urlHinh = $_FILES["urlHinh"]["name"];
-            $urlHinhA = "uploads/images/$urlHinh";
-            move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$urlHinh");
+            $urlHinhA = "uploads/images/$Ngay-$urlHinh";
+            move_uploaded_file($_FILES["urlHinh"]["tmp_name"], "../uploads/images/$Ngay-$urlHinh");
 
             $this->model->addnewTin($TieuDe, $Content, $TomTat, $iduser[0], $idLT, $Ngay, $AnHien, $NoiBat, $urlHinhA, $NguoiDang);
             header('location:index.php');
