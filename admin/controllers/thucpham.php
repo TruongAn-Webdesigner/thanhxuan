@@ -16,6 +16,9 @@ class thucpham
             case "edit":
                 $this->edit();
                 break;
+            case "addnew":
+                 $this->addnew();
+                break;
             case "update":
                 $this->update();
                 break;
@@ -29,27 +32,64 @@ class thucpham
         //$this->$act;
     }
 
-    function getAllThucPham() {
-      echo json_encode('ok ok');
+    function addnew() 
+    {
+        $ten = trim(strip_tags($_POST['ten']));
+        $protein = $_POST['protein'];
+        settype($protein, "int");
+        $fat = $_POST['fat'];
+        settype($fat, "int");
+        $carb = $_POST['carb'];
+        settype($carb, "int");
+        $calo = $_POST['calo'];
+        settype($calo, "int");
+        $mota = $_POST['mota'];
+        $anhien = $_POST['anhien'];
+        settype($anhien, "int");
+        $this->model->addThucpham($ten,$protein,$fat,$carb,$calo,$mota,$anhien);
+        $this->index();
     }
 
     function index()
     {
-
+        $list = $this->model->getAllThucPham();
+        $page_title = "Danh sách thực phẩm";
+        $page_file = "views/thucpham_index.php";
+        require_once "layout.php";
     }
 
     function edit()
     {
-
+        $id = $_GET['id'];
+        $list = $this->model->thucpham($id);
+        $page_title = "Sửa thực phẩm";
+        $page_file = "views/thucpham_edit.php";
+        require_once "layout.php";
     }
 
     function update()
     {
-
-    }
+        $id = $_POST['id'];
+        $ten = trim(strip_tags($_POST['ten']));
+        $protein = $_POST['protein'];
+        settype($protein, "int");
+        $fat = $_POST['fat'];
+        settype($fat, "int");
+        $carb = $_POST['carb'];
+        settype($carb, "int");
+        $calo = $_POST['calo'];
+        settype($calo, "int");
+        $mota = $_POST['mota'];
+        $anhien = $_POST['anhien'];
+        settype($anhien, "int");
+        $this->model->updateThucpham($id,$ten,$protein,$fat,$carb,$calo,$mota,$anhien);
+        $this->index();
+    } 
 
     function delete()
     {
-
+        $id = $_GET['id'];
+        $this->model->xoaThucpham($id);
+        $this->index();
     }
 } //class nhasanxuat

@@ -85,6 +85,12 @@ if (!isset($_SESSION['admin'])) {
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="<?=ADMIN_URL?>/?ctrl=thucpham">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Quản lý thực phẩm</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="<?=ADMIN_URL?>/?ctrl=home">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Loại tin</span>
