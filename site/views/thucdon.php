@@ -80,23 +80,7 @@
                   <th width="10%">Điều khiển</th>
                 </thead>
                 <tbody id="body_thucdon_1">
-                  <!-- <tr>
-                    <td>
-                      <select name="" id="">
-                        <option value="1">Ức gà không da</option>
-                        <option value="2">Chuối vàng</option>
-                        <option value="3">Cá ngừ</option>
-                        <option value="4">Gạo lức</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="text" name="" class="khoithuc_1" id="" placeholder="Gram">
-                    </td>
-                    <td class="protein_1">...</td>
-                    <td class="fat_1">...</td>
-                    <td class="carb_1">...</td>
-                    <td class="calo_1">...</td>
-                  </tr> -->
+                 
                 </tbody>
               </table>
               <div class="controls_thucdon_1 bd-highlight">
@@ -107,7 +91,7 @@
 
             <!-- kết quả -->
             <div class="ketqua-thucdon" id="thucdon_1_result mt-5">
-                <table border="1" width="200px">
+                <table border="1" width="200px" id="result">
                   <thead>
                     <tr>
                       <th colspan="2">Tổng</th>
@@ -135,7 +119,7 @@
               </div>
             <!-- kết quả -->
             <div class="download-thucdon">
-                <button>
+                <button type="button" id="exportExcelButton">
                   Download excel
                 </button>
                 <button>
