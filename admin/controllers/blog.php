@@ -73,18 +73,18 @@ class blog
   }
   function update()
   {
-    $TieuDe   = trim(strip_tags($_POST['TieuDe']));
-    $TomTat   = trim(strip_tags($_POST['TomTat']));
-    $Content  = trim(strip_tags($_POST['Content']));
-    $idLT     = $_POST['idLT'];
-    $idTin    = $_POST['idTin'];
-    $Ngay     = $_POST['Ngay'];
-    $AnHien   = $_POST['AnHien'];
-    $NoiBat   = $_POST['NoiBat'];
-    $imgNew   = $_FILES['img-new'];
+    $TieuDe     = trim(strip_tags($_POST['TieuDe']));
+    $TomTat     = trim(strip_tags($_POST['TomTat']));
+    $Content    = ($_POST['Content']);
+    $idLT       = $_POST['idLT'];
+    $idTin      = $_POST['idTin'];
+    $Ngay       = $_POST['Ngay'];
+    $AnHien     = $_POST['AnHien'];
+    $NoiBat     = $_POST['NoiBat'];
+    $imgNew     = $_FILES['img-new'];
+    $imgNewName = $_FILES['img-new']['name'];
     
-
-    if ($imgNew == '') {
+    if ($imgNewName == '') {
         $image = $_POST['img-old'];        
     } else {        
         $urlHinh = $_FILES["img-new"]["name"];

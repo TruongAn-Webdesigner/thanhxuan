@@ -12,9 +12,9 @@ else ?>
                     <thead>
                         <tr>
                             <th class="control_mid" scope="col">STT</th>
-                            <th class="control_mid" scope="col-3">Tiêu đề</th>
+                            <th class="control_mid" scope="col">Tiêu đề</th>
                             <th class="control_mid" scope="col">Trạng thái</th>
-                            <th class="control_mid" scope="col">Edit</th>
+                            <th class="control_mid" width="20%" scope="col">Edit</th>
                         </tr>
                     </thead>
                     <!-- <tfoot>
@@ -31,7 +31,7 @@ else ?>
                         <tr>
                             <th class="control_mid" scope="row"><?=$i++?></th>
                             <td class="control_mid"><?=$row['TieuDe']?></td>
-                            <td class="control_mid"><?= ($row['AnHien'] == 0) ? "Đang ẩn" : "Đang hiện"; ?><br>
+                            <td class="control_mid">
                             <a href="<?= ADMIN_URL ?>/?ctrl=blog&act=duyet&id=<?= $row['idTin'] ?> "> <?= ($row['Duyet'] == 0) ? "Chưa duyệt" : "Đã duyệt"; ?></a>
                             </td>
                             <td class="control_mid">

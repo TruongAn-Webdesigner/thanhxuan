@@ -207,7 +207,7 @@
     function getheaderBlog() {
         $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
         FROM `tin` t INNER JOIN users us on t.idUser = us.idUser WHERE t.Duyet = 1
-        ORDER BY Ngay desc LIMIT 1, 4";
+        ORDER BY Ngay desc LIMIT 1, 3";
         return $this->query($sql);
     }
 
@@ -237,5 +237,12 @@
     function getCommentByIdBlog($idTin) {
       $sql = "SELECT * FROM `comment` WHERE idtin = $idTin ORDER BY ngaygio DESC LIMIT 5";
       return $this->query($sql);
+    }
+
+    function getBlogNoiBat() {
+        $sql = "SELECT t.idTin, t.lang, t.TieuDe, t.TomTat, t.urlHinh, t.Ngay, t.idUser, t.Content, t.SoLanXem, t.NoiBat, t.AnHien, t.tags, us.hoten 
+        FROM `tin` t INNER JOIN users us on t.idUser = us.idUser WHERE t.Duyet = 1 AND NoiBat = 1
+        ORDER BY Ngay desc LIMIT 4";
+        return $this->query($sql);
     }
   } //class

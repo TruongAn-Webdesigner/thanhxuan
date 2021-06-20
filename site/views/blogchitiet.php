@@ -23,7 +23,7 @@
                             <?=$blogById['Content']?>
                         </div>
 
-                        <div class="bg-related-post">
+                        <!-- <div class="bg-related-post">
                             <div class="related-title">Bài đọc gần đây</div>
                             <div class="related-post">
                                 <div class="post">
@@ -48,10 +48,10 @@
                                     <div class="post-button"><a href="http://">Đọc thêm</a></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- phần bình luần -->
-                        <div class="bg-comment">
+                        <div class="bg-comment mt-5">
                             <div class="box-comment-title">Bình luận</div>
                             <!-- phần đăng bình luận -->
                             <form action="" id="danglala">
@@ -64,7 +64,7 @@
                                             <input type="hidden" id="layiduser" value="<?=$layinfor[0]?>">
                                             <input type="hidden" id="layidtin" value="<?=$blogById['idTin']?>">
                                         </div>
-                                        <textarea placeholder="Bình luận của bạn" name="noidung" id="laynoidung" cols="50" rows="5" ></textarea>
+                                        <textarea class="w-100" placeholder="Bình luận của bạn" name="noidung" id="laynoidung" cols="80" rows="5" ></textarea>
                                         <?php 
                                             if (isset($_SESSION['user']) == true) { ?>
                                                 <div class="box-news-button">
@@ -118,9 +118,12 @@
                                 CATEGORIES
                             </div>
                             <div class="cata-list">
-                            <div class="cata-name"><a href="http://">Sức khỏe</a> </div>
-                            <div class="cata-name"><a href="http://">Bữa ăn hằng ngày</a> </div>
-                            <div class="cata-name"><a href="http://">Tâm lý</a> </div>
+                                <?php require_once "models/model_home.php";
+                                $this->model = new model_home();
+                                $list = $this->model->listLoaitin();
+                                foreach ($list as $ds) { ?>
+                                    <div class="cata-name"><a href="javascript:void(0)"><?= $ds['Ten'] ?></a> </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="bg-aside-popu">
@@ -128,27 +131,24 @@
                                 BLOG NỔI BẬT
                             </div>
                             <div class="popu-list">
-                                <div class="box-post">
-                                    <div class="box-post-title"><a href="http://">Something la la la la lal wfeij ẹ</a></div>
-                                    <div class="box-post-infor">
-                                        <i class="fa fa-eye" aria-hidden="true"> Lượt xem</i>
-                                        <i class="fa fa-user" aria-hidden="true"> tên</i>
+                                <?php $nb = 0; foreach ($blogNoiBat as $noibat) { $nb++; ?>
+                                <div class="box-post <?php echo ($nb == 4) ? 'm-0' : ''?>">
+                                    <div class="row">
+                                        <div class="col-4" style="background-position: center;background-repeat: no-repeat;background-size: cover; background-image: url('../<?=$noibat['urlHinh']?>');">
+                                            
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="box-post-title"><a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$noibat['idTin']?>"><?=$noibat['TieuDe']?></a>
+                                            </div>
+                                            <div class="box-post-infor">
+                                                <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+                                                <i class="fa fa-user" aria-hidden="true"><?=$noibat['hoten']?> </i>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
                                 </div>
-                                <div class="box-post">
-                                    <div class="box-post-title"><a href="http://">Something la la la la lal wfeij ẹ</a></div>
-                                    <div class="box-post-infor">
-                                        <i class="fa fa-eye" aria-hidden="true"> Lượt xem</i>
-                                        <i class="fa fa-user" aria-hidden="true"> tên</i>
-                                    </div>
-                                </div>
-                                <div class="box-post">
-                                    <div class="box-post-title"><a href="http://">Something la la la la lal wfeij ẹ</a></div>
-                                    <div class="box-post-infor">
-                                        <i class="fa fa-eye" aria-hidden="true"> Lượt xem</i>
-                                        <i class="fa fa-user" aria-hidden="true"> tên</i>
-                                    </div>
-                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="bg-aside-subs">

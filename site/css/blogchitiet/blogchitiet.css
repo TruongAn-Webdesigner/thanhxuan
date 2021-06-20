@@ -517,18 +517,21 @@ body {
 }
 
 .row-handmake article .boxcenter .bg-news .bg-news-right-aside .bg-aside-popu .popu-list {
-  width: 100%;
-  min-height: 10rem;
-  /* background-color: white; */
+    width: 100%;
+    min-height: 10rem;
+    background-color: white;
+    box-shadow: 0px 0px 9px #00000017;
+    padding: 12px;
+    border: 1px solid #0000001c;
 }
 
 .row-handmake article .boxcenter .bg-news .bg-news-right-aside .bg-aside-popu .popu-list .box-post {
-  width: 100%;
-  min-height: 8rem;
-  background-color: white;
-  border: 1px solid #dddddd;
-  padding: 5px 40px;
-  margin-bottom: 5px;
+    width: 100%;
+    /* min-height: 8rem; */
+    /* background-color: white; */
+    /* border: 1px solid #dddddd; */
+    padding: 1px 16px;
+    margin-bottom: 26px;
 }
 
 .row-handmake article .boxcenter .bg-news .bg-news-right-aside .bg-aside-popu .popu-list .box-post .box-post-title {
@@ -721,3 +724,7 @@ footer .icon .boxcenter i {
   width: 95%;
 }
 /*# sourceMappingURL=blogchitiet.css.map */
+
+img {
+    width: 100%;
+}

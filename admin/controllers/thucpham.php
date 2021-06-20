@@ -25,9 +25,9 @@ class thucpham
             case "delete":
                 $this->delete();
                 break;
-            case "getAllThucPham":
-              $this->getAllThucPham();
-              break;
+            // case "getAllThucPham":
+            //   $this->getAllThucPham();
+            //   break;
         }
         //$this->$act;
     }
@@ -46,7 +46,7 @@ class thucpham
 
         $calo = $_POST['calo'];
         settype($calo, "float");
-        
+
         $mota = $_POST['mota'];
         $anhien = $_POST['anhien'];
         settype($anhien, "int");

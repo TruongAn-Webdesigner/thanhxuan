@@ -119,7 +119,7 @@ class home
         $sportsBlog       = $this->model->getblog($sportsBlogId);
         $mentalityBlog    = $this->model->getblog($mentalityBlogId);
         $listHead         = $this->model->getheaderBlog();
-
+        $blogNoiBat       = $this->model->getBlogNoiBat();
         $page_file = "views/blog.php";
         // $cssFile = 'abc.css';
         require_once "layout.php";
@@ -155,10 +155,11 @@ class home
             $layinfor = $this->model->inforUser($tenuser);
         }
         $id = $_GET['id'];
-        
+        $blogNoiBat       = $this->model->getBlogNoiBat();
+
         $blogById = $this->model->chitiet($id);        
         $comment = $this->model->getCommentByIdBlog($blogById['0']);        
-        // $list = $this->model->listLoaitin();
+        
         $page_file = "views/blogchitiet.php";
         require_once "layout.php";
     }

@@ -250,7 +250,7 @@ body{
                     /* background-color: rgb(247, 189, 189); */
                 .bg-news-left{
                     width: 100%;
-                    min-height: 47rem;
+                    // min-height: 47rem;
                     /* background-color: rgb(247, 189, 189); */
                     display: flex;
 
@@ -566,14 +566,16 @@ body{
                         .popu-list{
                             width: 100%;
                             min-height: 10rem;
-                            /* background-color: white; */
+                            background-color: white; 
+                            border: 1px solid #0000001c;
+                            padding: 12px;
                             .box-post{
                                 width: 100%;
-                                min-height: 8rem;
-                                background-color: white;
-                                border: 1px solid rgb(221, 221, 221);
-                                padding: 5px 40px;
-                                margin-bottom: 5px;
+                                // min-height: 8rem;
+                                // background-color: white;
+                                // border: 1px solid rgb(221, 221, 221);
+                                padding: 1px 16px;
+                                margin-bottom: 26px;
                                 .box-post-title{
                                     font-size: 1vw;
                                     font-family: 'Asap Condensed', sans-serif;

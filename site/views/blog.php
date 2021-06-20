@@ -296,12 +296,12 @@
                 
                 <!-- aside -->
                 <div class="bg-news-right-aside">
-                    <div class="bg-aside-search">
+                    <!-- <div class="bg-aside-search">
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
-                    </div>
+                    </div> -->
                     <div class="bg-aside-cata" style="min-height: 100px;">
                         <div class="cata-title">
                             Đăng bài
@@ -328,30 +328,24 @@
                             BLOG NỔI BẬT
                         </div>
                         <div class="popu-list">
-                            <div class="box-post">
-                                <div class="box-post-title"><a href="http://">Something la la la la lal wfeij ẹ</a>
+                            <?php $nb = 0; foreach ($blogNoiBat as $noibat) { $nb++; ?>
+                            <div class="box-post <?php echo ($nb == 4) ? 'm-0' : ''?>">
+                                <div class="row">
+                                    <div class="col-4" style="background-position: center;background-repeat: no-repeat;background-size: cover; background-image: url('../<?=$noibat['urlHinh']?>');">
+                                        
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="box-post-title"><a href="<?=SITE_URL?>/?act=blogdetail&id=<?=$noibat['idTin']?>"><?=$noibat['TieuDe']?></a>
+                                        </div>
+                                        <div class="box-post-infor">
+                                            <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+                                            <i class="fa fa-user" aria-hidden="true"><?=$noibat['hoten']?> </i>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="box-post-infor">
-                                    <i class="fa fa-eye" aria-hidden="true"> Lượt xem</i>
-                                    <i class="fa fa-user" aria-hidden="true"> tên</i>
-                                </div>
+                                
                             </div>
-                            <div class="box-post">
-                                <div class="box-post-title"><a href="http://">Something la la la la lal wfeij ẹ</a>
-                                </div>
-                                <div class="box-post-infor">
-                                    <i class="fa fa-eye" aria-hidden="true"> Lượt xem</i>
-                                    <i class="fa fa-user" aria-hidden="true"> tên</i>
-                                </div>
-                            </div>
-                            <div class="box-post">
-                                <div class="box-post-title"><a href="http://">Something la la la la lal wfeij ẹ</a>
-                                </div>
-                                <div class="box-post-infor">
-                                    <i class="fa fa-eye" aria-hidden="true"> Lượt xem</i>
-                                    <i class="fa fa-user" aria-hidden="true"> tên</i>
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="bg-aside-subs">

@@ -58,10 +58,10 @@ function createHtmlBlog(blog) {
     var str = `
     <div class="box-news-theo-muc-bao">
         <div class="box-news-theo-muc-img">
-            <a href="<?=SITE_URL?>/?act=blogdetail&id=`+ blog.idTin +`"><img src="../`+ blog.urlHinh +`" alt="" srcset=""></a>
+            <a href="/thanhxuan/site/?act=blogdetail&id=`+ blog.idTin +`"><img src="../`+ blog.urlHinh +`" alt="" srcset=""></a>
         </div>
         <div class="box-news-theo-muc-title">
-            <a href="<?= SITE_URL ?>/?act=blogdetail&id=`+ blog.idTin +`">`+ blog.TieuDe +`</a>
+            <a href="/thanhxuan/site/?act=blogdetail&id=`+ blog.idTin +`">`+ blog.TieuDe +`</a>
             <div class="tomtat mt-1">
                 <span class="text">`+ blog.TomTat +`</span>
             </div>
