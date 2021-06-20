@@ -17,11 +17,10 @@ body{
 .bg-menu{
     width: 100%;
     height: 3.2rem;
-    background-color: darkcyan;
+    /* background-color: white; */
     position: fixed;
     z-index: 90;
     transition:all 0.5s;
-
     &.menuShadow{
         background-color: rgb(255, 189, 189);
         box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
@@ -33,12 +32,23 @@ body{
         .logo{
             width: 20%;
             height: 3.2rem;
-            /* background-color: darkgoldenrod; */
+            /* background-color: rgb(255, 189, 189); */
+            .box-logo{
+                width: 40%;
+                height: 3.2rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+
         }
         .menu{
             width: 80%;
             height: 3.2rem;
-            /* background-color: darkgrey; */
+            /* background-color: white; */
             text-align: right;
             ul{
                 padding: 0;
@@ -56,7 +66,7 @@ body{
                     }
                     a:hover{
                         text-decoration: none;
-                        color: white;
+                        color: rgb(209, 89, 89);
                     }
                 }
             }

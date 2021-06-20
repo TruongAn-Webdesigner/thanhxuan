@@ -42,7 +42,10 @@
     <!-- menu -->
     <div class="bg-menu" id="menu">
         <div class="boxcenter">
-            <div class="logo">Logo</div>
+            <div class="logo">
+                <div class="box-logo"><img src="../uploads/images/logo.png" alt="" srcset=""></div>
+                
+            </div>
             <div class="menu">
                 <ul>
                     <li><a href="<?= SITE_URL ?>">Home</a></li>

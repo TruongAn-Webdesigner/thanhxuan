@@ -33,7 +33,18 @@ body{
         .logo{
             width: 20%;
             height: 3.2rem;
-            /* background-color: darkgoldenrod; */
+            background-color: rgb(255, 189, 189);
+            .box-logo{
+                width: 40%;
+                height: 3.2rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+
         }
         .menu{
             width: 80%;
@@ -1408,7 +1419,37 @@ article{
                         position: relative;
                         overflow: hidden;
                         border-radius: 10px 0px 0px 0px;
-                        
+                        .box-help-button{
+                            position: absolute;
+                            bottom: 73px;
+                            left: 0;
+                            width: 100%;
+                            min-height: 100px;
+                            /* background-color: #d4d4d483; */
+                            transition: 0.5s;
+                            padding: 20px;
+                            transform: translate(0px, 70px);
+                            a{
+                                color: white;
+                                background-color: none;
+                                border: 1px solid white;
+                                padding: 20px;
+                                /* filter: blur(8px); */
+                                
+                            }
+                        }
+                        .title-help-1{
+                            position: absolute;
+                            bottom: -100px;
+                            left: 0;
+                            width: 100%;
+                            min-height: 100px;
+                            background-color: #d4d4d483;
+                            transition: 0.5s;
+                            color: white;
+                            font-weight: bold;
+                            padding: 20px;
+                        }
                         img{
                             width: 100%;
                             height: 100%;
@@ -1417,19 +1458,10 @@ article{
                             overflow: hidden;
                             transition: 0.5s;
                         }
-                        &::before{
+ /*                        &::before{
                             content: "";
-                            position: absolute;
-                            bottom: -100px;
-                            left: 0;
-                            width: 100%;
-                            height: 100px;
-                            background-color: #d4d4d483;
-                            transition: 0.5s;
-                            z-index: 10;
-                            color: white;
-                            font-weight: bold;
-                        }
+
+                        } */
                     }
 /*                     .box-help-img-1:hover img, &::before{
                         
@@ -1437,13 +1469,20 @@ article{
                     } */
 
 
-                    .box-help-img-1:hover::before{
+/*                     .box-help-img-1:hover::before{
                         bottom: 0px; 
+                    } */
+                    .box-help-img-1:hover .title-help-1{
+                        bottom: 0px;
                     }
                     .box-help-img-1:hover img {
                         filter: brightness(50%);
                         transform: scale(1.1);
                         transition: 0.5s;
+                    }
+
+                    .box-help-img-1:hover .box-help-button{
+                        transform: translate(0px, 0px);
                     }
 
                     .box-help-img-2{
@@ -1457,6 +1496,25 @@ article{
                             margin-bottom: 4.5%;
                             position: relative;
                             overflow: hidden;
+                            .box-help-button{
+                                position: absolute;
+                                bottom: 65px;
+                                left: 0;
+                                width: 100%;
+                                min-height: 100px;
+                                /* background-color: #d4d4d483; */
+                                transition: 0.5s;
+                                padding: 20px;
+                                transform: translate(0px, 70px);
+                                a{
+                                    color: white;
+                                    background-color: none;
+                                    border: 1px solid white;
+                                    padding: 20px;
+                                    /* filter: blur(8px); */
+                                    
+                                }
+                            }
                             .title-help-2a{
                                 position: absolute;
                                 bottom: -100px;
@@ -1467,6 +1525,7 @@ article{
                                 transition: 0.5s;
                                 color: white;
                                 font-weight: bold;
+                                padding: 20px;
                             }
                             img{
                                 width: 100%;
@@ -1481,11 +1540,16 @@ article{
                             bottom: 0px;
                         }
 
+                        .box-help-img-2a:hover .box-help-button, .box-help-img-2b:hover .box-help-button{
+                            transform: translate(0px, 0px);
+                        }
+
                         .box-help-img-2a:hover img {
                             filter: brightness(50%);
                             transform: scale(1.1);
                             transition: 0.5s;
                         }
+
 
                         .box-help-img-2b:hover img {
                             filter: brightness(50%);
@@ -1500,6 +1564,25 @@ article{
                             /* background-color: rgb(87, 8, 8); */
                             position: relative;
                             overflow: hidden;
+                            .box-help-button{
+                                position: absolute;
+                                bottom: 65px;
+                                left: 0;
+                                width: 100%;
+                                min-height: 100px;
+                                /* background-color: #d4d4d483; */
+                                transition: 0.5s;
+                                padding: 20px;
+                                transform: translate(0px, 70px);
+                                a{
+                                    color: white;
+                                    background-color: none;
+                                    border: 1px solid white;
+                                    padding: 20px;
+                                    /* filter: blur(8px); */
+                                    
+                                }
+                            }
                             .title-help-2b{
                                 position: absolute;
                                 bottom: -100px;
@@ -1510,6 +1593,7 @@ article{
                                 transition: 0.5s;
                                 color: white;
                                 font-weight: bold;
+                                padding: 20px;
                             }
                             img{
                                 width: 100%;
@@ -1537,6 +1621,24 @@ article{
                         /* background-color: rgb(87, 8, 8); */
                         position: relative;
                         overflow: hidden;
+                        .box-help-button{
+                            position: absolute;
+                            bottom: 65px;
+                            left: 0;
+                            width: 100%;
+                            min-height: 100px;
+                            /* background-color: #d4d4d483; */
+                            transition: 0.5s;
+                            padding: 20px;
+                            transform: translate(0px, 70px);
+                            a{
+                                color: white;
+                                background-color: none;
+                                border: 1px solid white;
+                                padding: 20px;
+                                /* filter: blur(8px); */
+                            }
+                        }
                         .title-help{
                             position: absolute;
                             bottom: -100px;
@@ -1547,6 +1649,7 @@ article{
                             transition: 0.5s;
                             color: white;
                             font-weight: bold;
+                            padding: 20px;
                         }
                         img{
                             width: 100%;
@@ -1560,6 +1663,11 @@ article{
                     .box-help-img-3:hover .title-help{
                         bottom: 0px;
                     }
+
+                    .box-help-img-3:hover .box-help-button{
+                        transform: translate(0px, 0px);
+                    }
+
                     .box-help-img-3:hover img {
                         filter: brightness(50%);
                         transform: scale(1.1);

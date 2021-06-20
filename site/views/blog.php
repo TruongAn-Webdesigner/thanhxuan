@@ -94,7 +94,7 @@
                         <div class="bg-news-small">
                             <?php foreach ($listHead as $ds) { ?>
                                 <div class="box-news-small">
-                                    <div class="box-news-small-img" style="height: 8rem;">
+                                    <div class="box-news-small-img" style="height: 11.5rem;">
                                         <?php if ($ds['urlHinh'] == '') { ?>
                                             <img src="../img/women.jpg" class="hover_imgae" alt="">
                                         <?php } else { ?>
@@ -124,7 +124,7 @@
                     
                     <!-- blog tâm lý -->
                     <div class="bg-news-theo-muc">
-                        <div class="news-theo-muc-title-big">Bửa Ăn</div>
+                        <div class="news-theo-muc-title-big">Bữa Ăn</div>
                         <!-- box  -->
                         <div class="bg-news-theo-muc-box">
 
