@@ -36,13 +36,17 @@ class thucpham
     {
         $ten = trim(strip_tags($_POST['ten']));
         $protein = $_POST['protein'];
-        settype($protein, "int");
+        settype($protein, "float");
+
         $fat = $_POST['fat'];
-        settype($fat, "int");
+        settype($fat, "float");
+
         $carb = $_POST['carb'];
-        settype($carb, "int");
+        settype($carb, "float");
+
         $calo = $_POST['calo'];
-        settype($calo, "int");
+        settype($calo, "float");
+        
         $mota = $_POST['mota'];
         $anhien = $_POST['anhien'];
         settype($anhien, "int");

@@ -427,7 +427,7 @@ if (!isset($_SESSION['admin'])) {
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 
-    <script src="js/chart.js"></script>
+    <!-- <script src="js/chart.js"></script> -->
 </body>
 
 </html>

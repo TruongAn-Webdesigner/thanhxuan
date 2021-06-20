@@ -1,4 +1,4 @@
-linkCssthucDon();
+    linkCssthucDon();
 
 function linkCssthucDon() {
     var linkElement = document.createElement("link");
@@ -214,70 +214,128 @@ function exportExcel(tableNames, headerbdColor, filename) {
     if (arrTableNames.length > 0) {
         //duyệt từng bảng
         for (var i = 0; i < arrTableNames.length; i++) {
-            export_data += "<table border='2px'><tr bgcolor='" + headerbdColor + "'>";
+            export_data += "<table border='2px'><tr bgcolor='" + headerbdColor + "'>";            
             var objectTable = document.getElementById(arrTableNames[i]);//Lấy id bảng thứ i
+            
             if (objectTable === undefined) {
                 alert('Bảng không tìm thấy');
                 return;
-            }
-
-            //duyệt từng dòng Lấy dữ liệu lưu vào export_data                        
-            for (var j = 0; j < objectTable.rows.length; j++) {                    
-                if (i == 0) {
-                    for (var n = 0; n < objectTable.rows[j].cells.length; n++) { 
-                        if (j = 0) {
-                            if (n != 6) {
-                                // console.log(objectTable.rows[j].cells[n]);
-                                export_data += "<th>" + objectTable.rows[j].cells[n].innerHTML+ "</th>";
-        
-                                if (n == 5) {
-                                    export_data += "</tr>";
-                                }
-                                
-                            }    
-                        } 
-                        else if (j > 0){
-                            if (n == 0) { // kể từ hàng thứ 2 n = 0 và 1 sẽ lấy db khác nhau
-                                // $( "#myselect option:selected" ).text();
-                                console.log(objectTable.rows[j].cells[n]);
-                                export_data += 0;
-                            }
-                        }                              
-                        
-                        
-                        // if (bien == j) {
-                        //     bien = -1;
-                        //     console.log(objectTable.rows[j].cells[n]);
-                        // }
-                        // if (n == objectTable.rows[j].cells.length - 1) {
-                        //     bien = j + 1;
-                        // }
+            }            
+            for (var j = 0; j < objectTable.rows.length; j++) {
+                if (i == 0) { // bảng 1 lấy theo cột     
+                    var objCells = objectTable.rows.item(j).cells;
     
+                    for (var c = 0; c < objCells.length; c++) {
+                        if (c == 0 && j != 0) { // bắt đầu hàng
+                            export_data += "<tr>";
+                        }
+
+                        if (j == 0) { // header
+                            if (c != 6) {
+                                export_data += "<th>";
+                                export_data += objCells.item(c).innerHTML;  
+                                export_data += "</th>";                      
+                            }
+                        } 
+                        else { // body
+                            if (c != 6) {
+                                export_data += "<td>";
+                                if (c == 0) {
+                                    var optionSelected = $("[data-select-id="+ j +"] option:selected").text();                                
+                                    export_data += optionSelected;
+                                } else if (c == 1) {
+                                    var gram = $("#id_g_" + j).val(); 
+                                    export_data += gram;
+                                } else {
+                                    export_data += objCells.item(c).innerHTML;        
+                                }                            
+                                export_data += "</td>";            
+                            }
+                        }
+                        
+                        if (c == 5) {
+                            export_data += "</tr>";
+                        }
+                        
                     }
-                } 
-                else {                        
-                    export_data += objectTable.rows[j].innerHTML + "</tr>";                        
+                } else { // bảng 2 lấy theo hàng           
+                    export_data += objectTable.rows[j].innerHTML  + "</tr>";     
                 }
-                
-                // console.log(objectTable.rows[j].cells[1].innerHTML);
-
-                // var select = objectTable.rows[j].cells[0].getElementsByClassName('select')[0];
-                // console.log(select.options[select.selectedIndex]);
-            }
-
-            export_data += "</table>";
+            }        
+            export_data += "</table>";            
         }
 
         // kiểm tra trình duyệt Là IE thì
-        // if (window.navigator.userAgent.indexOf("MSIE") > 0 || !!window.navigator.userAgent.match(/Trient.*rv\:11\./)) {
-        //     exportIF.document.open("txt/html", "replace");
-        //     exportIF.document.write(export_data);
-        //     exportIF.document.close();
-        //     exportIF.focus();
-        //     sa = exportIF.document.execCommand("SaveAs", true, filename + ".xsl");
-        // } else { //các trình duyệt khác
-        //     sa = window.open("data:application/vnd.ms-excel," + encodeURIComponent(export_data))
-        // }
-    }
 
+        if (window.navigator.userAgent.indexOf("MSIE") > 0 || !!window.navigator.userAgent.match(/Trient.*rv\:11\./)) {
+            exportIF.document.open("txt/html", "replace");
+            exportIF.document.write(export_data);
+            exportIF.document.close();
+            exportIF.focus();
+            sa = exportIF.document.execCommand("SaveAs", true, filename + ".xsl");
+        } else { //các trình duyệt khác
+            sa = window.open("data:application/vnd.ms-excel," + encodeURIComponent(export_data))
+        }
+    }
+}
+
+
+
+function doCapture() {
+    window.scrollTo(0, 0);
+ 
+    html2canvas(document.getElementById("_menu_")).then(function (canvas) {
+ 
+        // Create an AJAX object
+        var ajax = new XMLHttpRequest();
+ 
+        // Setting method, server file name, and asynchronous
+        ajax.open("POST", "controllers/save-capture.php", true);
+ 
+        // Setting headers for POST method
+        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ 
+        // Sending image data to server
+        ajax.send("image=" + canvas.toDataURL("image/jpeg", 0.9));
+ 
+        // Receiving response from server
+        // This function will be called multiple times
+        ajax.onreadystatechange = function () {
+ 
+            // Check when the requested is completed
+            if (this.readyState == 4 && this.status == 200) {
+ 
+                // Displaying response from server
+                console.log(this.responseText);
+            }
+        };
+    });
+}
+
+function downloadtable() {
+
+    var node = document.getElementById('_menu_');
+
+    domtoimage.toPng(node)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            downloadURI(dataUrl, "records.png")
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
+
+}
+
+
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    delete link;
 }

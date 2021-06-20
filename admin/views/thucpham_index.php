@@ -25,26 +25,25 @@ else ?>
     <div class="row justify-content-center align-items-center text-warning">
         <h1>Thêm thực phẩm</h1>
     </div>
-    <div class="form-group">
-       
+    <div class="form-group">       
         <label for="ten_loai">Tên thực phẩm</label>
-        <input type="text" class="form-control" id="ten_nn" name="ten" required >
+        <input type="text" class="form-control" id="" name="ten" required >
     </div>
     <div class="form-group">
-        <label for="ten_loai">Protein</label>
-        <input type="number"  class="form-control" id="ten_nn" name="protein" required >
+        <label for="ten_loai">Protein (tỉ lệ 1g/bao nhiêu)</label>
+        <input type="number" step="0.0001" class="form-control" id="" name="protein" required >
     </div>
     <div class="form-group">
-        <label for="ten_loai">Fat</label>
-        <input type="number" class="form-control" id="ten_nn" name="fat" required >
+        <label for="ten_loai">Fat (tỉ lệ 1g/bao nhiêu)</label>
+        <input type="number" step="0.0001" class="form-control" id="" name="fat" required >
     </div>
     <div class="form-group">
-        <label for="ten_loai">Carb</label>
-        <input type="number" class="form-control" id="ten_nn" name="carb" required >
+        <label for="ten_loai">Carb (tỉ lệ 1g/bao nhiêu)</label>
+        <input type="number" step="0.0001" class="form-control" id="" name="carb" required >
     </div>
     <div class="form-group">
-        <label for="ten_loai">Calo</label>
-        <input type="number" class="form-control" id="ten_nn" name="calo" required >
+        <label for="ten_loai">Calo (tỉ lệ 1g/bao nhiêu)</label>
+        <input type="number" step="0.0001" class="form-control" id="" name="calo" required >
     </div>
     <div class="form-group">
         <label for="" class="form-label">Mô tả</label>
@@ -98,14 +97,16 @@ else ?>
                         <tr>
                             <td class="control_mid" scope="row" width="5%"><?=$row['id']?></td>
                             <td class="control_mid"  with="20%"><?=$row['ten']?> <br> <b><?= ($row['anhien'] == 0) ? "Đang ẩn" : "Đang hiện"; ?></b> </td>
-                            <td class="control_mid" width="20%">
-                                <b>Protein :</b><?=$row['protein']?>
-                                <br><b>Fat :</b><?=$row['fat']?>
-                                <br><b>Carb :</b><?=$row['carb']?>
-                                <br><b>Calo :</b><?=$row['calo']?>
+                            <td class="control_mid" width="35%">
+                                <div class="thucdon_">
+                                    <b>Protein:</b> <?=$row['protein']?>
+                                    <br><b>Fat:</b> <?=$row['fat']?>
+                                    <br><b>Carb:</b> <?=$row['carb']?>
+                                    <br><b>Calo:</b> <?=$row['calo']?>
+                                </div>
                             </td>
-                            <td class="control_mid" scope="row" width="40%"><?=$row['mota']?></td>
-                            <td class="control_mid" width="15%">
+                            <td class="control_mid" scope="row" width="10%"><?=$row['mota']?></td>
+                            <td class="control_mid" width="20%">
                                 <a href="<?= ADMIN_URL ?>/?ctrl=thucpham&act=edit&id=<?= $row['id'] ?>"><button type="button" class="btn btn-primary">Chỉnh sửa</button></a>
                                 <a href="<?= ADMIN_URL ?>/?ctrl=thucpham&act=delete&id=<?= $row['id'] ?>"><button type="button" name="delete" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="return confirm('Bạn chắc chắn muốn xóa?');">Xóa</button></a>
                             </td>

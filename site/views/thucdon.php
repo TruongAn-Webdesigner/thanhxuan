@@ -63,12 +63,10 @@
         </div>
       </div>
 
-      <div class="bg-thuc-don-right">
-
-        <div class="row-handmake">
+      <div class="bg-thuc-don-right" id="_menu_">
+        <div class="row-handmake" >
           <div class="thucdon my-5">
             <div class="box_thucdon position-relative" id="box_thucdon_1">
-
               <table border=1 class="w-100" id="thucdon_1">
                 <thead>
                   <th width="25%">Thực phẩm</th>
@@ -122,7 +120,7 @@
                 <button type="button" id="exportExcelButton">
                   Download excel
                 </button>
-                <button>
+                <button onclick="downloadtable();">
                   Download png
                 </button>
               </div>
@@ -136,5 +134,5 @@
 </article>
 
 <script src="js/blog.js"></script>
-
 <script src="js/thucdon.js"></script>
+<script src="js/html2canvas.js"></script>
