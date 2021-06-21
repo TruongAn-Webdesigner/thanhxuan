@@ -9,19 +9,19 @@
     </div>
     <div class="form-group">
         <label for="ten_loai">Protein</label>
-        <input type="number"  class="form-control" id="ten_nn" name="protein" value="<?=$list['protein']?>">
+        <input type="number"   class="form-control" step="0.0001" id="ten_nn" name="protein" value="<?=$list['protein']?>">
     </div>
     <div class="form-group">
         <label for="ten_loai">Fat</label>
-        <input type="number" class="form-control" id="ten_nn" name="fat" value="<?=$list['fat']?>">
+        <input type="number" class="form-control" step="0.0001" id="ten_nn" name="fat" value="<?=$list['fat']?>">
     </div>
     <div class="form-group">
         <label for="ten_loai">Carb</label>
-        <input type="number" class="form-control" id="ten_nn" name="carb" value="<?=$list['carb']?>">
+        <input type="number" class="form-control" step="0.0001" id="ten_nn" name="carb" value="<?=$list['carb']?>">
     </div>
     <div class="form-group">
         <label for="ten_loai">Calo</label>
-        <input type="number" class="form-control" id="ten_nn" name="calo" value="<?=$list['calo']?>">
+        <input type="number" class="form-control" step="0.0001" id="ten_nn" name="calo" value="<?=$list['calo']?>">
     </div>
     <div class="form-group">
         <label for="" class="form-label">Mô tả</label>
