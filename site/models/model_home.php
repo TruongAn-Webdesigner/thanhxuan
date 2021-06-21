@@ -245,4 +245,9 @@
         ORDER BY Ngay desc LIMIT 4";
         return $this->query($sql);
     }
+
+    function getUserName($user) {
+        $sql = "SELECT * FROM `users` WHERE username = '$user'";
+        return $this->queryOne($sql);
+    }
   } //class

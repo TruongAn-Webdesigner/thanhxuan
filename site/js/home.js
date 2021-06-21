@@ -69,7 +69,7 @@ function makeResultHtmlCalo(TDEE) {
   var str = `
     <div id="cl_result" class="mt-Down50">
       <div class="calo-about-title">Lượng Calories cơ thể cần trong ngày</div>
-      <button class="button-tdee"><span class="tdee">`+ TDEE +`</span> Calories/ngày</button>
+      <button class="button-tdee"><span class="tdee"><b>`+ TDEE +`</b></span> Calories/ngày</button>
       <table border=1 class="w-90 mx-auto">
         <tr>
           <td colspan="2">Giữ cân</td>
@@ -80,21 +80,21 @@ function makeResultHtmlCalo(TDEE) {
           <td colspan="2">Tăng cân</td>
         </tr>
         <tr>
-          <td>Giảm cân nhẹ (0.25kg/tuần)</td>
+          <td><b>Giảm cân nhẹ</b> <br>(0.25kg/tuần)</td>
           <td><span class="tdDown1">`+ dt.tdDown1 +` </span><br>Calories/ngày(86%)</td>
-          <td>Tăng cân nhẹ(0.25kg/tuần)</td>
+          <td><b>Tăng cân nhẹ</b><br>(0.25kg/tuần)</td>
           <td><span class="tdUp1">`+ dt.tdUp1 +` </span><br>Calories/ngày(114%)</td>
         </tr>
         <tr>
-          <td>Giảm cân(0.5kg/tuần)</td>
+          <td><b>Giảm cân</b><br>(0.5kg/tuần)</td>
           <td><span class="tdDown2">`+ dt.tdDown2 +` </span><br>Calories/ngày(72%)</td>
-          <td>Tăng cân(0.5kg/tuần)</td>
+          <td><b>Tăng cân</b><br>(0.5kg/tuần)</td>
           <td><span class="tdUp2">`+ dt.tdUp2 +` </span><br>Calories/ngày(128%)</td>
         </tr>
         <tr>
-          <td>Giảm cân nhiều(1kg/tuần)</td>
+          <td><b>Giảm cân nhiều</b><br>(1kg/tuần)</td>
           <td><span class="tdDown3">`+ dt.tdDown3 +` </span><br>Calories/ngày(45%)</td>
-          <td>Tăng cân nhiều(1kg/tuần)</td>
+          <td><b>Tăng cân nhiều</b><br>(1kg/tuần)</td>
           <td><span class="tdUp3">`+ dt.tdUp3 +` </span><br>Calories/ngày(155%)</td>
         </tr>
       </table>

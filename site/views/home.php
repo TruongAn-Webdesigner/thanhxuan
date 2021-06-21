@@ -273,26 +273,26 @@
                     $this->model = new model_home();
                     $tin1 = $this->model->chitiet(2);
                     $tin2 = $this->model->chitiet(3);
-                    $tin3 = $this->model->chitiet(4);
+                    $tin3 = $this->model->chitiet(9);
                     $tin4 = $this->model->chitiet(1);
                     ?>
                     <div class="box-help-img-left">
                         <div class="box-help-img-1">
-                            <a></a><img src="../<?=$tin2['urlHinh']?>" alt="" srcset="">
-                            <div class="box-help-button"><a href="http://">Xem thêm</a></div>
-                            <div class="title-help-1">Tâm lý là nơi mà bạn có thể tìm hiểu rõ hơn về vấn đề mà bạn gặp phải cách khắc phục cũng như tìm hiểu về cải thiện bản thân bạn</div>
+                            <a href="<?=SITE_URL?>?act=blogdetail=<?=$tin2['idTin']?>"></a><img src="../<?=$tin2['urlHinh']?>" alt="" srcset="">
+                            <div class="box-help-button"><a href="<?=SITE_URL?>?act=blogdetail&id=<?=$tin2['idTin']?>">Xem thêm</a></div>
+                            <div class="title-help-1"><?=$tin2['TieuDe']?></div>
                         </div>
 
                         <div class="box-help-img-2">
                             <div class="box-help-img-2a">
                                 <img src="../<?=$tin1['urlHinh']?>" alt="" srcset="">
-                                <div class="box-help-button"><a href="http://">Xem thêm</a></div>
-                                <div class="title-help-2a">Sức khỏe chính là sự thể hiện một thể trạng tốt nhất nhờ vào các yếu tố tập luyện</div>
+                                <div class="box-help-button"><a href="<?=SITE_URL?>?act=blogdetail&id=<?=$tin1['idTin']?>">Xem thêm</a></div>
+                                <div class="title-help-2a"><?=$tin1['TieuDe']?></div>
                             </div>
                             <div class="box-help-img-2b">
                                 <img src="../<?=$tin3['urlHinh']?>" alt="" srcset="">
-                                <div class="box-help-button"><a href="http://">Xem thêm</a></div>
-                                <div class="title-help-2b">Bữa ăn là yếu tố quan trọng giúp bạn có thể cung cấp cơ thể một nguồn năng lượng đủ để cơ thể tiêu thụ</div>
+                                <div class="box-help-button"><a href="<?=SITE_URL?>?act=blogdetail&id=<?=$tin3['idTin']?>">Xem thêm</a></div>
+                                <div class="title-help-2b"><?=$tin3['TieuDe']?></div>
                             </div>
                         </div>
                     </div>
@@ -301,8 +301,8 @@
                     <div class="box-help-img-right">
                         <div class="box-help-img-3">
                             <img src="../<?=$tin4['urlHinh']?>" alt="" srcset="">
-                            <div class="box-help-button"><a href="http://">Xem thêm</a></div>
-                            <div class="title-help">Tập luyện là một hình thức quan trọng nếu bạn muốn mình trở nên khỏe hơn và nổi bật hơn người khác.</div>
+                            <div class="box-help-button"><a href="<?=SITE_URL?>?act=blogdetail&id=<?=$tin4['idTin']?>">Xem thêm</a></div>
+                            <div class="title-help"><?=$tin4['TieuDe']?></div>
                         </div>
                     </div>
                 </div>

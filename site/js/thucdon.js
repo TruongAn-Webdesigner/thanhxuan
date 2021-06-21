@@ -192,7 +192,7 @@ function getTotal(menu) {
 
 $('#exportExcelButton').click(function (e) { 
     e.preventDefault();
-    exportExcel('thucdon_1|result', '', '');
+    exportExcel('thucdon_1|result', '', 'thucdon');
 });
 
 function exportExcel(tableNames, headerbdColor, filename) {    
@@ -320,7 +320,7 @@ function downloadtable() {
         .then(function (dataUrl) {
             var img = new Image();
             img.src = dataUrl;
-            downloadURI(dataUrl, "records.png")
+            downloadURI(dataUrl, "thuc-don.png")
         })
         .catch(function (error) {
             console.error('oops, something went wrong!', error);

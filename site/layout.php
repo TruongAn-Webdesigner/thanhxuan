@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+if (isset($_SESSION['user'])) {
+    require_once "models/model_home.php";
+    $this->model = new model_home();
 
+    $user = $this->model->getUserName($_SESSION['user']);    
+}   
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,16 +55,16 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="<?= SITE_URL ?>">Home</a></li>
-                    <li><a href="http://">About</a></li>
-                    <li><a href="http://">Tính Calo</a></li>
-                    <li><a href="<?= SITE_URL ?>/?act=thucdon">Thực đơn</a></li>
-                    <li><a href="<?= SITE_URL ?>/?act=blog">Blog</a></li>
+                    <li><a class="nav-link" href="<?= SITE_URL ?>">Home</a></li>
+                    <!-- <li><a class="nav-link" href="http://">About</a></li>
+                    <li><a class="nav-link" href="http://">Tính Calo</a></li> -->
+                    <li><a class="nav-link" href="<?= SITE_URL ?>/?act=thucdon">Thực đơn</a></li>
+                    <li><a class="nav-link" href="<?= SITE_URL ?>/?act=blog">Blog</a></li>
 
                     <li class="nav-item dropdown">
                         <?php if (isset($_SESSION['user'])) { ?>
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?= $_SESSION['user'] ?>
+                                <?= $user['hoten'] ?>
                             </a>
 
                         <?php } else { ?>
